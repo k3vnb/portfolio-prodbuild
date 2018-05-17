@@ -1,9 +1,12 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 ReactDOM.render(
   <div>
     <h1>Hello World</h1>
     <h3>from a computer interface</h3>
     <p>Direct to you</p>
-  </div>
+  </div>,
   document.getElementById('react-app-root')
 );
 
