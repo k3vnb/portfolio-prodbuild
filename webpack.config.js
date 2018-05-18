@@ -1,3 +1,6 @@
+// what is a webpack loader? Webpack loaders are just customizable tools that work with Webpack to do something extra to source-code as Webpack bundles it.
+
+
 const webpack = require('webpack');
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -29,6 +32,16 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.jsx?$/,
+        enforce: "pre",
+        loader: "eslint-loader",
+        exclude: /node_modules/,
+        options: {
+          emitWarning: true,
+          configFile: "./.eslintrc.json"
+          }
+        },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
