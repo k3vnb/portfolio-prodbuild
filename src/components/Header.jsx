@@ -6,12 +6,13 @@ function Header(){
   };
   return (
     <div style={headerStyleSheet}>
-      <h1 className="title-text">About Kv</h1>
       <style jsx>{`
           .title-text {
             text-shadow: 1px 1px 1px pink;
           }
-            `}</style>
+        `}</style>
+      <a href="/"><h1 className="title-text">About Kv</h1></a>
+      <a href="/about">About</a>
       <hr />
     </div>
   );
