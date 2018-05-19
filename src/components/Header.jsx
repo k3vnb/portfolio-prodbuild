@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header(){
   let headerStyleSheet = {
@@ -11,8 +12,8 @@ function Header(){
             text-shadow: 1px 1px 1px pink;
           }
         `}</style>
-      <a href="/"><h1 className="title-text">About Kv</h1></a>
-      <a href="/about">About</a>
+      <Link to="/"><h1 className="title-text">About Kv</h1></Link>
+      <Link to="/about">About</Link>
       <hr />
     </div>
   );
