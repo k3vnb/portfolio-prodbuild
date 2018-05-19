@@ -14,15 +14,16 @@ var masterPictureList = [
     imageSource: '1C',
     imageTitle: 'Pic3'
   }
-]
+];
 
 function PictureList(){
   return (
     <div>
       <hr/>
       {masterPictureList.map((picture, index) =>
-      <Picture imageSource = {picture.imageSource}
-        imageTitle = {picture.imageTitle} />
+        <Picture imageSource = {picture.imageSource}
+          imageTitle = {picture.imageTitle}
+          key={index}/>
       )}
     </div>
   );
