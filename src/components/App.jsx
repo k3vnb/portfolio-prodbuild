@@ -20,7 +20,10 @@ function App(){
   }
   return (
     <div style={appStylesSheet}>
-
+      <style jsx global>{`
+          @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+            `}
+      </style>
       <Header />
       <Switch>
         <Route exact path='/' component={LandingPage} />
