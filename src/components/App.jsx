@@ -5,6 +5,7 @@ import PictureList from './PictureList';
 import Contact from './Contact';
 import Footer from './Footer';
 import LandingPage from './LandingPage';
+import PreLandingPage from './PreLandingPage';
 import About from './About';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
@@ -27,6 +28,7 @@ function App(){
       <Header />
       <Switch>
         <Route exact path='/' component={LandingPage} />
+        <Route exact path='/a' component={PreLandingPage} />
         <Route exact path='/gallery' component={PictureList} />
         <Route path='/about' component={About} />
         <Route exact path='/contact' component={Contact} />

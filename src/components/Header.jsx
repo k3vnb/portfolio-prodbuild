@@ -18,6 +18,7 @@ function Header(){
         `}</style>
       <Link to="/"><h1 className="title-text">About Kv</h1></Link>
       <div className="link-line">
+        <Link to="/a">pre</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/gallery">Image Gallery</Link>
