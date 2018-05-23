@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header(){
   let headerStyleSheet = {
-    backgroundColor: 'peachpuff'
+    backgroundColor: '#93d1ff52'
   };
   return (
     <div style={headerStyleSheet}>

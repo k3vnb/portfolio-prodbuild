@@ -3,7 +3,7 @@ import React from 'react';
 function Footer(){
   let footerStyleSheet = {
     width: '100%',
-    backgroundColor: 'peachpuff',
+    backgroundColor: '#93d1ff52',
     position: 'fixed',
     bottom: '0'
   };

@@ -10,6 +10,7 @@ import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
 function App(){
+
   const appStylesSheet = {
     backgroundImage: `url(${wallpaper})`,
     backgroundRepeat: 'no-repeat',
