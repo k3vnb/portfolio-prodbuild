@@ -8,7 +8,7 @@ function Error404(props){
       <h3>The page {props.location.pathname} is invalid!</h3>
       <h3>Return <Link to="/">Home</Link>?</h3>
     </div>
-  )
+  );
 }
 
 export default Error404;
