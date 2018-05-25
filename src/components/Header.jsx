@@ -30,7 +30,6 @@ function Header(){
             z-index: 2;
           }
           .header-main-content {
-            color: white;
             text-shadow: 1px 1px 1px black;
             width: 60%;
             background-color: #0e000e61;
@@ -40,10 +39,16 @@ function Header(){
             flex-direction: column;
             padding: 5%;
           }
+          .title-text, .tagline {
+            text-align: center;
+          }
           .title-text {
             text-decoration: none;
             color: white;
-            text-align: center;
+            text-shadow: 0px 0px 3px black;
+          }
+          .tagline {
+            text-shadow: .5px .5px 1px white;
           }
           .link-line {
             margin-top: 5%;
@@ -52,7 +57,7 @@ function Header(){
           }
           .nav-links {
             border: 1px solid #ffa90e;
-            color: white;
+            color: #ffa90e;
             width: 100%;
             text-align: center;
             box-shadow: inset 1px 1px 1px black;
@@ -68,11 +73,17 @@ function Header(){
             margin: 0;
             margin-bottom: -10px;
           }
+          @media screen and (max-width: 450px){
+            .nav-links {
+              font-size: 3.5vw;
+            }
+          }
         `}</style>
       <div className="background-img">
       <div className="header-stylesheet">
       <div className="header-main-content">
         <Link to="/"><h1 className="title-text">Kevin Boyle</h1></Link>
+        <h2 className="tagline">Web Developer & Designer</h2>
         <div className="link-line">
           <Link to="/about"><div className="nav-links">About</div></Link>
           <Link to="/contact"><div className="nav-links">Contact</div></Link>
