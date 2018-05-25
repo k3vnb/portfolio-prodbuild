@@ -13,7 +13,6 @@ function Footer(){
     display: 'flex',
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
-    paddingRight: 50
   };
   return (
     <div style={footerStyleSheet}>
