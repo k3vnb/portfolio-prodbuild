@@ -1,15 +1,20 @@
 import React from 'react';
+import wallpaper from '../assets/images/body-bg.svg';
 import { Link } from 'react-router-dom';
 import skyBG from '../assets/images/sky-bg.jpg';
 
 
 function Header(){
-  let headerStyleSheet = {
 
-  };
   return (
-    <div className="background-img">
+    <div className="wallpaper-div">
       <style jsx>{`
+          .wallpaper-div {
+            background-image: url(${wallpaper});
+            height: 68%;
+            background-repeat: repeat-y;
+            background-size: cover;
+          }
           .background-img {
             height: 100%;
             width: 100%;
@@ -18,7 +23,7 @@ function Header(){
           }
           .header-stylesheet {
             background-color: #0e000e61;
-            height: 90%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -31,6 +36,9 @@ function Header(){
             background-color: #0e000e61;
             box-shadow: 2px 2px 2px #0e000e;
             font-family: 'Didact Gothic', sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 5%;
           }
           .title-text {
             text-decoration: none;
@@ -38,33 +46,42 @@ function Header(){
             text-align: center;
           }
           .link-line {
-            margin-top: 15%;
+            margin-top: 5%;
             display: flex;
             justify-content: space-around;
           }
           .nav-links {
-            border: 1px solid orange;
+            border: 1px solid #ffa90e;
             color: white;
             width: 100%;
+            text-align: center;
             box-shadow: inset 1px 1px 1px black;
             padding: 12%;
+            transition: box-shadow .2s;
+          }
+          .nav-links:hover {
+            box-shadow: 2px 2px 2px black;
+            text-shadow: 2px 2px 2px black;
+            border: 1px solid orange;
           }
           h1 {
             margin: 0;
             margin-bottom: -10px;
           }
         `}</style>
+      <div className="background-img">
       <div className="header-stylesheet">
       <div className="header-main-content">
         <Link to="/"><h1 className="title-text">Kevin Boyle</h1></Link>
         <div className="link-line">
           <Link to="/about"><div className="nav-links">About</div></Link>
           <Link to="/contact"><div className="nav-links">Contact</div></Link>
-          <Link to="/gallery"><div className="nav-links">Image Gallery</div></Link>
+          <Link to="/gallery"><div className="nav-links">Gallery</div></Link>
         </div>
       </div>
     </div>
   </div>
+</div>
     );
 }
 

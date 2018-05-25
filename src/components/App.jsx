@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './Header';
-import wallpaper from '../assets/images/body-bg.svg';
 import PictureList from './PictureList';
 import Contact from './Contact';
 import Footer from './Footer';
@@ -13,9 +12,6 @@ import { Switch, Route } from 'react-router-dom';
 function App(){
 
   const appStyleSheet = {
-    backgroundImage: `url(${wallpaper})`,
-    backgroundRepeat: 'repeat-y',
-    backgroundSize: 'cover',
     height: '150vh',
     width: '100vw'
   }
