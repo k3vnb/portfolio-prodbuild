@@ -9,14 +9,15 @@ function Header(){
     <div style={headerStyleSheet}>
       <style jsx>{`
           .title-text {
-            text-shadow: 1px 1px 1px pink;
+            font-family: 'Didact Gothic', sans-serif;
+            text-decoration: none;
           }
           .link-line {
             display: flex;
             justify-content: space-around;
           }
         `}</style>
-      <Link to="/"><h1 className="title-text">About Kv</h1></Link>
+      <Link to="/"><h1 className="title-text">Kevin Boyle</h1></Link>
       <div className="link-line">
         <Link to="/a">pre</Link>
         <Link to="/about">About</Link>

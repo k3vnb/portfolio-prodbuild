@@ -12,17 +12,29 @@ import { Switch, Route } from 'react-router-dom';
 
 function App(){
 
-  const appStylesSheet = {
+  const appStyleSheet = {
     backgroundImage: `url(${wallpaper})`,
-    backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'repeat-y',
     backgroundSize: 'cover',
-    height: '100vh',
+    height: '150vh',
     width: '100vw'
   }
+
   return (
-    <div style={appStylesSheet}>
+    <div style={appStyleSheet}>
       <style jsx global>{`
           @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+          .main-container {
+            margin: 2% 20%;
+            padding: 8%;
+            background-color: white;
+            box-shadow: #303d401c 0px 0px 4px 6px;
+            height: 200px;
+          }
+          @media screen and (max-width: 650px){
+            .main-container {
+              margin: 3% 10%;
+            }
             `}
       </style>
       <Header />
