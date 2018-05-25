@@ -24,6 +24,9 @@ function App(){
     <div style={appStyleSheet}>
       <style jsx global>{`
           @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+          a {
+            text-decoration: none;
+          }
           .main-container {
             margin: 2% 20%;
             padding: 8%;
