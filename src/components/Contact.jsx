@@ -3,15 +3,26 @@ import whiteBGHero from '../assets/images/white_bg_hero.jpg';
 
 function Contact(){
   return(
-    <div>
+    <div className="main-container">
       <style jsx>{`
-          .hero-img {
-            width: 100%;
-            height: 50vh;
+          .main-container {
+            background-image: url(${whiteBGHero});
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
           }
-        `}</style>
-      Contact Works
-      <img className="hero-img" src={whiteBGHero}/>
+          .contact-page-inner {
+            width: 100%;
+            height: 100%;
+          }
+          `}</style>
+        <div className="contact-page-inner">
+        <div className="contact-line">
+          <div className="contact-line-left">
+
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
