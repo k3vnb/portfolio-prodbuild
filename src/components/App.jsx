@@ -19,7 +19,7 @@ function App(){
   return (
     <div style={appStyleSheet}>
       <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+          @import @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Didact+Gothic');
           a {
             text-decoration: none;
           }

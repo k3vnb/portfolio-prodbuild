@@ -33,7 +33,7 @@ function Header(){
             text-shadow: 1px 1px 1px black;
             width: 60%;
             background-color: #0e000e61;
-            box-shadow: 2px 2px 2px #0e000e;
+            box-shadow: 13px 19px 20px 0px #9cece54a;
             font-family: 'Didact Gothic', sans-serif;
             display: flex;
             flex-direction: column;
@@ -41,11 +41,13 @@ function Header(){
           }
           .title-text, .tagline {
             text-align: center;
+            color: #0e000e;
           }
           .title-text {
+            font-family: 'Carrois Gothic SC', sans-serif;
             text-decoration: none;
-            color: white;
-            text-shadow: 0px 0px 3px black;
+            color: #fff9f0;
+            text-shadow: 3px 3px 5px black;
           }
           .tagline {
             text-shadow: .5px .5px 1px white;
@@ -54,6 +56,7 @@ function Header(){
             margin-top: 5%;
             display: flex;
             justify-content: space-around;
+            position: sticky;
           }
           .nav-links {
             border: 1px solid #ffa90e;
@@ -63,6 +66,7 @@ function Header(){
             box-shadow: inset 1px 1px 1px black;
             padding: 12%;
             transition: box-shadow .2s;
+            height: 60%;
           }
           .nav-links:hover {
             box-shadow: 2px 2px 2px black;
@@ -82,12 +86,12 @@ function Header(){
       <div className="background-img">
       <div className="header-stylesheet">
       <div className="header-main-content">
-        <Link to="/"><h1 className="title-text">Kevin Boyle</h1></Link>
+        <Link to="/"><h1 className="title-text">K e v i n  &nbsp; B o y l e</h1></Link>
         <h2 className="tagline">Web Developer & Designer</h2>
         <div className="link-line">
           <Link to="/about"><div className="nav-links">About</div></Link>
-          <Link to="/contact"><div className="nav-links">Contact</div></Link>
           <Link to="/gallery"><div className="nav-links">Gallery</div></Link>
+          <Link to="/contact"><div className="nav-links">Contact</div></Link>
         </div>
       </div>
     </div>
