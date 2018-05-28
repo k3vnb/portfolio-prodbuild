@@ -16,6 +16,8 @@ function Header(){
             height: 68%;
             background-repeat: repeat-y;
             background-size: cover;
+            position: sticky;
+            top: -480px;
           }
           .background-img {
             height: 100%;
@@ -50,6 +52,7 @@ function Header(){
             text-decoration: none;
             color: #fff9f0;
             text-shadow: 3px 3px 5px black;
+            letter-spacing: 13px;
           }
           .tagline {
             text-shadow: .5px .5px 1px white;
@@ -66,9 +69,10 @@ function Header(){
             width: 100%;
             text-align: center;
             box-shadow: inset 1px 1px 1px black;
-            padding: 12%;
+            padding: 1%;
+            width: 20%;
             transition: box-shadow .2s;
-            height: 60%;
+            height: 20%;
           }
           .nav-links:hover {
             box-shadow: 2px 2px 2px black;
@@ -86,20 +90,20 @@ function Header(){
           }
         `}</style>
       <div className="background-img">
-      <div className="header-stylesheet">
-      <div className="header-main-content">
-        <Link to="/"><h1 className="title-text">K e v i n  &nbsp; B o y l e</h1></Link>
-        <h2 className="tagline">Web Developer & Designer</h2>
-        <div className="link-line">
-          <div className="nav-links" onClick={(e) => window.scrollTo({top:2000, behavior:"smooth"})}>About</div>
-          <div className="nav-links">Gallery</div>
-          <div className="nav-links">Contact</div>
+        <div className="header-stylesheet">
+          <div className="header-main-content">
+            <Link to="/"><h1 className="title-text">Kevin  &nbsp;Boyle</h1></Link>
+            <h2 className="tagline">Web Developer & Designer</h2>
+            <div className="link-line">
+              <div className="nav-links" onClick={(e) => window.scrollTo({top:2000, behavior:'smooth'})}>About</div>
+              <div className="nav-links">Gallery</div>
+              <div className="nav-links">Contact</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-    );
+  );
 }
 
 export default Header;

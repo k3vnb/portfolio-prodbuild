@@ -16,7 +16,7 @@ function Contact(){
             height: 100%;
           }
           `}</style>
-        <div className="contact-page-inner">
+      <div className="contact-page-inner">
         <div className="contact-line">
           <div className="contact-line-left">
             Contact

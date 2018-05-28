@@ -21,7 +21,7 @@ function Footer(){
             margin-right: 20px;
           }
             `}</style>
-          <h1>Kevin Boyle</h1>
+      <h1>Kevin Boyle</h1>
     </div>
   );
 }

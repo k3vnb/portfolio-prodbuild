@@ -14,7 +14,7 @@ function App(){
   const appStyleSheet = {
     height: '150vh',
     width: '100vw'
-  }
+  };
 
   return (
     <div style={appStyleSheet}>
@@ -37,7 +37,6 @@ function App(){
             `}
       </style>
       <Header />
-      <LandingPage />
       <About />
       <Contact />
       <Footer />
