@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import skyBG from '../assets/images/sky-bg.jpg';
 
 
+
+
 function Header(){
 
   return (
@@ -89,9 +91,9 @@ function Header(){
         <Link to="/"><h1 className="title-text">K e v i n  &nbsp; B o y l e</h1></Link>
         <h2 className="tagline">Web Developer & Designer</h2>
         <div className="link-line">
-          <Link to="/about"><div className="nav-links">About</div></Link>
-          <Link to="/gallery"><div className="nav-links">Gallery</div></Link>
-          <Link to="/contact"><div className="nav-links">Contact</div></Link>
+          <div className="nav-links" onClick={(e) => window.scrollTo({top:2000, behavior:"smooth"})}>About</div>
+          <div className="nav-links">Gallery</div>
+          <div className="nav-links">Contact</div>
         </div>
       </div>
     </div>
