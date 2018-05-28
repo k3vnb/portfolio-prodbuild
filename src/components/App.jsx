@@ -37,17 +37,20 @@ function App(){
             `}
       </style>
       <Header />
-      <Switch>
-        <Route exact path='/' component={LandingPage} />
-        <Route exact path='/a' component={PreLandingPage} />
-        <Route exact path='/gallery' component={PictureList} />
-        <Route path='/about' component={About} />
-        <Route exact path='/contact' component={Contact} />
-        <Route component={Error404} />
-      </Switch>
+      <LandingPage />
+      <About />
+      <Contact />
       <Footer />
     </div>
   );
 }
 
 export default App;
+// <Switch>
+//   <Route exact path='/' component={LandingPage} />
+//   <Route exact path='/a' component={PreLandingPage} />
+//   <Route exact path='/gallery' component={PictureList} />
+//   <Route path='/about' component={About} />
+//   <Route exact path='/contact' component={Contact} />
+//   <Route component={Error404} />
+// </Switch>
