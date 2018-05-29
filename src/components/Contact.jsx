@@ -1,15 +1,11 @@
 import React from 'react';
-import whiteBGHero from '../assets/images/white_bg_hero.jpg';
 
 function Contact(){
   return(
     <div className="main-container contact-container">
       <style jsx>{`
-          .main-container {
-            background-image: url(${whiteBGHero});
-            background-size: cover;
-            background-position: right;
-            background-repeat: no-repeat;
+          .contact-container {
+            height: 80%;
             margin-top: 5%;
           }
           .contact-page-inner {
