@@ -33,7 +33,7 @@ function Header(){
             background-repeat: repeat-y;
             background-size: cover;
             position: sticky;
-            top: -480px;
+            top: -525px;
           }
           .background-img {
             height: 100%;
@@ -97,7 +97,7 @@ function Header(){
             cursor: pointer;
           }
           .nav-links:active {
-            background-color: #f9980291;
+            box-shadow: 3px 3px 3px white;
             color: white;
           }
           h1 {
