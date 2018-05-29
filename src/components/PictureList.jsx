@@ -34,16 +34,15 @@ function PictureList(){
     <div className="gallery-container">
       <style jsx>{`
         .gallery-container {
-          background-color: white;
+          background-color: black;
+          padding: 3%;
           color: white;
           display: flex;
           flex-wrap: wrap;
-        }
-        img {
-          margin-left: 50px;
+          justify-content: space-around;
         }
         `}</style>
-      <hr/>
+
       {masterPictureList.map((picture, index) =>
         <Picture imageSource = {picture.imageSource}
           imageTitle = {picture.imageTitle}

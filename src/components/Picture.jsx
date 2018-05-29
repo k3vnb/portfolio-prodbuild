@@ -7,18 +7,20 @@ function Picture(props){
       <style jsx>{`
         .gallery-card {
           width: 45%;
+          padding: 1%;
         }
         .gallery-image {
-          height: 90%;
-          width: 50%;
+          background-color: white;
+          margin: 1%;
+          width: 40px;
+          overflow: hidden;
           margin: 10px 30%;
+          zoom: 300%;
           object-fit: contain;
+          object-position: 50% 50%;
         }
         `}</style>
-      <h4>{props.imageSource}</h4>
-      <h4>{props.imageTitle}</h4>
-        <img className="gallery-image" src={props.imageItself} />
-      <hr/>
+        <img className="gallery-image" src={props.imageItself} alt={props.imageTitle} />
     </div>
   );
 }
