@@ -3,7 +3,7 @@ import whiteBGHero from '../assets/images/white_bg_hero.jpg';
 
 function Contact(){
   return(
-    <div className="main-container">
+    <div className="main-container contact-container">
       <style jsx>{`
           .main-container {
             background-image: url(${whiteBGHero});
@@ -20,7 +20,7 @@ function Contact(){
       <div className="contact-page-inner">
         <div className="contact-line">
           <div className="contact-line-left">
-            Contact
+            Contact CONTACT Contact
           </div>
         </div>
       </div>

@@ -13,7 +13,6 @@ function Header(){
 
   function scrollToPage(pageSelector) {
     const goToPage = document.querySelector(pageSelector);
-    alert('blammo');
     const toElement = (element) => {
       if (element) {
         element.scrollIntoView({
@@ -117,9 +116,9 @@ function Header(){
             <Link to="/"><h1 className="title-text">Kevin  &nbsp;Boyle</h1></Link>
             <h2 className="tagline">Web Developer & Designer</h2>
             <div className="link-line">
-              <div className="nav-links" onClick={(e) => scrollToPage('.about-upper')}>About</div>
-              <div className="nav-links">Gallery</div>
-              <div className="nav-links">Contact</div>
+              <div className="nav-links" onClick={(e) => scrollToPage('.about-container')}>About</div>
+              <div className="nav-links" onClick={(e) => scrollToPage('.gallery-container')}>Gallery</div>
+              <div className="nav-links" onClick={(e) => scrollToPage('.contact-container')}>Contact</div>
             </div>
           </div>
         </div>
