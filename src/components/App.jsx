@@ -38,6 +38,7 @@ function App(){
       </style>
       <Header />
       <About />
+      <PictureList />
       <Contact />
       <Footer />
     </div>

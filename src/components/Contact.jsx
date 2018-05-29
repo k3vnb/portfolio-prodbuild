@@ -10,6 +10,7 @@ function Contact(){
             background-size: cover;
             background-position: right;
             background-repeat: no-repeat;
+            margin-top: 5%;
           }
           .contact-page-inner {
             width: 100%;

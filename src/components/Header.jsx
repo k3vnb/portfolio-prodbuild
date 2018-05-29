@@ -6,7 +6,24 @@ import skyBG from '../assets/images/sky-bg.jpg';
 
 
 
+
+
+
 function Header(){
+
+  function scrollToPage(pageSelector) {
+    const goToPage = document.querySelector(pageSelector);
+    alert('blammo');
+    const toElement = (element) => {
+      if (element) {
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    };
+    toElement(goToPage);
+  }
 
   return (
     <div className="wallpaper-div">
@@ -78,6 +95,11 @@ function Header(){
             box-shadow: 2px 2px 2px black;
             text-shadow: 2px 2px 2px black;
             border: 1px solid orange;
+            cursor: pointer;
+          }
+          .nav-links:active {
+            background-color: #f9980291;
+            color: white;
           }
           h1 {
             margin: 0;
@@ -95,7 +117,7 @@ function Header(){
             <Link to="/"><h1 className="title-text">Kevin  &nbsp;Boyle</h1></Link>
             <h2 className="tagline">Web Developer & Designer</h2>
             <div className="link-line">
-              <div className="nav-links" onClick={(e) => window.scrollTo({top:2000, behavior:'smooth'})}>About</div>
+              <div className="nav-links" onClick={(e) => scrollToPage('.about-upper')}>About</div>
               <div className="nav-links">Gallery</div>
               <div className="nav-links">Contact</div>
             </div>

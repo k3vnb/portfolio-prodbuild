@@ -18,7 +18,13 @@ var masterPictureList = [
 
 function PictureList(){
   return (
-    <div>
+    <div className="gallery-container">
+      <style jsx>{`
+        .gallery-container {
+          background-color: black;
+          color: white;
+        }
+        `}</style>
       <hr/>
       {masterPictureList.map((picture, index) =>
         <Picture imageSource = {picture.imageSource}
