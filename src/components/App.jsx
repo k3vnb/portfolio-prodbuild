@@ -4,7 +4,7 @@ import PictureList from './PictureList';
 import Contact from './Contact';
 import Footer from './Footer';
 import LandingPage from './LandingPage';
-import PreLandingPage from './PreLandingPage';
+import Nav from './Nav';
 import About from './About';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
@@ -13,7 +13,8 @@ function App(){
 
   const appStyleSheet = {
     height: '150vh',
-    width: '100vw'
+    width: '100vw',
+    position: 'relative'
   };
 
   return (
@@ -39,6 +40,7 @@ function App(){
       <About />
       <PictureList />
       <Contact />
+      <Nav />
       <Footer />
     </div>
   );
