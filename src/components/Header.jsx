@@ -25,11 +25,17 @@ function Header(){
   }
 
   return (
-    <div className="wallpaper-div">
+    <div className="header-container">
       <style jsx>{`
+          .header-container {
+            height: 68%;
+            background-color: white;
+            position: relative;
+            z-index: 2;
+          }
           .wallpaper-div {
             background-image: url(${wallpaper});
-            height: 68%;
+            height: 100%;
             background-repeat: repeat-y;
             background-size: cover;
             position: sticky;
@@ -41,13 +47,13 @@ function Header(){
             background-image: url(${skyBG});
             opacity: .7;
           }
-          .header-stylesheet {
+          .header-overlay {
             background-color: #0e000e61;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 2;
+            z-index: 3;
           }
           .header-main-content {
             text-shadow: 1px 1px 1px black;
@@ -110,8 +116,9 @@ function Header(){
             }
           }
         `}</style>
+    <div className="wallpaper-div">
       <div className="background-img">
-        <div className="header-stylesheet">
+        <div className="header-overlay">
           <div className="header-main-content">
             <Link to="/"><h1 className="title-text">Kevin  &nbsp;Boyle</h1></Link>
             <h2 className="tagline">Web Developer & Designer</h2>
@@ -124,6 +131,7 @@ function Header(){
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

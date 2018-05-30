@@ -4,7 +4,6 @@ function Footer(){
   let footerStyleSheet = {
     fontFamily: 'Didact Gothic, sans-serif',
     width: '100%',
-    backgroundColor: '#0e000e61',
     position: 'fixed',
     bottom: '0',
     height: 20,

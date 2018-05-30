@@ -32,15 +32,19 @@ function Nav(){
           left: 2%;
         }
         .sidebar-links-container {
-          height: 30vh;
+          height: 40vh;
+          width: 10vw;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
         }
         .nav-link-sidebar {
-          text-shadow: 1px 1px 1px white;
-          border: 1px solid white;
-          padding: .5%;
+          text-shadow: .2px .2px 0px #ffffff38;
+          color: orange;
+          border: .1px solid #ffffff38;
+          font-family: 'Carrois Gothic SC', sans-serif;
+          padding: 5%;
+          font-size: 3vw;
         }
         `}</style>
       <div className="sidebar-links-container">
