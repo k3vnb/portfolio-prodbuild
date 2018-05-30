@@ -27,7 +27,6 @@ function App(){
             margin: 2% 20%;
             padding: 8%;
             background-color: white;
-            box-shadow: #303d401c 0px 0px 4px 6px;
             height: 200px;
           }
           @media screen and (max-width: 650px){

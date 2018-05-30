@@ -34,7 +34,7 @@ function PictureList(){
     <div className="gallery-container">
       <style jsx>{`
         .gallery-container {
-          background-color: black;
+          background-color: #010106d6;
           padding: 3%;
           color: white;
           display: flex;

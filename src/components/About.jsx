@@ -44,6 +44,13 @@ function About() {
           }
           .leader-text {
             font-size: 3vw;
+            margin-left: -4px;
+          }
+          .leader-text2 {
+            font-size: 2.15vw;
+          }
+          .about-lower {
+            font-size: 1.7vw;
           }
           .skills-list {
             list-style: none;
@@ -52,9 +59,6 @@ function About() {
           }
           .skills-list li {
             width: 50%;
-          }
-          .about-lower {
-            font-size: 2.5vw;
           }
           @media screen and (max-width: 650px){
             .leader-text {
@@ -74,7 +78,7 @@ function About() {
         </div>
       </div>
       <div className="about-lower">
-          <p>As a student of Anthropology at the University of Toronto, I was immersed in post-structural thought on human communication and interaction. I learned that all human culture is part of a vast interwoven fabric of human communication. And as the semiotician Marshall McLuhan said, "the Medium is the Message." I didn't understand that quote in college, and also I do not understand it now. But sometimes I kind of understand it.</p>
+          <p><span className="leader-text2">As a student of Anthropology</span> at the University of Toronto, I was immersed in post-structural thought on human communication and interaction. I learned that all human culture is part of a vast interwoven fabric of human communication. And as the semiotician Marshall McLuhan said, "the Medium is the Message." I didn't understand that quote in college, and also I do not understand it now. But sometimes I kind of understand it.</p>
             <p>I have been trained in the art of building apps and making websites at Epicodus. I consider coding to be a craft and artform, and I enjoy enjoy building my Javascript, React, and design toolkits.</p>
               <p>Some of specialties my are:
                 <ul className="skills-list">

@@ -95,10 +95,10 @@ function Header(){
             text-shadow: 2px 2px 2px black;
             border: 1px solid orange;
             cursor: pointer;
+            transform: translate(-.5px, -.5px);
           }
           .nav-links:active {
-            box-shadow: 3px 3px 3px white;
-            color: white;
+            box-shadow: 3px 3px 5px #fffffe8c;
           }
           h1 {
             margin: 0;
