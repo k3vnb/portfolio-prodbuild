@@ -9,17 +9,17 @@ import About from './About';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
-function App(){
+class App extends React.Component {
 
-  const appStyleSheet = {
-    height: '150vh',
-    width: '100vw',
-    position: 'relative'
-  };
-
-  return (
-    <div style={appStyleSheet}>
-      <style jsx global>{`
+  render(){
+    const appStyleSheet = {
+      height: '150vh',
+      width: '100vw',
+      position: 'relative'
+    };
+    return (
+      <div style={appStyleSheet}>
+        <style jsx global>{`
           @import @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Didact+Gothic');
           a {
             text-decoration: none;
@@ -35,15 +35,16 @@ function App(){
               margin: 3% 10%;
             }
             `}
-      </style>
-      <Header />
-      <About />
-      <PictureList />
-      <Contact />
-      <Nav />
-      <Footer />
-    </div>
-  );
+        </style>
+        <Header />
+        <About />
+        <PictureList />
+        <Contact />
+        <Nav />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;

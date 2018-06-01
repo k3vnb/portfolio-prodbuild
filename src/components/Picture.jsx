@@ -20,7 +20,7 @@ function Picture(props){
           object-position: 50% 50%;
         }
         `}</style>
-        <img className="gallery-image" src={props.imageItself} alt={props.imageTitle} />
+      <img className="gallery-image" src={props.imageItself} alt={props.imageTitle} />
     </div>
   );
 }

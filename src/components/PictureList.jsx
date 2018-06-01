@@ -1,10 +1,10 @@
 import React from 'react';
 import Picture from './Picture';
 
-import devil from '../assets/images/gallery/devil.svg'
-import walrus from '../assets/images/gallery/walrus.svg'
-import martini from '../assets/images/gallery/martini.svg'
-import boom from '../assets/images/gallery/boom.svg'
+import devil from '../assets/images/gallery/devil.svg';
+import walrus from '../assets/images/gallery/walrus.svg';
+import martini from '../assets/images/gallery/martini.svg';
+import boom from '../assets/images/gallery/boom.svg';
 
 var masterPictureList = [
   {
