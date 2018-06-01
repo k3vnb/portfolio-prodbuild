@@ -36,6 +36,18 @@ class Header extends React.Component {
               background-color: white;
               position: relative;
               z-index: 2;
+              animation: color-change 14s linear infinite;
+            }
+            @keyframes color-change {
+              0% {
+                background-color: #8bd8fb;
+              }
+              50% {
+                background-color: white;
+              }
+              100% {
+                background-color: #8bd8fb;
+              }
             }
             .wallpaper-div {
               background-image: url(${wallpaper});
@@ -50,6 +62,15 @@ class Header extends React.Component {
               width: 100%;
               background-image: url(${skyBG});
               opacity: .7;
+              animation: opacity-change 1.5s ease-in;
+            }
+            @keyframes opacity-change {
+              from {
+                opacity: .3;
+              }
+              to {
+                opacity: .7;
+              }
             }
             .header-overlay {
               background-color: #0e000e61;
@@ -68,6 +89,15 @@ class Header extends React.Component {
               display: flex;
               flex-direction: column;
               padding: 5%;
+              animation: opacity-change-2 3s ease-in;
+            }
+            @keyframes opacity-change-2 {
+              from {
+                background-color: #0e000e00;
+              }
+              to {
+                background-color: #0e000e61;
+              }
             }
             .title-text, .tagline {
               text-align: center;
