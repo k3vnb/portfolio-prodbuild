@@ -56,7 +56,13 @@ class Nav extends React.Component {
             left: 2%;
           }
           .sidebar-links-container-off {
+            height: 40vh;
+            width: 10vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             opacity: 0;
+            animation: become-transparent .2s;
           }
           .sidebar-links-container-on {
             height: 40vh;
@@ -64,15 +70,14 @@ class Nav extends React.Component {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            animation: become-opaque 2s ease-in;
+            animation: become-opaque 1.8s;
           }
           .nav-link-sidebar {
             text-shadow: .2px .2px 0px #ffffff38;
             color: orange;
-            border: .1px solid #ffffff38;
             font-family: 'Carrois Gothic SC', sans-serif;
             padding: 5%;
-            font-size: 3vw;
+            font-size: 2vw;
           }
           @keyframes become-opaque {
             from {
@@ -80,6 +85,14 @@ class Nav extends React.Component {
             }
             to {
               opacity: 1;
+            }
+          }
+          @keyframes become-transparent {
+            from {
+              opacity: .8;
+            }
+            to {
+              opacity: 0;
             }
           }
           `}</style>

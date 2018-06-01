@@ -43,7 +43,7 @@ function About() {
             font-size: 14vw;
           }
           .leader-text {
-            font-size: 3vw;
+            font-size: 2.5vw;
             margin-left: -4px;
           }
           .leader-text2 {
@@ -53,16 +53,19 @@ function About() {
             font-size: 1.7vw;
           }
           .skills-list {
-            list-style: none;
+            width: 110%;
+            margin-left: -7%;
             display: flex;
+            justify-content: space-between;
             flex-wrap: wrap;
           }
           .skills-list li {
-            width: 50%;
+            width: 45%;
+            margin-left: 2%;
           }
           @media screen and (max-width: 650px){
             .leader-text {
-              font-size: 4vw;
+              font-size: 3.5vw;
             }
             .about-upper-right {
               font-size: 3vw;
@@ -74,23 +77,29 @@ function About() {
           <h2 className="hi">Hi</h2>
         </div>
         <div className="about-upper-half about-upper-right">
-          <p><span className="leader-text">Thank you</span> for visiting. My name is Kevin and I design and develop websites.</p>
+          <p><span className="leader-text">Thank you</span> for visiting. My name is Kevin and I design & develop websites.</p>
         </div>
       </div>
       <div className="about-lower">
-        <p><span className="leader-text2">As a student of Anthropology</span> at the University of Toronto, I was immersed in post-structural thought on human communication and interaction. I learned that all human culture is part of a vast interwoven fabric of human communication. And as the semiotician Marshall McLuhan said, "the Medium is the Message." I didn't understand that quote in college, and also I do not understand it now. But sometimes I kind of understand it.</p>
-        <p>I have been trained in the art of building apps and making websites at Epicodus. I consider coding to be a craft and artform, and I enjoy enjoy building my Javascript, React, and design toolkits.</p>
-        <p>Some of specialties my are:
+        <p><span className="leader-text2">I consider coding to be craft and artform</span>, an opportunity for lifelong learning and for building on life experiences. My personal mission is to contribute and facilitate meaningful art, interaction, and dialogue to society and to build positive relationships with peers, clients, and users.</p>
+        <p>I have a background in Anthropology, cross-cultural communication, and community management. I completed my undergraduate degree at the University of Toronto, where I was immersed in post-structural thought on human communication in the age of digital media. After receiving my degree I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. I have studied music, art, and philosophy. When I first learned to code, I immediately realized that I found the platform that could combine all of my passions and interests with endless possibilities.</p>
+        <h4>Some of my skills are:</h4>
           <ul className="skills-list">
             <li>Javascript</li>
-            <li>React</li>
-            <li>jQuery</li>
+            <li>React/Redux</li>
             <li>HTML5/CSS3</li>
-            <li>Pair-Programming</li>
+            <li>Sass/SCSS</li>
+            <li>Vector Graphic Illustration</li>
+            <li>MVC</li>
+            <li>API Integration</li>
+            <li>NodeJS/NPM</li>
+            <li>jQuery</li>
+            <li>Mobile Responsive Design</li>
+            <li>SEO</li>
+            <li>Behavior Driven Development</li>
             <li>Creative Problem Solving</li>
-            <li>Cross-cultural communication</li>
+            <li>Cross-cultural Communication</li>
           </ul>
-        </p>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ function Contact(){
       <div className="contact-page-inner">
         <div className="contact-line">
           <div className="contact-line-left">
-            Contact CONTACT Contact
+            
           </div>
         </div>
       </div>
