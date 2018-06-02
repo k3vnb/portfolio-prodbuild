@@ -1,4 +1,6 @@
 import React from 'react';
+import portraitNav from '../assets/images/portrait-nav.png';
+
 
 
 class Nav extends React.Component {
@@ -52,36 +54,48 @@ class Nav extends React.Component {
         <style jsx>{`
           .sidebar {
             position: fixed;
-            top: -2%;
+            top: -.5%;
             left: 0%;
-            width: 100%;
-            background-color: #ffffffcf;
+            width: 110%;
+            background-color: #fffffff0;
+            border-bottom: .5px solid #ffa90e8c;
           }
           .sidebar-links-container-off {
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
+            align-items: center;
             opacity: 0;
             animation: become-transparent .2s;
+            margin-left: 5%;
           }
           .sidebar-links-container-on {
-            height: 10vh;
-            width: 100%;
+            height: 12.8vh;
+            width: 80%;
             display: flex;
-            justify-content: space-around;
+            align-items: center;
+            justify-content: space-between;
             animation: become-opaque 1.8s;
+            margin-left: 5%;
+          }
+          .nav-links-right {
+            display: flex;
           }
           .nav-link-sidebar {
-            color: orange;
+            color: #4c4943;
             font-family: 'Carrois Gothic SC', sans-serif;
             padding: 5%;
-            font-size: 3vw;
+            font-size: 2vw;
             transition: text-shadow .1s;
           }
           .nav-link-sidebar:hover {
             cursor: pointer;
             transform: scale(1.015);
-            text-shadow: .5px .5px 1px #0202029c;
+            text-shadow: .5px .5px 0px #0202029c;
+          }
+          .self-portrait {
+            max-height: 11.4vh;
+            object-fit: contain;
           }
           @keyframes become-opaque {
             from {
@@ -101,17 +115,21 @@ class Nav extends React.Component {
           }
           `}</style>
         <div className={this.state.navOpacityFull ? 'sidebar-links-container-on' : 'sidebar-links-container-off'}>
-          <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.about-container')}>
-                About
+          <div>
+            <div className="nav-link-sidebar" onClick={(e) => scrollToTop()}>
+              <img className="self-portrait" src={portraitNav} alt="Kevin Boyle" title="Back to Top"/>
+            </div>
           </div>
-          <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.gallery-container')}>
-                Gallery
-          </div>
-          <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.contact-container')}>
-                Contact
-          </div>
-          <div className="nav-link-sidebar" onClick={(e) => scrollToTop()}>
-            Back to top
+          <div className="nav-links-right">
+            <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.about-container')}>
+              About
+            </div>
+            <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.gallery-container')}>
+              Gallery
+            </div>
+            <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.contact-container')}>
+              Contact
+            </div>
           </div>
         </div>
       </div>

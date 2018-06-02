@@ -1,5 +1,4 @@
 import React from 'react';
-import portrait from '../assets/images/self-portrait.png';
 
 function About() {
 
