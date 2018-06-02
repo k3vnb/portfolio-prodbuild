@@ -100,6 +100,10 @@ class Nav extends React.Component {
           .self-portrait {
             max-height: 11.4vh;
             object-fit: contain;
+            transition: .6s transform ease-in;
+          }
+          .self-portrait:hover {
+            transform: rotateY(180deg);
           }
           @keyframes become-opaque {
             from {
@@ -115,6 +119,20 @@ class Nav extends React.Component {
             }
             to {
               opacity: 0;
+            }
+          }
+          @keyframes flip {
+            0% {
+              transform: rotateY(0deg);
+            }
+            3% {
+              transform: rotateY(180deg);
+            }
+            97% {
+              transform: rotateY(180deg);
+            }
+            100% {
+              transform: rotateY(360deg);
             }
           }
           `}</style>
