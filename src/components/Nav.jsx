@@ -56,12 +56,14 @@ class Nav extends React.Component {
             position: fixed;
             top: -.5%;
             left: 0%;
-            width: 110%;
+            width: 100%;
             background-color: #fffffff0;
             border-bottom: .5px solid #ffa90e8c;
+            height: 12.8vh;
           }
           .sidebar-links-container-off {
-            width: 100%;
+            height: 100%;
+            width: 80%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -73,18 +75,20 @@ class Nav extends React.Component {
             height: 12.8vh;
             width: 80%;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            animation: become-opaque 1.8s;
+            align-items: center;
+            animation: become-opaque 2s;
             margin-left: 5%;
           }
           .nav-links-right {
             display: flex;
+            justify-content: space-between;
+            width: 35%;
+            margin-left: 5%;
           }
           .nav-link-sidebar {
             color: #4c4943;
             font-family: 'Carrois Gothic SC', sans-serif;
-            padding: 5%;
             font-size: 2vw;
             transition: text-shadow .1s;
           }

@@ -82,25 +82,25 @@ function About() {
         </div>
       </div>
       <div className="about-lower">
-        <p><span className="leader-text2">I consider coding to be craft and artform</span>, an opportunity for lifelong learning and for building on life experiences. My personal mission is to contribute and facilitate meaningful art, interaction, and dialogue to society and to build positive relationships with peers, clients, and users.</p>
+        <p><span className="leader-text2">I consider coding to be a craft and an artform</span>, an opportunity for lifelong learning and for building on life experiences. My personal mission is to contribute and facilitate meaningful art, interaction, and dialogue to society and to build positive relationships with peers, clients, and users.</p>
         <p>I have a background in Anthropology, cross-cultural communication, and community management. I completed my undergraduate degree at the University of Toronto, where I was immersed in post-structural thought on human communication in the age of digital media. After receiving my degree I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. I have studied music, art, language, and philosophy. When I first learned to code, I immediately realized that I found the platform that could combine all of my passions and interests with endless possibilities.</p>
         <p className="leader-text2">Some of my skills are:</p>
-          <ul className="skills-list">
-            <li>Javascript</li>
-            <li>React/Redux</li>
-            <li>HTML5/CSS3</li>
-            <li>Sass/SCSS</li>
-            <li>Vector Graphic Illustration</li>
-            <li>MVC</li>
-            <li>API Integration</li>
-            <li>NodeJS/NPM</li>
-            <li>jQuery</li>
-            <li>Mobile Responsive Design</li>
-            <li>SEO</li>
-            <li>Behavior Driven Development</li>
-            <li>Creative Problem Solving</li>
-            <li>Cross-cultural Communication</li>
-          </ul>
+        <ul className="skills-list">
+          <li>Javascript</li>
+          <li>React/Redux</li>
+          <li>HTML5/CSS3</li>
+          <li>Sass/SCSS</li>
+          <li>Vector Graphic Illustration</li>
+          <li>MVC</li>
+          <li>API Integration</li>
+          <li>NodeJS/NPM</li>
+          <li>jQuery</li>
+          <li>Mobile Responsive Design</li>
+          <li>SEO</li>
+          <li>Behavior Driven Development</li>
+          <li>Creative Problem Solving</li>
+          <li>Cross-cultural Communication</li>
+        </ul>
       </div>
     </div>
   );

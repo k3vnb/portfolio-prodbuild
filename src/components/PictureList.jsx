@@ -33,7 +33,10 @@ function PictureList(){
   return (
     <div className="gallery-container">
       <style jsx>{`
-        .gallery-container {
+        .top-buffer {
+          height: 12.55vh;
+        }
+        .gallery-main-content {
           background-color: #010106d6;
           padding: 3%;
           color: white;
@@ -42,13 +45,16 @@ function PictureList(){
           justify-content: space-around;
         }
         `}</style>
+      <div className="top-buffer"></div>
+      <div className="gallery-main-content">
 
-      {masterPictureList.map((picture, index) =>
-        <Picture imageSource = {picture.imageSource}
-          imageTitle = {picture.imageTitle}
-          imageItself = {picture.imageItself}
-          key={index}/>
-      )}
+        {masterPictureList.map((picture, index) =>
+          <Picture imageSource = {picture.imageSource}
+            imageTitle = {picture.imageTitle}
+            imageItself = {picture.imageItself}
+            key={index}/>
+        )}
+      </div>
     </div>
   );
 }
