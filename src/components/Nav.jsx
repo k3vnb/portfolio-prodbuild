@@ -52,32 +52,36 @@ class Nav extends React.Component {
         <style jsx>{`
           .sidebar {
             position: fixed;
-            top: 10%;
-            left: 2%;
+            top: -2%;
+            left: 0%;
+            width: 100%;
+            background-color: #ffffffcf;
           }
           .sidebar-links-container-off {
-            height: 40vh;
-            width: 10vw;
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             opacity: 0;
             animation: become-transparent .2s;
           }
           .sidebar-links-container-on {
-            height: 40vh;
-            width: 10vw;
+            height: 10vh;
+            width: 100%;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            justify-content: space-around;
             animation: become-opaque 1.8s;
           }
           .nav-link-sidebar {
-            text-shadow: .2px .2px 0px #ffffff38;
             color: orange;
             font-family: 'Carrois Gothic SC', sans-serif;
             padding: 5%;
-            font-size: 2vw;
+            font-size: 3vw;
+            transition: text-shadow .1s;
+          }
+          .nav-link-sidebar:hover {
+            cursor: pointer;
+            transform: scale(1.015);
+            text-shadow: .5px .5px 1px #0202029c;
           }
           @keyframes become-opaque {
             from {
@@ -97,9 +101,6 @@ class Nav extends React.Component {
           }
           `}</style>
         <div className={this.state.navOpacityFull ? 'sidebar-links-container-on' : 'sidebar-links-container-off'}>
-          <div className="nav-link-sidebar" onClick={(e) => scrollToTop()}>
-            <p>Back to top</p>
-          </div>
           <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.about-container')}>
                 About
           </div>
@@ -108,6 +109,9 @@ class Nav extends React.Component {
           </div>
           <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.contact-container')}>
                 Contact
+          </div>
+          <div className="nav-link-sidebar" onClick={(e) => scrollToTop()}>
+            Back to top
           </div>
         </div>
       </div>

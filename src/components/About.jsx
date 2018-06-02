@@ -1,4 +1,5 @@
 import React from 'react';
+import portrait from '../assets/images/self-portrait.png';
 
 function About() {
 
@@ -63,6 +64,7 @@ function About() {
             width: 45%;
             margin-left: 2%;
           }
+
           @media screen and (max-width: 650px){
             .leader-text {
               font-size: 3.5vw;
@@ -82,8 +84,8 @@ function About() {
       </div>
       <div className="about-lower">
         <p><span className="leader-text2">I consider coding to be craft and artform</span>, an opportunity for lifelong learning and for building on life experiences. My personal mission is to contribute and facilitate meaningful art, interaction, and dialogue to society and to build positive relationships with peers, clients, and users.</p>
-        <p>I have a background in Anthropology, cross-cultural communication, and community management. I completed my undergraduate degree at the University of Toronto, where I was immersed in post-structural thought on human communication in the age of digital media. After receiving my degree I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. I have studied music, art, and philosophy. When I first learned to code, I immediately realized that I found the platform that could combine all of my passions and interests with endless possibilities.</p>
-        <h4>Some of my skills are:</h4>
+        <p>I have a background in Anthropology, cross-cultural communication, and community management. I completed my undergraduate degree at the University of Toronto, where I was immersed in post-structural thought on human communication in the age of digital media. After receiving my degree I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. I have studied music, art, language, and philosophy. When I first learned to code, I immediately realized that I found the platform that could combine all of my passions and interests with endless possibilities.</p>
+        <p className="leader-text2">Some of my skills are:</p>
           <ul className="skills-list">
             <li>Javascript</li>
             <li>React/Redux</li>
