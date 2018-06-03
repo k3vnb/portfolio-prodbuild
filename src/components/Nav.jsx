@@ -1,5 +1,5 @@
 import React from 'react';
-import portraitNav from '../assets/images/portrait-nav.png';
+import logo from '../assets/images/logo.png';
 
 
 
@@ -57,9 +57,9 @@ class Nav extends React.Component {
             top: -.5%;
             left: 0%;
             width: 100%;
-            background-color: #fffffff0;
+            background-color: white;
             border-bottom: .5px solid #ffa90e8c;
-            height: 12.8vh;
+            height: 7.8vh;
           }
           .sidebar-links-container-off {
             height: 100%;
@@ -72,7 +72,7 @@ class Nav extends React.Component {
             margin-left: 5%;
           }
           .sidebar-links-container-on {
-            height: 12.8vh;
+            height: 100%;
             width: 80%;
             display: flex;
             justify-content: space-between;
@@ -97,13 +97,22 @@ class Nav extends React.Component {
             transform: scale(1.015);
             text-shadow: .5px .5px 0px #0202029c;
           }
+          .nav-link-sidebar:active {
+            transform: scale(1.025);
+            text-shadow: 0px 1px 5px #ffee0087;
+          }
           .self-portrait {
-            max-height: 11.4vh;
+            max-height: 7.1vh;
             object-fit: contain;
-            transition: .6s transform ease-in;
+            margin-top: 1vh;
+            margin-left: 5vw;
+            transition: .6s transform ease-out;
           }
           .self-portrait:hover {
             transform: rotateY(180deg);
+          }
+          .self-portrait:active {
+            transform: rotateX(180deg);
           }
           @keyframes become-opaque {
             from {
@@ -121,25 +130,11 @@ class Nav extends React.Component {
               opacity: 0;
             }
           }
-          @keyframes flip {
-            0% {
-              transform: rotateY(0deg);
-            }
-            3% {
-              transform: rotateY(180deg);
-            }
-            97% {
-              transform: rotateY(180deg);
-            }
-            100% {
-              transform: rotateY(360deg);
-            }
-          }
           `}</style>
         <div className={this.state.navOpacityFull ? 'sidebar-links-container-on' : 'sidebar-links-container-off'}>
           <div>
             <div className="nav-link-sidebar" onClick={(e) => scrollToTop()}>
-              <img className="self-portrait" src={portraitNav} alt="Kevin Boyle" title="Back to Top"/>
+              <img className="self-portrait" src={logo} alt="Kevin Boyle" title="Back to Top"/>
             </div>
           </div>
           <div className="nav-links-right">

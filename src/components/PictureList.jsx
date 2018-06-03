@@ -34,7 +34,7 @@ function PictureList(){
     <div className="gallery-container">
       <style jsx>{`
         .top-buffer {
-          height: 12.55vh;
+          height: 7.4vh;
         }
         .gallery-main-content {
           background-color: #010106d6;

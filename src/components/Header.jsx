@@ -89,7 +89,7 @@ class Header extends React.Component {
               display: flex;
               flex-direction: column;
               padding: 5%;
-              animation: opacity-change-2 3s ease-in;
+              animation: opacity-change-2 3s, box-shadow-glow 6s;
             }
             @keyframes opacity-change-2 {
               from {
@@ -97,6 +97,14 @@ class Header extends React.Component {
               }
               to {
                 background-color: #0e000e61;
+              }
+            }
+            @keyframes box-shadow-glow {
+              from {
+                box-shadow: 0px 1px 1px 0px #0d0e0e4a;
+              }
+              to {
+                box-shadow: 13px 19px 20px 0px #9cece54a;
               }
             }
             .title-text, .tagline {
