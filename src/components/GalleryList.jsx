@@ -34,7 +34,7 @@ class GalleryList extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      selectedGalleryItem: '1'
     };
 
     this.handleGallerySelection = this.handleGallerySelection.bind(this);
@@ -43,6 +43,7 @@ class GalleryList extends React.Component {
 
   handleGallerySelection() {
     console.log('gallery item seleced');
+    console.log(this)
   }
   render(){
 

@@ -17,14 +17,10 @@ class Nav extends React.Component {
   }
 
   makeOpaque() {
-    console.log('makeOpaque');
     if (document.documentElement.scrollTop > 400) {
-      console.log('yep');
       this.setState({navOpacityFull: true});
-      console.log(this.state);
     } else {
       this.setState({navOpacityFull: false});
-      console.log(this.state);
     }
   }
   render(){
