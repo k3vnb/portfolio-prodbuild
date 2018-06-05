@@ -1,11 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import PictureList from './PictureList';
-import Contact from './Contact';
 import Footer from './Footer';
 import LandingPage from './LandingPage';
-import Nav from './Nav';
-import About from './About';
 import Error404 from './Error404';
 import { Switch, Route } from 'react-router-dom';
 
@@ -25,22 +20,21 @@ class App extends React.Component {
             text-decoration: none;
           }
           .main-container {
-            margin: 2% 20%;
+            margin: 2% 16%;
             padding: 8%;
             background-color: white;
             height: 200px;
           }
-          @media screen and (max-width: 650px){
+          @media screen and (max-width: 500px){
             .main-container {
-              margin: 3% 10%;
+              margin: 3% 8%;
             }
             `}
         </style>
-        <Header />
-        <About />
-        <PictureList />
-        <Contact />
-        <Nav />
+        <Switch>
+          <Route exact path='/' component={LandingPage} />
+          <Route component={Error404} />
+        </Switch>
         <Footer />
       </div>
     );
@@ -48,11 +42,3 @@ class App extends React.Component {
 }
 
 export default App;
-// <Switch>
-//   <Route exact path='/' component={LandingPage} />
-//   <Route exact path='/a' component={PreLandingPage} />
-//   <Route exact path='/gallery' component={PictureList} />
-//   <Route path='/about' component={About} />
-//   <Route exact path='/contact' component={Contact} />
-//   <Route component={Error404} />
-// </Switch>

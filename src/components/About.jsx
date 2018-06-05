@@ -55,6 +55,7 @@ function About() {
           .skills-list {
             width: 110%;
             margin-left: -7%;
+            list-style: circle inside;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -83,7 +84,7 @@ function About() {
       </div>
       <div className="about-lower">
         <p><span className="leader-text2">I consider coding to be a craft and an artform</span>, an opportunity for lifelong learning and for building on life experiences. My personal mission is to contribute and facilitate meaningful art, interaction, and dialogue to society and to build positive relationships with peers, clients, and users.</p>
-        <p>I have a background in Anthropology, cross-cultural communication, and community management. I completed my undergraduate degree at the University of Toronto, where I was immersed in post-structural thought on human communication in the age of digital media. After receiving my degree I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. I have studied music, art, language, and philosophy. When I first learned to code, I immediately realized that I found the platform that could combine all of my passions and interests with endless possibilities.</p>
+        <p>I have a background in anthropology, education, cross-cultural communication, and community management. I completed my undergraduate degree at the University of Toronto, where I was immersed in post-structural thought on human communication in the age of digital media. After receiving my degree I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. I have studied music, art, language, and philosophy. When I first learned to code, I immediately realized that I found the platform that could combine all of my passions and interests with endless possibilities.</p>
         <p className="leader-text2">Some of my skills are:</p>
         <ul className="skills-list">
           <li>Javascript</li>
