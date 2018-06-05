@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Gallery(props){
   return (
-    <div className="gallery-card">
+    <div className="gallery-card" onClick={() => {props.onGalleryItemSelection(props.imageId);}}>
       <style jsx>{`
         .gallery-card {
           width: 45%;
@@ -28,7 +28,9 @@ function Gallery(props){
 Gallery.propTypes = {
   imageSource: PropTypes.string,
   imageTitle: PropTypes.string,
-  imageItself: PropTypes.element
+  imageItself: PropTypes.element,
+  imageId: PropTypes.string,
+  onGallerySelection: PropTypes.func
 };
 
 export default Gallery;

@@ -1,12 +1,13 @@
 import React from 'react';
 import Gallery from './Gallery';
+import GallerySelection from './GallerySelection';
 
 import devil from '../assets/images/gallery/devil.svg';
 import walrus from '../assets/images/gallery/walrus.svg';
 import martini from '../assets/images/gallery/martini.svg';
 import boom from '../assets/images/gallery/boom.svg';
 
-var masterGalleryList = [
+const masterGalleryList = [
   {
     imageSource: '1A',
     imageTitle: 'Pic1',
@@ -29,7 +30,22 @@ var masterGalleryList = [
   }
 ];
 
-function GalleryList(){
+class GalleryList extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+
+    };
+
+    this.handleGallerySelection = this.handleGallerySelection.bind(this);
+  }
+
+
+  handleGallerySelection() {
+    console.log('gallery item seleced');
+  }
+  render(){
+
   return (
     <div className="gallery-container">
       <style jsx>{`
@@ -52,11 +68,17 @@ function GalleryList(){
           <Gallery imageSource = {picture.imageSource}
             imageTitle = {picture.imageTitle}
             imageItself = {picture.imageItself}
-            key={index}/>
+            key={index}
+            questionId = {index}
+            onGalleryItemSelection={this.handleGallerySelection} />
         )}
+      </div>
+      <div className="GallerySelection-container">
+        <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
       </div>
     </div>
   );
+};
 }
 
 export default GalleryList;

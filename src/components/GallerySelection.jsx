@@ -11,7 +11,7 @@ function GallerySelection(props){
           width: 300px;
         }`}
       </style>
-      <h3>{props.thisSelectedGalleryItem.question}</h3>
+      GALLERY SELECTION TEST
     </div>
   );
 }
@@ -22,4 +22,10 @@ GallerySelection.propTypes = {
 
 
 
-export default QuestionDetail;
+export default GallerySelection;
+
+
+
+
+
+// <h3>{props.thisSelectedGalleryItem.question}</h3>
