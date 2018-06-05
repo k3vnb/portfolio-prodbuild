@@ -8,6 +8,7 @@ function Footer(){
     bottom: '0',
     height: 20,
     color: 'white',
+    textShadow: '-.5px .5px 1px black',
     fontSize: 5,
     display: 'flex',
     justifyContent: 'flex-end',

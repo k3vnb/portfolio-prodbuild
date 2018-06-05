@@ -1,12 +1,12 @@
 import React from 'react';
-import Picture from './Picture';
+import Gallery from './Gallery';
 
 import devil from '../assets/images/gallery/devil.svg';
 import walrus from '../assets/images/gallery/walrus.svg';
 import martini from '../assets/images/gallery/martini.svg';
 import boom from '../assets/images/gallery/boom.svg';
 
-var masterPictureList = [
+var masterGalleryList = [
   {
     imageSource: '1A',
     imageTitle: 'Pic1',
@@ -29,7 +29,7 @@ var masterPictureList = [
   }
 ];
 
-function PictureList(){
+function GalleryList(){
   return (
     <div className="gallery-container">
       <style jsx>{`
@@ -48,8 +48,8 @@ function PictureList(){
       <div className="top-buffer"></div>
       <div className="gallery-main-content">
 
-        {masterPictureList.map((picture, index) =>
-          <Picture imageSource = {picture.imageSource}
+        {masterGalleryList.map((picture, index) =>
+          <Gallery imageSource = {picture.imageSource}
             imageTitle = {picture.imageTitle}
             imageItself = {picture.imageItself}
             key={index}/>
@@ -59,4 +59,4 @@ function PictureList(){
   );
 }
 
-export default PictureList;
+export default GalleryList;

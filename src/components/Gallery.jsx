@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Picture(props){
+function Gallery(props){
   return (
     <div className="gallery-card">
       <style jsx>{`
@@ -25,10 +25,10 @@ function Picture(props){
   );
 }
 
-Picture.propTypes = {
+Gallery.propTypes = {
   imageSource: PropTypes.string,
   imageTitle: PropTypes.string,
   imageItself: PropTypes.element
 };
 
-export default Picture;
+export default Gallery;

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import PictureList from './PictureList';
+import GalleryList from './GalleryList';
 import Contact from './Contact';
 import Footer from './Footer';
 import Nav from './Nav';
@@ -16,12 +16,12 @@ class LandingPage extends React.Component {
       <div className="landingpage-container">
         <style jsx>{`
             .landingpage-container {
-              height: 150vh;
+              height: 100%;
             }
               `}</style>
         <Header />
         <About />
-        <PictureList />
+        <GalleryList />
         <Contact />
         <Nav />
       </div>
