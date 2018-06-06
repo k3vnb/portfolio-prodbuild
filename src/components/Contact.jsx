@@ -1,4 +1,8 @@
 import React from 'react';
+import instagramIcon from '../assets/images/icons/instagram-icon.png';
+import gmailIcon from '../assets/images/icons/gmail-icon.png';
+import githubIcon from '../assets/images/icons/github-icon.png';
+import linkedinIcon from '../assets/images/icons/linkedin-icon.png';
 
 function Contact(){
   return(
@@ -21,21 +25,35 @@ function Contact(){
             height: 50%;
             border: 1px solid black;
             padding: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .icon {
+            height: 20vw;
+            transition: height 1s;
+          }
+          .icon:hover {
+            height: 20.1vw
+          }
+          .github-icon {
+            border-radius: 23%;
+            box-shadow: 3px 2px 8px #0000008c;
           }
           `}</style>
         <div>REACH OUT TO ME</div>
       <div className="contact-page-inner">
         <div className="contact-box contact-top-left">
-          <h3>EMAIL</h3>
+          <img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" />
         </div>
         <div className="contact-box contact-top-right">
-          <h3>GITHUB</h3>
+          <img className="github-icon icon" src={githubIcon} />
         </div>
         <div className="contact-box contact-bottom-left">
-          <h3>INSTAGRAM</h3>
+          <img className="instagram-icon icon" src={instagramIcon} />
         </div>
         <div className="contact-box contact-bottom-right">
-          <h3>LINKEDIN</h3>
+          <img className="linkedin-icon icon" src={linkedinIcon} />
         </div>
       </div>
     </div>
