@@ -91,7 +91,7 @@ function About() {
           <li>React/Redux</li>
           <li>HTML5/CSS3</li>
           <li>Sass/SCSS</li>
-          <li>Vector Graphic Illustration</li>
+          <li>SVG/Vector Graphic Illustration</li>
           <li>MVC</li>
           <li>API Integration</li>
           <li>NodeJS/NPM</li>

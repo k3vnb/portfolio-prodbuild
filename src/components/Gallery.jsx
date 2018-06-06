@@ -6,8 +6,14 @@ function Gallery(props){
     <div className="gallery-card" onClick={() => {props.onGalleryItemSelection(props.imageId);}}>
       <style jsx>{`
         .gallery-card {
-          width: 50%;
+          width: 25%;
           height: 200px;
+        }
+        @media screen and (max-width: 500px){
+          .gallery-card {
+            width: 50%;
+            height: 150px;
+          }
         }
         .gallery-image {
           background-color: white;
