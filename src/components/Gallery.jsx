@@ -7,16 +7,13 @@ function Gallery(props){
       <style jsx>{`
         .gallery-card {
           width: 50%;
-          padding: 1%;
+          height: 200px;
         }
         .gallery-image {
           background-color: white;
-          margin: 1%;
-          width: 50%;
-          overflow: hidden;
-          zoom: 300%;
-          object-fit: contain;
-          object-position: 50% 50%;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
         `}</style>
       <img className="gallery-image" src={props.imageItself} alt={props.imageTitle} />

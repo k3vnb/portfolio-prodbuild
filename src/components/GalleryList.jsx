@@ -17,7 +17,7 @@ const masterGalleryList = [
   {
     imageSource: '1B',
     imageTitle: 'Pic2',
-    imageItself: `${mountains}`
+    imageItself: `${duckBath}`
   },
   {
     imageSource: '1C',
@@ -27,11 +27,6 @@ const masterGalleryList = [
   {
     imageSource: '1D',
     imageTitle: 'Pic4',
-    imageItself: `${duckBath}`
-  },
-  {
-    imageSource: '1E',
-    imageTitle: 'Pic5',
     imageItself: `${mindBlown}`
   }
 ];
@@ -61,11 +56,9 @@ class GalleryList extends React.Component {
         }
         .gallery-main-content {
           background-color: #010106d6;
-          padding: 3%;
           color: white;
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-around;
         }
         `}</style>
       <div className="top-buffer"></div>
