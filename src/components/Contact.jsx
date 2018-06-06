@@ -1,47 +1,61 @@
 import React from 'react';
 import instagramIcon from '../assets/images/icons/instagram-icon.png';
+import skyBG from '../assets/images/sky-bg.jpg';
 import gmailIcon from '../assets/images/icons/gmail-icon.png';
 import githubIcon from '../assets/images/icons/github-icon.png';
 import linkedinIcon from '../assets/images/icons/linkedin-icon.png';
 
 function Contact(){
   return(
-    <div className="main-container contact-container">
+    <div className="contact-container">
       <style jsx>{`
           .contact-container {
-            height: 80%;
-            margin-top: 5%;
+            height: 64%;
+            margin-bottom: 7.8vh;
+            border-bottom: 20px solid black
           }
           .contact-page-inner {
             width: 100%;
-            height: 60%;
+            height: 100%;
             display: flex;
+            background-image: url(${skyBG});
+            background-size: cover;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
           }
           .contact-box {
-            width: 45%;
+            width: 50%;
             height: 50%;
-            border: 1px solid black;
-            padding: 1%;
             display: flex;
             justify-content: center;
             align-items: center;
           }
           .icon {
-            height: 20vw;
-            transition: height 1s;
+            height: 17vw;
+            transition: height .2s ease-out;
           }
           .icon:hover {
-            height: 20.1vw
+            height: 16.1vw
           }
-          .github-icon {
+          .github-icon, .instagram-icon, .linkedin-icon {
             border-radius: 23%;
             box-shadow: 3px 2px 8px #0000008c;
+
+          }
+          .contact-top-left {
+            background-color: #e91e63a8;
+          }
+          .contact-top-right {
+            background-color: #2196f36e;
+          }
+          .contact-bottom-left {
+            background-color: #8bc34a69;
+          }
+          .contact-bottom-right {
+            background-color: #ff9800ad;
           }
           `}</style>
-        <div>REACH OUT TO ME</div>
       <div className="contact-page-inner">
         <div className="contact-box contact-top-left">
           <img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" />
