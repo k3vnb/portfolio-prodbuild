@@ -2,10 +2,11 @@ import React from 'react';
 import Gallery from './Gallery';
 import GallerySelection from './GallerySelection';
 
-import devil from '../assets/images/gallery/devil.svg';
-import walrus from '../assets/images/gallery/walrus.svg';
-import martini from '../assets/images/gallery/martini.svg';
-import boom from '../assets/images/gallery/boom.svg';
+import mountains from '../assets/images/gallery/mountains.png';
+import walrus from '../assets/images/gallery/walrus.png';
+import nightDrive from '../assets/images/gallery/nightdrive1.png';
+import duckBath from '../assets/images/gallery/duckbath1.png';
+import mindBlown from '../assets/images/gallery/mindblown.png';
 
 const masterGalleryList = [
   {
@@ -16,17 +17,22 @@ const masterGalleryList = [
   {
     imageSource: '1B',
     imageTitle: 'Pic2',
-    imageItself: `${devil}`
+    imageItself: `${mountains}`
   },
   {
     imageSource: '1C',
     imageTitle: 'Pic3',
-    imageItself: `${martini}`
+    imageItself: `${nightDrive}`
   },
   {
     imageSource: '1D',
     imageTitle: 'Pic4',
-    imageItself: `${boom}`
+    imageItself: `${duckBath}`
+  },
+  {
+    imageSource: '1E',
+    imageTitle: 'Pic5',
+    imageItself: `${mindBlown}`
   }
 ];
 

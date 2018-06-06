@@ -6,15 +6,14 @@ function Gallery(props){
     <div className="gallery-card" onClick={() => {props.onGalleryItemSelection(props.imageId);}}>
       <style jsx>{`
         .gallery-card {
-          width: 45%;
+          width: 50%;
           padding: 1%;
         }
         .gallery-image {
           background-color: white;
           margin: 1%;
-          width: 40px;
+          width: 50%;
           overflow: hidden;
-          margin: 10px 30%;
           zoom: 300%;
           object-fit: contain;
           object-position: 50% 50%;
