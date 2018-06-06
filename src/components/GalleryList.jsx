@@ -59,6 +59,8 @@ class GalleryList extends React.Component {
           width: 100%;
           background-image: url(${pool});
           background-position: 11% 14%;
+          background-repeat: no-repeat;
+          background-size: cover;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -81,6 +83,12 @@ class GalleryList extends React.Component {
         <div className="gallery-title">
           <h2>Projects</h2>
         </div>
+      </div>
+      <div className="web-projects">
+        <h2>Web Projects</h2>
+        <div>Sieve Jobs</div>
+        <div>Beep Boop</div>
+        <div>Other Page</div>
       </div>
       <div className="gallery-main-content">
 

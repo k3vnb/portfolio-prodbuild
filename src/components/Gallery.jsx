@@ -8,6 +8,7 @@ function Gallery(props){
         .gallery-card {
           width: 25%;
           height: 200px;
+          overflow: hidden;
         }
         @media screen and (max-width: 500px){
           .gallery-card {
@@ -18,8 +19,12 @@ function Gallery(props){
         .gallery-image {
           background-color: white;
           width: 100%;
-          height: 100%;
+          height: 110%;
           object-fit: cover;
+          transition: height .3s ease-in;
+        }
+        .gallery-image:hover {
+          height: 100%;
         }
         `}</style>
       <img className="gallery-image" src={props.imageItself} alt={props.imageTitle} />
