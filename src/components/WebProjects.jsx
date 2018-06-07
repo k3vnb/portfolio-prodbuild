@@ -11,7 +11,7 @@ function WebProjects() {
       WebProjects Works
       <style jsx>{`
           .webprojects-container {
-            font-family: 'Didact Gothic', sans-serif;
+            font-family: 'Carrois Gothic SC', sans-serif;
             height: 100%;
           }
           .project-card-container {

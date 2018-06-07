@@ -107,6 +107,11 @@ class Header extends React.Component {
                 box-shadow: 13px 19px 20px 0px #9cece54a;
               }
             }
+            @media screen and (max-width: 330px){
+              .header-main-content {
+                width: 77%;
+              }
+            }
             .title-text, .tagline {
               text-align: center;
               color: #0e000e;
@@ -131,12 +136,14 @@ class Header extends React.Component {
               border: 1px solid #ffa90e;
               color: #ffa90e;
               width: 100%;
-              text-align: center;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               box-shadow: inset 1px 1px 1px black;
               padding: 1%;
-              width: 20%;
+              width: 30%;
+              height: 30px;
               transition: box-shadow .2s;
-              height: 20%;
             }
             .nav-links:hover {
               box-shadow: 2px 2px 2px black;
@@ -166,7 +173,7 @@ class Header extends React.Component {
             <div className="background-img">
               <div className="header-overlay">
                 <div className="header-main-content">
-                  <Link to="/"><h1 className="title-text">Kevin  &nbsp;Boyle</h1></Link>
+                  <h1 className="title-text">Kevin  &nbsp;Boyle</h1>
                   <h2 className="tagline">Web Developer & Designer</h2>
                   <div className="link-line">
                     <div className="nav-links" onClick={(e) => scrollToPage('.about-container')}>About</div>
