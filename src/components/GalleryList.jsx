@@ -1,7 +1,7 @@
 import React from 'react';
 import Gallery from './Gallery';
 import GallerySelection from './GallerySelection';
-
+import WebProjects from './WebProjects';
 import pool from '../assets/images/gallery/pool.png';
 import walrus from '../assets/images/gallery/walrus.png';
 import nightDrive from '../assets/images/gallery/nightdrive1.png';
@@ -85,10 +85,7 @@ class GalleryList extends React.Component {
         </div>
       </div>
       <div className="web-projects">
-        <h2>Web Projects</h2>
-        <div>Sieve Jobs</div>
-        <div>Beep Boop</div>
-        <div>Other Page</div>
+        <WebProjects />
       </div>
       <div className="gallery-main-content">
 
