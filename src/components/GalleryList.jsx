@@ -44,13 +44,13 @@ class GalleryList extends React.Component {
 
   handleGallerySelection() {
     console.log('gallery item seleced');
-    console.log(this)
+    console.log(this);
   }
   render(){
 
-  return (
-    <div className="gallery-container">
-      <style jsx>{`
+    return (
+      <div className="gallery-container">
+        <style jsx>{`
         .top-buffer {
           height: 7.4vh;
         }
@@ -78,32 +78,32 @@ class GalleryList extends React.Component {
           flex-wrap: wrap;
         }
         `}</style>
-      <div className="top-buffer"></div>
-      <div className="gallery-hero">
-        <div className="gallery-title">
-          <h2>Projects</h2>
+        <div className="top-buffer"></div>
+        <div className="gallery-hero">
+          <div className="gallery-title">
+            <h2>Projects</h2>
+          </div>
+        </div>
+        <div className="web-projects">
+          <WebProjects />
+        </div>
+        <div className="gallery-main-content">
+
+          {masterGalleryList.map((picture, index) =>
+            <Gallery imageSource = {picture.imageSource}
+              imageTitle = {picture.imageTitle}
+              imageItself = {picture.imageItself}
+              key={index}
+              questionId = {index}
+              onGalleryItemSelection={this.handleGallerySelection} />
+          )}
+        </div>
+        <div className="GallerySelection-container">
+          <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
         </div>
       </div>
-      <div className="web-projects">
-        <WebProjects />
-      </div>
-      <div className="gallery-main-content">
-
-        {masterGalleryList.map((picture, index) =>
-          <Gallery imageSource = {picture.imageSource}
-            imageTitle = {picture.imageTitle}
-            imageItself = {picture.imageItself}
-            key={index}
-            questionId = {index}
-            onGalleryItemSelection={this.handleGallerySelection} />
-        )}
-      </div>
-      <div className="GallerySelection-container">
-        <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
-      </div>
-    </div>
-  );
-};
+    );
+  }
 }
 
 export default GalleryList;
