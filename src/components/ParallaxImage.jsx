@@ -5,7 +5,7 @@ import pool from '../assets/images/gallery/pool.png';
 const ParallaxImage = () => (
     <Parallax
         className="parallax-container"
-        offsetYMax={10}
+        offsetYMax={20}
         offsetYMin={-90}
         slowerScrollRate
         tag="figure"
@@ -25,7 +25,7 @@ const ParallaxImage = () => (
         font-family: 'Didact Gothic', sans-serif;
         position: absolute;
         top: 20%;
-        left: 60%;
+        right: 16%;
       }
       `}</style>
     <div className="projects-banner-container">

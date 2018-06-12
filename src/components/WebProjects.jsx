@@ -17,18 +17,24 @@ function WebProjects() {
           }
           .project-card-container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             min-height: 60vh;
           }
           .project-card {
-            width: 33%;
+            width: 29%;
             height: 100%;
-            margin: 5% 0% 5% 5%;
+            margin: 5% 0% 5% 2%;
             border: 1px solid black;
             overflow: hidden;
           }
           .project-card:last-child {
-            margin-right: 5%;
+            margin-right: 2%;
+          }
+          @media screen and (max-width: 450px){
+            .project-card {
+              width: 90%;
+            }
           }
           .screenshot {
             height: 100%;
@@ -87,10 +93,8 @@ function WebProjects() {
             background-color: #47ff7e;
           }
             `}</style>
-      <div className="gallery-hero">
-        <div className="gallery-title">
-          <h2>Projects</h2>
-        </div>
+          <div className="gallery-header">
+            <h2>Websites & Web Apps</h2>
       </div>
       <div className="project-card-container">
         <div className="project-card sievejobs">

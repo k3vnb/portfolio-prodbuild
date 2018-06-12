@@ -8,6 +8,7 @@ function About() {
           .main-container {
             font-family: 'Didact Gothic', sans-serif;
             height: 100%;
+            margin-bottom: 15%;
           }
           .about-upper {
             display: flex;
