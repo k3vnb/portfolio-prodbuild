@@ -59,6 +59,33 @@ function WebProjects() {
             height: 50%;
             padding: 5%;
           }
+          .project-link {
+            width: 99.5%;
+            min-height: 25px;
+            color: white;
+            text-shadow: .5px .5px .5px #3f51b59c;
+            border: none;
+            transition: width .2s ease-out, box-shadow .2s ease-out;
+          }
+          .project-link:hover {
+            width: 100%;
+            box-shadow: 0px .1px 1px #3f51b59c;
+            cursor: pointer;
+          }
+          .project-link:active {
+            width: 99.4%;
+            box-shadow: 0px .1px 1px inset #3f51b59c;
+          }
+          button:focus {
+            outline: 0;
+          }
+          .project-site-link {
+            background-color: #4bf5f4;
+            margin-bottom: 3%;
+          }
+          .project-github-link {
+            background-color: #47ff7e;
+          }
             `}</style>
       <div className="project-card-container">
         <div className="project-card sievejobs">
@@ -67,6 +94,8 @@ function WebProjects() {
           <div className="cardbottom">
             <h2>Sieve Jobs</h2>
             <p>A job interview flashcard preparation app, built in React</p>
+            <a><button className="project-site-link project-link">Go to the webpage</button></a>
+            <a><button className="project-github-link project-link">Go to the repository</button></a>
           </div>
         </div>
         <div className="project-card fizzbuzz">
@@ -74,6 +103,9 @@ function WebProjects() {
           <div className="cardbottom">
             <h2>Pumpkin Spice Bot</h2>
             <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
+            <a><button className="project-site-link project-link">Go to the webpage</button></a>
+            <a><button className="project-github-link project-link">Go to the repository</button></a>
+
           </div>
         </div>
         <div className="project-card herbl">
@@ -81,6 +113,8 @@ function WebProjects() {
           <div className="cardbottom">
             <h2>Herbl</h2>
             <p>A sample responsive website built with Bootstrap and pure CSS.</p>
+            <a><button className="project-site-link project-link">Go to the webpage</button></a>
+            <a><button className="project-github-link project-link">Go to the repository</button></a>
           </div>
         </div>
       </div>
