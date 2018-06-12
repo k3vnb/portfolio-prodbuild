@@ -4,21 +4,35 @@ import pool from '../assets/images/gallery/pool.png';
 
 const ParallaxImage = () => (
     <Parallax
-        className="projects-banner"
-        offsetYMax={20}
-        offsetYMin={-20}
+        className="parallax-container"
+        offsetYMax={10}
+        offsetYMin={-90}
         slowerScrollRate
         tag="figure"
     ><style jsx>{`
-      .banner {
-        height: 100px;
+      projects-banner-container {
+        position: relative;
       }
-      h1 {
-        background-color: blue;
+      .projects-banner {
+        height: 250px;
+        width: 120%;
+        margin-left: -10%;
+        object-fit: cover;
+      }
+      .projects-title {
+        color: white;
+        text-shadow: 1px 1px 1px #00000073;
+        font-family: 'Didact Gothic', sans-serif;
+        position: absolute;
+        top: 20%;
+        left: 60%;
       }
       `}</style>
-    <img className="banner" src={pool} />
-        <h1>HELLO HELLO</h1>
+    <div className="projects-banner-container">
+      <img className="projects-banner" src={pool}/>
+      <h1 className="projects-title">Projects</h1>
+    </div>
+
     </Parallax>
 );
 

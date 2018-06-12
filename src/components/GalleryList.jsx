@@ -83,11 +83,6 @@ class GalleryList extends React.Component {
         }
         `}</style>
         <div className="top-buffer"></div>
-        <div className="gallery-hero">
-          <div className="gallery-title">
-            <h2>Projects</h2>
-          </div>
-        </div>
         <ParallaxImage />
         <div className="web-projects">
           <WebProjects />
