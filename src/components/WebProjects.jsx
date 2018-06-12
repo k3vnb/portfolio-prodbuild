@@ -87,6 +87,11 @@ function WebProjects() {
             background-color: #47ff7e;
           }
             `}</style>
+      <div className="gallery-hero">
+        <div className="gallery-title">
+          <h2>Projects</h2>
+        </div>
+      </div>
       <div className="project-card-container">
         <div className="project-card sievejobs">
           <div className="cardtop">

@@ -1,6 +1,8 @@
 import React from 'react';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import Gallery from './Gallery';
 import GallerySelection from './GallerySelection';
+import ParallaxImage from './ParallaxImage';
 import WebProjects from './WebProjects';
 import pool from '../assets/images/gallery/pool.png';
 import walrus from '../assets/images/gallery/walrus.png';
@@ -49,6 +51,7 @@ class GalleryList extends React.Component {
   render(){
 
     return (
+      <ParallaxProvider>
       <div className="gallery-container">
         <style jsx>{`
         .top-buffer {
@@ -85,6 +88,7 @@ class GalleryList extends React.Component {
             <h2>Projects</h2>
           </div>
         </div>
+        <ParallaxImage />
         <div className="web-projects">
           <WebProjects />
         </div>
@@ -103,6 +107,7 @@ class GalleryList extends React.Component {
           <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
         </div>
       </div>
+      </ParallaxProvider>
     );
   }
 }
