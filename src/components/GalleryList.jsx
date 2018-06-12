@@ -72,10 +72,11 @@ class GalleryList extends React.Component {
           padding: 10% 50%;
         }
         .gallery-main-content {
-          background-color: #010106d6;
+          background-color: #2020a7d6;
           color: white;
           display: flex;
           flex-wrap: wrap;
+          padding: 1%;
         }
         `}</style>
         <div className="top-buffer"></div>

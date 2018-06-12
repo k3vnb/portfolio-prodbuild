@@ -8,8 +8,11 @@ function Gallery(props){
         .gallery-card {
           width: 25%;
           height: 200px;
+          border-radius: 50%;
           overflow: hidden;
+          transition: transform .3s;
         }
+
         @media screen and (max-width: 500px){
           .gallery-card {
             width: 50%;
