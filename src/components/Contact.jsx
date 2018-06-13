@@ -10,8 +10,8 @@ function Contact(){
     <div className="contact-container">
       <style jsx>{`
           .contact-container {
-            height: 64%;
-            border-bottom: 3.6vh solid #3b3b3b;
+            height: 100vh;
+            border-bottom: 5.6vh solid #3b3b3b;
             position: relative;
           }
           .contact-page-inner {

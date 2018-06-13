@@ -8,7 +8,6 @@ class App extends React.Component {
 
   render(){
     const appStyleSheet = {
-      height: '150vh',
       width: '100vw',
       position: 'relative'
     };
@@ -18,6 +17,7 @@ class App extends React.Component {
           @import @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Didact+Gothic');
           * {
             box-sizing: border-box;
+            margin: 0%;
           }
           a {
             text-decoration: none;

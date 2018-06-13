@@ -1,7 +1,6 @@
 import React from 'react';
 import sjScrnsht1 from '../assets/images/webprojects/sieve-jobs1.png';
 import sjScrnsht2 from '../assets/images/webprojects/sieve-jobs1.png';
-import sjScrnshtGIF from '../assets/images/webprojects/sieve-jobsgif.gif';
 import fbScrnsht1 from '../assets/images/webprojects/fizzbuzz.png';
 import hrblScrnsht1 from '../assets/images/webprojects/herbl.png';
 
@@ -18,17 +17,25 @@ function WebProjects() {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            height: 80vh;
           }
           .project-card {
             width: 29%;
-            height: 100%;
             margin: 5% 0% 5% 2%;
-            border: 1px solid black;
-            overflow: hidden;
+            box-shadow: 1px 1px 3px #0000008c;
+            transition: transform .21s, box-shadow .21s;
           }
           .project-card:last-child {
             margin-right: 2%;
+          }
+          .project-card:hover {
+            transform: scale(1.009);
+            box-shadow: 1.2px 1.2px 2.4px #3c3333f5;
+          }
+          .project-card:hover button {
+            box-shadow: 1px 1px 3px #0000008c;
+          }
+          .project-card:hover h2 {
+            border-bottom: .5px solid #3f51b582;
           }
           @media screen and (max-width: 450px){
             .project-card {
@@ -57,21 +64,21 @@ function WebProjects() {
             background-size: cover;
             transition: background-image .3s;
           }
-          .sievejobs .cardtop:hover {
-            background-image: url(${sjScrnshtGIF});
-          }
           .cardbottom {
             height: 50%;
             padding: 5%;
-            position: relative;
+            min-height: 35vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .cardbottom h2 {
+            font-size: 12px;
+            margin-bottom: 2%;
           }
           .cardbottom p {
             font-size: 10px;
             color: #706a79;
-          }
-          .card-buttons {
-            position: absolute;
-            bottom: 0;
           }
           .project-link {
             width: 99.5%;
@@ -100,51 +107,57 @@ function WebProjects() {
           .project-github-link {
             background-color: #47ff7e;
           }
-            `}</style>
-      <div className="gallery-header">
-        <h2>Websites & Web Apps</h2>
-      </div>
-      <div className="project-card-container">
-        <div className="project-card sievejobs">
-          <div className="cardtop">
-            <div className="cardtop-overlay">
-            </div>
-          </div>
-          <div className="cardbottom">
-            <h2>Sieve Jobs</h2>
-            <p>A job interview flashcard preparation app, built in React</p>
-            <div className="card-buttons">
-              <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
-              <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
-            </div>
-          </div>
+          `}</style>
+        <div className="gallery-header">
+          <h2>Websites & Web Apps</h2>
         </div>
-        <div className="project-card fizzbuzz">
-          <div className="cardtop"></div>
-          <div className="cardbottom">
-            <h2>Pumpkin Spice Bot</h2>
-            <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
-            <div className="card-buttons">
-              <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
-              <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+        <div className="project-card-container">
+          <div className="project-card sievejobs">
+            <div className="cardtop">
+              <div className="cardtop-overlay">
+              </div>
             </div>
+            <div className="cardbottom">
+              <div className="project-description">
+                <h2>Sieve Jobs</h2>
+                <p>A job interview flashcard preparation app, built in React</p>
+              </div>
+              <div className="card-buttons">
+                <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
+                <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+              </div>
+            </div>
+          </div>
+          <div className="project-card fizzbuzz">
+            <div className="cardtop"></div>
+            <div className="cardbottom">
+              <div className="project-description">
+                <h2>Pumpkin Spice Bot</h2>
+                <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
+              </div>
+              <div className="card-buttons">
+                <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
+                <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+              </div>
 
+            </div>
           </div>
-        </div>
-        <div className="project-card herbl">
-          <div className="cardtop"></div>
-          <div className="cardbottom">
-            <h2>Herbl</h2>
-            <p>A sample responsive website built with Bootstrap and pure CSS.</p>
-            <div className="card-buttons">
-              <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
-              <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+          <div className="project-card herbl">
+            <div className="cardtop"></div>
+            <div className="cardbottom">
+              <div className="project-description">
+                <h2>Herbl</h2>
+                <p>A sample responsive website built with Bootstrap and pure CSS.</p>
+              </div>
+              <div className="card-buttons">
+                <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
+                <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
-export default WebProjects;
+  export default WebProjects;

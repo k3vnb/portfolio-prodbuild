@@ -16,7 +16,7 @@ class LandingPage extends React.Component {
       <div className="landingpage-container">
         <style jsx>{`
             .landingpage-container {
-              height: 100%;
+
             }
               `}</style>
         <Header />
@@ -27,5 +27,5 @@ class LandingPage extends React.Component {
       </div>
     );
   }
-}
+};
 export default LandingPage;

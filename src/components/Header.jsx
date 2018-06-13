@@ -29,7 +29,7 @@ class Header extends React.Component {
       <div className="header-and-nav">
         <style jsx>{`
             .header-and-nav {
-              height: 68%;
+              height: 100vh;
             }
             .header-container {
               height: 100%;
