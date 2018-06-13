@@ -115,7 +115,7 @@ function WebProjects() {
           }
           @media screen and (max-width: 450px){
             .project-card {
-              width: 90%;
+              width: 100%;
               display: flex;
             }
             .cardtop {
@@ -142,8 +142,8 @@ function WebProjects() {
                 <p>A job interview flashcard preparation app, built in React</p>
               </div>
               <div className="card-buttons">
-                <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
-                <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+                <a href="https://sieve-jobs.herokuapp.com/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
+                <a href="https://github.com/lemurriot/Sieve_Jobs" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
               </div>
             </div>
           </div>
@@ -158,8 +158,8 @@ function WebProjects() {
                 <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
               </div>
               <div className="card-buttons">
-                <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
-                <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+                <a href="https://lemurriot.github.io/beepboop2/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
+                <a href="https://github.com/lemurriot/beepboop2" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
               </div>
 
             </div>
@@ -175,8 +175,8 @@ function WebProjects() {
                 <p>A sample responsive website built with Bootstrap and pure CSS.</p>
               </div>
               <div className="card-buttons">
-                <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
-                <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+                <a href="https://lemurriot.github.io/herb-grid/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
+                <a href="https://github.com/lemurriot/herb-grid" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
               </div>
             </div>
           </div>

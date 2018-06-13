@@ -60,25 +60,43 @@ class Nav extends React.Component {
           .sidebar-links-container-off {
             height: 100%;
             width: 80%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             opacity: 0;
-            animation: become-transparent .2s;
+            -webkit-animation: become-transparent .2s;
+                    animation: become-transparent .2s;
             margin-left: 5%;
           }
           .sidebar-links-container-on {
             height: 100%;
             width: 80%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            animation: become-opaque 2s;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-animation: become-opaque 2s;
+                    animation: become-opaque 2s;
             margin-left: 5%;
           }
           .nav-links-right {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: space-between;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
             width: 35%;
             margin-left: 5%;
           }
@@ -86,29 +104,48 @@ class Nav extends React.Component {
             color: #4c4943;
             font-family: 'Carrois Gothic SC', sans-serif;
             font-size: 2vw;
+            -webkit-transition: text-shadow .1s;
+            -o-transition: text-shadow .1s;
             transition: text-shadow .1s;
           }
           .nav-link-sidebar:hover {
             cursor: pointer;
-            transform: scale(1.015);
+            -webkit-transform: scale(1.015);
+                -ms-transform: scale(1.015);
+                    transform: scale(1.015);
             text-shadow: .5px .5px 0px #0202029c;
           }
           .nav-link-sidebar:active {
-            transform: scale(1.025);
+            -webkit-transform: scale(1.025);
+                -ms-transform: scale(1.025);
+                    transform: scale(1.025);
             text-shadow: 0px 1px 5px #ffee0087;
           }
           .self-portrait {
             max-height: 7.1vh;
-            object-fit: contain;
+            -o-object-fit: contain;
+               object-fit: contain;
             margin-top: 1vh;
             margin-left: 5vw;
+            -webkit-transition: .6s transform ease-out;
+            -o-transition: .6s transform ease-out;
             transition: .6s transform ease-out;
           }
           .self-portrait:hover {
-            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
           }
           .self-portrait:active {
-            transform: rotateX(180deg);
+            -webkit-transform: rotateX(180deg);
+                    transform: rotateX(180deg);
+          }
+          @-webkit-keyframes become-opaque {
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
           }
           @keyframes become-opaque {
             from {
@@ -116,6 +153,14 @@ class Nav extends React.Component {
             }
             to {
               opacity: 1;
+            }
+          }
+          @-webkit-keyframes become-transparent {
+            from {
+              opacity: .8;
+            }
+            to {
+              opacity: 0;
             }
           }
           @keyframes become-transparent {

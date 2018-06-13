@@ -113,7 +113,7 @@ function About() {
           <h2 className="hi">Hi</h2>
         </div>
         <div className="about-upper-half about-upper-right">
-          <p><span className="leader-text">Thank you</span> for visiting. My name is Kevin and I design & develop websites.</p>
+          <p><span className="leader-text">Thank you</span> for visiting. My name is Kevin. I live in Portland, Oregon, where I design & develop websites.</p>
         </div>
       </div>
       <div className="about-lower">
