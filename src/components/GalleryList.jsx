@@ -52,8 +52,8 @@ class GalleryList extends React.Component {
 
     return (
       <ParallaxProvider>
-      <div className="gallery-container">
-        <style jsx>{`
+        <div className="gallery-container">
+          <style jsx>{`
         .top-buffer {
           height: 7.4vh;
         }
@@ -68,12 +68,7 @@ class GalleryList extends React.Component {
           justify-content: center;
           align-items: center;
         }
-        .gallery-title {
-          color: white;
-          text-shadow: 1px 1px 1px #00000073;
-          font-family: 'Didact Gothic', sans-serif;
-          padding: 10% 50%;
-        }
+
         .gallery-main-content {
           background-color: #2020a7d6;
           color: white;
@@ -82,26 +77,26 @@ class GalleryList extends React.Component {
           padding: 1%;
         }
         `}</style>
-        <div className="top-buffer"></div>
-        <ParallaxImage />
-        <div className="web-projects">
-          <WebProjects />
-        </div>
-        <div className="gallery-main-content">
+          <div className="top-buffer"></div>
+          <ParallaxImage />
+          <div className="web-projects">
+            <WebProjects />
+          </div>
+          <div className="gallery-main-content">
 
-          {masterGalleryList.map((picture, index) =>
-            <Gallery imageSource = {picture.imageSource}
-              imageTitle = {picture.imageTitle}
-              imageItself = {picture.imageItself}
-              key={index}
-              questionId = {index}
-              onGalleryItemSelection={this.handleGallerySelection} />
-          )}
+            {masterGalleryList.map((picture, index) =>
+              <Gallery imageSource = {picture.imageSource}
+                imageTitle = {picture.imageTitle}
+                imageItself = {picture.imageItself}
+                key={index}
+                questionId = {index}
+                onGalleryItemSelection={this.handleGallerySelection} />
+            )}
+          </div>
+          <div className="GallerySelection-container">
+            <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
+          </div>
         </div>
-        <div className="GallerySelection-container">
-          <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
-        </div>
-      </div>
       </ParallaxProvider>
     );
   }

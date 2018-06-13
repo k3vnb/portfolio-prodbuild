@@ -3,13 +3,13 @@ import { Parallax } from 'react-scroll-parallax';
 import pool from '../assets/images/gallery/pool.png';
 
 const ParallaxImage = () => (
-    <Parallax
-        className="parallax-container"
-        offsetYMax={20}
-        offsetYMin={-90}
-        slowerScrollRate
-        tag="figure"
-    ><style jsx>{`
+  <Parallax
+    className="parallax-container"
+    offsetYMax={10}
+    offsetYMin={-90}
+    slowerScrollRate
+    tag="figure"
+  ><style jsx>{`
       projects-banner-container {
         position: relative;
       }
@@ -33,7 +33,7 @@ const ParallaxImage = () => (
       <h1 className="projects-title">Projects</h1>
     </div>
 
-    </Parallax>
+  </Parallax>
 );
 
 export default ParallaxImage;

@@ -12,6 +12,7 @@ function Contact(){
           .contact-container {
             height: 64%;
             border-bottom: 3.6vh solid #3b3b3b;
+            position: relative;
           }
           .contact-page-inner {
             width: 100%;
@@ -54,10 +55,25 @@ function Contact(){
           .contact-bottom-right {
             background-color: #ff9800ad;
           }
+          .email-on-psuedo-footer {
+            position: absolute;
+            font-family: Didact Gothic, sans-serif;
+            color: white;
+            font-size: 10px;
+            bottom: -3.5%;
+            left: 2%;
+          }
+          .email-on-psuedo-footer h4 {
+            margin: 0%;
+          }
+          .email-on-psuedo-footer a {
+            color: white;
+            text-decoration: none;
+          }
           `}</style>
       <div className="contact-page-inner">
         <div className="contact-box contact-top-left">
-          <img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" />
+          <a href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" title="email boyle.kevin.michael@gmail.com"><img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" /></a>
         </div>
         <div className="contact-box contact-top-right">
           <a href="http://www.github.com/lemurriot" target="_blank" title="Go to Kevin's Github"><img className="github-icon icon" src={githubIcon} /></a>
@@ -68,6 +84,9 @@ function Contact(){
         <div className="contact-box contact-bottom-right">
           <a href="http://www.linkedin.com/in/boylekev" target="_blank" title="Go to Kevin's LinkedIn"><img className="linkedin-icon icon" src={linkedinIcon} /></a>
         </div>
+      </div>
+      <div className="email-on-psuedo-footer">
+        <h4>email me at <a href="mailto:boyle.kevin.michael@gmail.com" title="email me at boyle.kevin.michael@gmail.com">boyle.kevin.michael@gmail.com</a></h4>
       </div>
     </div>
   );

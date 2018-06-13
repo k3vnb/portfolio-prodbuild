@@ -13,13 +13,12 @@ function WebProjects() {
       <style jsx>{`
           .webprojects-container {
             font-family: 'Carrois Gothic SC', sans-serif;
-            height: 100%;
           }
           .project-card-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            min-height: 60vh;
+            height: 80vh;
           }
           .project-card {
             width: 29%;
@@ -64,6 +63,15 @@ function WebProjects() {
           .cardbottom {
             height: 50%;
             padding: 5%;
+            position: relative;
+          }
+          .cardbottom p {
+            font-size: 10px;
+            color: #706a79;
+          }
+          .card-buttons {
+            position: absolute;
+            bottom: 0;
           }
           .project-link {
             width: 99.5%;
@@ -93,18 +101,22 @@ function WebProjects() {
             background-color: #47ff7e;
           }
             `}</style>
-          <div className="gallery-header">
-            <h2>Websites & Web Apps</h2>
+      <div className="gallery-header">
+        <h2>Websites & Web Apps</h2>
       </div>
       <div className="project-card-container">
         <div className="project-card sievejobs">
           <div className="cardtop">
+            <div className="cardtop-overlay">
+            </div>
           </div>
           <div className="cardbottom">
             <h2>Sieve Jobs</h2>
             <p>A job interview flashcard preparation app, built in React</p>
-            <a><button className="project-site-link project-link">Go to the webpage</button></a>
-            <a><button className="project-github-link project-link">Go to the repository</button></a>
+            <div className="card-buttons">
+              <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
+              <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+            </div>
           </div>
         </div>
         <div className="project-card fizzbuzz">
@@ -112,8 +124,10 @@ function WebProjects() {
           <div className="cardbottom">
             <h2>Pumpkin Spice Bot</h2>
             <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
-            <a><button className="project-site-link project-link">Go to the webpage</button></a>
-            <a><button className="project-github-link project-link">Go to the repository</button></a>
+            <div className="card-buttons">
+              <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
+              <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+            </div>
 
           </div>
         </div>
@@ -122,8 +136,10 @@ function WebProjects() {
           <div className="cardbottom">
             <h2>Herbl</h2>
             <p>A sample responsive website built with Bootstrap and pure CSS.</p>
-            <a><button className="project-site-link project-link">Go to the webpage</button></a>
-            <a><button className="project-github-link project-link">Go to the repository</button></a>
+            <div className="card-buttons">
+              <a href="" title="Go to webpage"><button className="project-site-link project-link">Go to the webpage</button></a>
+              <a href="" title="Go to repository"><button className="project-github-link project-link">Go to the repository</button></a>
+            </div>
           </div>
         </div>
       </div>
