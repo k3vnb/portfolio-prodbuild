@@ -10,13 +10,12 @@ const ParallaxImage = () => (
     slowerScrollRate
     tag="figure"
   ><style jsx>{`
-      projects-banner-container {
+      .projects-banner-container {
         position: relative;
       }
       .projects-banner {
         height: 250px;
-        width: 120%;
-        margin-left: -10%;
+        width: 100%;
         object-fit: cover;
       }
       .projects-title {

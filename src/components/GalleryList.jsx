@@ -55,7 +55,7 @@ class GalleryList extends React.Component {
         <div className="gallery-container">
           <style jsx>{`
         .top-buffer {
-          height: 9.4vh;
+          height: 14.4vh;
         }
         .gallery-hero {
           height: 200px;
@@ -74,6 +74,7 @@ class GalleryList extends React.Component {
           color: white;
           text-align: center;
           padding: 1%;
+          font-family: 'Didact Gothic', sans-serif;
         }
         .illustration-container {
           width: 100%;

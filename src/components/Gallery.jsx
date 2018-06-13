@@ -6,8 +6,8 @@ function Gallery(props){
     <div className="gallery-card" onClick={() => {props.onGalleryItemSelection(props.imageId);}}>
       <style jsx>{`
         .gallery-card {
-          width: 25%;
-          height: 40px;
+          width: 80px;
+          height: 80px;
           border-radius: 50%;
           overflow: hidden;
           transition: transform .3s;
@@ -22,12 +22,13 @@ function Gallery(props){
         .gallery-image {
           background-color: white;
           width: 100%;
-          height: 110%;
+          height: 100%;
           object-fit: cover;
           transition: height .3s ease-in;
         }
         .gallery-image:hover {
-          height: 100%;
+          height: 160%;
+          cursor: pointer;
         }
         `}</style>
       <img className="gallery-image" src={props.imageItself} alt={props.imageTitle} />

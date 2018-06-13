@@ -8,13 +8,13 @@ function About() {
           .main-container {
             font-family: 'Didact Gothic', sans-serif;
             min-height: 120vh;
-            margin-bottom: 15%;
           }
           .about-upper {
             display: flex;
             align-items: center;
             height: 20%;
             width: 100%;
+            margin: 8% 0%;
           }
           .about-upper-half {
             width: 49%;
@@ -22,6 +22,7 @@ function About() {
             display: flex;
             align-items: center;
             padding: 2%;
+            margin-bottom: 5%;
           }
           .about-upper-left {
             border-right: 3px solid black;
@@ -33,7 +34,7 @@ function About() {
             margin-left: 12%;
             display: flex;
             align-items: center;
-            font-size: 2vw
+            font-size: 1.5vw;
           }
           .about-lower {
             width: 120%;
@@ -64,6 +65,9 @@ function About() {
           .skills-list li {
             width: 45%;
             margin-left: 2%;
+          }
+          .main-container p {
+            margin-bottom: 5%;
           }
 
           @media screen and (max-width: 650px){

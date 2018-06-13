@@ -13,6 +13,12 @@ function WebProjects() {
           .webprojects-container {
             font-family: 'Carrois Gothic SC', sans-serif;
           }
+          .gallery-header {
+            text-align: center;
+            font-family: 'Didact Gothic', sans-serif;
+            color: white;
+            text-shadow: 0px 0px 2px #4646b5;
+          }
           .project-card-container {
             display: flex;
             flex-wrap: wrap;
@@ -32,7 +38,7 @@ function WebProjects() {
             box-shadow: 1.2px 1.2px 2.4px #3c3333f5;
           }
           .project-card:hover button {
-            box-shadow: 1px 1px 3px #0000008c;
+            box-shadow: .5px .5px 1px #0000008c;
           }
           .project-card:hover h2 {
             border-bottom: .5px solid #3f51b582;
