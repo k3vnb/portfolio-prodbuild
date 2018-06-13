@@ -70,6 +70,11 @@ function Contact(){
             color: white;
             text-decoration: none;
           }
+          @media screen and (max-width: 430px){
+            .display-none-sm-scrn {
+              display: none;
+            }
+          }
           `}</style>
       <div className="contact-page-inner">
         <div className="contact-box contact-top-left">
@@ -86,7 +91,7 @@ function Contact(){
         </div>
       </div>
       <div className="email-on-psuedo-footer">
-        <h4>email me at <a href="mailto:boyle.kevin.michael@gmail.com" title="email me at boyle.kevin.michael@gmail.com">boyle.kevin.michael@gmail.com</a></h4>
+        <h4><span className="display-none-sm-scrn">email me at</span> <a href="mailto:boyle.kevin.michael@gmail.com" title="email me at boyle.kevin.michael@gmail.com">boyle.kevin.michael@gmail.com</a></h4>
       </div>
     </div>
   );

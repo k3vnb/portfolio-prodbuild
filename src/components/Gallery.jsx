@@ -7,7 +7,7 @@ function Gallery(props){
       <style jsx>{`
         .gallery-card {
           width: 25%;
-          height: 200px;
+          height: 40px;
           border-radius: 50%;
           overflow: hidden;
           transition: transform .3s;
@@ -15,8 +15,8 @@ function Gallery(props){
 
         @media screen and (max-width: 500px){
           .gallery-card {
-            width: 50%;
-            height: 150px;
+            width: 50px;
+            height: 50px;
           }
         }
         .gallery-image {

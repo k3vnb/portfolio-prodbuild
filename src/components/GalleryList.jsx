@@ -72,9 +72,14 @@ class GalleryList extends React.Component {
         .gallery-main-content {
           background-color: #2020a7d6;
           color: white;
+          text-align: center;
+          padding: 1%;
+        }
+        .illustration-container {
+          width: 100%;
           display: flex;
           flex-wrap: wrap;
-          padding: 1%;
+          justify-content: space-around;
         }
         `}</style>
           <div className="top-buffer"></div>
@@ -83,19 +88,21 @@ class GalleryList extends React.Component {
             <WebProjects />
           </div>
           <div className="gallery-main-content">
-
-            {masterGalleryList.map((picture, index) =>
-              <Gallery imageSource = {picture.imageSource}
-                imageTitle = {picture.imageTitle}
-                imageItself = {picture.imageItself}
-                key={index}
-                questionId = {index}
-                onGalleryItemSelection={this.handleGallerySelection} />
-            )}
-          </div>
-          <div className="GallerySelection-container">
-            <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
-          </div>
+            <h2>Sample Illustrations</h2>
+            <div className="illustration-container">
+              {masterGalleryList.map((picture, index) =>
+                <Gallery imageSource = {picture.imageSource}
+                  imageTitle = {picture.imageTitle}
+                  imageItself = {picture.imageItself}
+                  key={index}
+                  questionId = {index}
+                  onGalleryItemSelection={this.handleGallerySelection} />
+              )}
+            </div>
+            <div className="GallerySelection-container">
+              <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
+            </div>
+            </div>
         </div>
       </ParallaxProvider>
     );
