@@ -7,7 +7,7 @@ function About() {
       <style jsx>{`
           .main-container {
             font-family: 'Didact Gothic', sans-serif;
-            height: 100%;
+            min-height: 120vh;
             margin-bottom: 15%;
           }
           .about-upper {

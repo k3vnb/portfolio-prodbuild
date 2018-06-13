@@ -157,7 +157,7 @@ class Header extends React.Component {
             }
             h1 {
               margin: 0;
-              margin-bottom: -10px;
+              margin-bottom: 4%;
             }
             .nav-component {
               z-index: 0;

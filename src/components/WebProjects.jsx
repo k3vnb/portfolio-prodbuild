@@ -22,13 +22,13 @@ function WebProjects() {
             width: 29%;
             margin: 5% 0% 5% 2%;
             box-shadow: 1px 1px 3px #0000008c;
-            transition: transform .21s, box-shadow .21s;
+            transition: transform .1s, box-shadow .21s;
           }
           .project-card:last-child {
             margin-right: 2%;
           }
           .project-card:hover {
-            transform: scale(1.009);
+            transform: scale(1.001);
             box-shadow: 1.2px 1.2px 2.4px #3c3333f5;
           }
           .project-card:hover button {
@@ -37,10 +37,9 @@ function WebProjects() {
           .project-card:hover h2 {
             border-bottom: .5px solid #3f51b582;
           }
-          @media screen and (max-width: 450px){
-            .project-card {
-              width: 90%;
-            }
+          .project-card:hover .cardtop-overlay {
+            box-shadow: inset 1px 1px 10px white;
+            border-bottom: .2px solid #3f51b582;
           }
           .screenshot {
             height: 100%;
@@ -63,6 +62,12 @@ function WebProjects() {
             width: 100%;
             background-size: cover;
             transition: background-image .3s;
+          }
+          .cardtop-overlay {
+            height: 100%;
+            width: 100%;
+            box-shadow: inset 0 0 33px #00000029;
+            transition: box-shadow .2s;
           }
           .cardbottom {
             height: 50%;
@@ -90,8 +95,9 @@ function WebProjects() {
           }
           .project-link:hover {
             width: 100%;
-            box-shadow: 0px .1px 1px #3f51b59c;
+            box-shadow: 0px .3px 3px #3f51b59c;
             cursor: pointer;
+            text-shadow: .5px .5px .5px black;
           }
           .project-link:active {
             width: 99.4%;
@@ -106,6 +112,19 @@ function WebProjects() {
           }
           .project-github-link {
             background-color: #47ff7e;
+          }
+          @media screen and (max-width: 450px){
+            .project-card {
+              width: 90%;
+              display: flex;
+            }
+            .cardtop {
+              width: 40%;
+              border-right: .5px solid #4bf6f4c7;
+            }
+            .cardbottom {
+              width: 60%;
+            }
           }
           `}</style>
         <div className="gallery-header">
@@ -129,7 +148,10 @@ function WebProjects() {
             </div>
           </div>
           <div className="project-card fizzbuzz">
-            <div className="cardtop"></div>
+            <div className="cardtop">
+              <div className="cardtop-overlay">
+              </div>
+            </div>
             <div className="cardbottom">
               <div className="project-description">
                 <h2>Pumpkin Spice Bot</h2>
@@ -143,7 +165,10 @@ function WebProjects() {
             </div>
           </div>
           <div className="project-card herbl">
-            <div className="cardtop"></div>
+            <div className="cardtop">
+              <div className="cardtop-overlay">
+              </div>
+            </div>
             <div className="cardbottom">
               <div className="project-description">
                 <h2>Herbl</h2>
