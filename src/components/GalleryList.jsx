@@ -39,17 +39,17 @@ class GalleryList extends React.Component {
     this.state = {
       masterIllustrationList: {
         '0':   {
-            imageItself: `${walrus}`
-          },
-          '1':  {
-            imageItself: `${duckBath}`
-          },
-          '2': {
-            imageItself: `${nightDrive}`
-          },
-          '3': {
-            imageItself: `${mindBlown}`
-          },
+          imageItself: `${walrus}`
+        },
+        '1':  {
+          imageItself: `${duckBath}`
+        },
+        '2': {
+          imageItself: `${nightDrive}`
+        },
+        '3': {
+          imageItself: `${mindBlown}`
+        },
       },
       selectedGalleryItem: '1',
       lightboxIsVisible: false
@@ -63,10 +63,8 @@ class GalleryList extends React.Component {
   handleGallerySelection(newSelectedGalleryItem) {
     this.setState({selectedGalleryItem: newSelectedGalleryItem});
     this.setState({lightboxIsVisible: true});
-    console.log(this.state);
   }
   handleLightboxToggle(){
-    console.log(this.state);
     this.setState({lightboxIsVisible: false});
   }
   handleChangingLightboxPicture(imageNumber){
@@ -102,9 +100,12 @@ class GalleryList extends React.Component {
         .gallery-main-content {
           background-color: #2020a7d6;
           color: white;
-          text-align: center;
-          padding: 1%;
-          font-family: 'Didact Gothic', sans-serif;
+          padding: 1% 1% 5%;
+          font-family: 'Carrois Gothic', sans-serif;
+          margin-bottom: 50vh;
+        }
+        .gallery-main-content h2 {
+          margin: 0% 0% 5% 5%;
         }
         .illustration-container {
           width: 100%;
@@ -135,12 +136,12 @@ class GalleryList extends React.Component {
             </div>
             <div className="GallerySelection-container">
               <GallerySelection onToggleLightbox={this.handleLightboxToggle}
-              imageList={this.state.masterIllustrationList}
-              imageNumber={this.state.selectedGalleryItem}
-              lightboxIsVisible={this.state.lightboxIsVisible }
-              onChangeLightboxPicture={this.handleChangingLightboxPicture} />
+                imageList={this.state.masterIllustrationList}
+                imageNumber={this.state.selectedGalleryItem}
+                lightboxIsVisible={this.state.lightboxIsVisible }
+                onChangeLightboxPicture={this.handleChangingLightboxPicture} />
             </div>
-            </div>
+          </div>
         </div>
       </ParallaxProvider>
     );
@@ -148,15 +149,3 @@ class GalleryList extends React.Component {
 }
 
 export default GalleryList;
-
-// {Object.keys(this.state.masterIllustrationList).map(function(galleryItemId) {
-//
-//   return <div className="galleryItem"><Gallery
-//     imageSource ={galleryItemId.imageSource}
-//     imageTitle = {galleryItemId.imageTitle}
-//     imageItself = {galleryItemId.imageItself}
-//     key={galleryItemId}
-//     questionId = {galleryItemId}
-//
-//   /></div>;
-// })}

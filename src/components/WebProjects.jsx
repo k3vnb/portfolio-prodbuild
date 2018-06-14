@@ -1,6 +1,5 @@
 import React from 'react';
 import sjScrnsht1 from '../assets/images/webprojects/sieve-jobs1.png';
-import sjScrnsht2 from '../assets/images/webprojects/sieve-jobs1.png';
 import fbScrnsht1 from '../assets/images/webprojects/fizzbuzz.png';
 import hrblScrnsht1 from '../assets/images/webprojects/herbl.png';
 
@@ -13,10 +12,11 @@ function WebProjects() {
           .webprojects-container {
             font-family: 'Carrois Gothic SC', sans-serif;
             background: #ffffff;
-            background: -moz-linear-gradient(top, #ffffff 80%, #ffffff 80%, #fbb7ff 100%);
-            background: -webkit-linear-gradient(top, #ffffff 80%,#ffffff 80%,#fbb7ff 100%);
-            background: linear-gradient(to bottom, #ffffff 80%,#ffffff 80%,#fbb7ff 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fbb7ff',GradientType=0 );
+            background: -moz-linear-gradient(top, #ffffff 80%, #ffffff 80%, #ffff5f 100%);
+            background: -webkit-linear-gradient(top, #ffffff 80%,#ffffff 80%,#ffff5f 100%);
+            background: linear-gradient(to bottom, #ffffff 80%,#ffffff 80%,#ffff5f 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffff5f',GradientType=0 );
+            padding-bottom: 10vh;
           }
           .gallery-header {
             text-align: center;
@@ -129,6 +129,10 @@ function WebProjects() {
           .project-github-link {
             background-color: #47ff7e;
           }
+          @media screen and (max-width: 650px){
+            .gallery-header {
+              width: 75%;
+            }
           @media screen and (max-width: 450px){
             .project-card {
               width: 100%;
@@ -143,62 +147,62 @@ function WebProjects() {
             }
           }
           `}</style>
-        <div className="gallery-header">
-          <h2>Websites & Web Apps</h2>
+      <div className="gallery-header">
+        <h2>Websites & Web Apps</h2>
+      </div>
+      <div className="project-card-container">
+        <div className="project-card sievejobs">
+          <div className="cardtop">
+            <div className="cardtop-overlay">
+            </div>
+          </div>
+          <div className="cardbottom">
+            <div className="project-description">
+              <h2>Sieve Jobs</h2>
+              <p>A job interview flashcard preparation app, built in React</p>
+            </div>
+            <div className="card-buttons">
+              <a href="https://sieve-jobs.herokuapp.com/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
+              <a href="https://github.com/lemurriot/Sieve_Jobs" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
+            </div>
+          </div>
         </div>
-        <div className="project-card-container">
-          <div className="project-card sievejobs">
-            <div className="cardtop">
-              <div className="cardtop-overlay">
-              </div>
-            </div>
-            <div className="cardbottom">
-              <div className="project-description">
-                <h2>Sieve Jobs</h2>
-                <p>A job interview flashcard preparation app, built in React</p>
-              </div>
-              <div className="card-buttons">
-                <a href="https://sieve-jobs.herokuapp.com/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
-                <a href="https://github.com/lemurriot/Sieve_Jobs" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
-              </div>
+        <div className="project-card fizzbuzz">
+          <div className="cardtop">
+            <div className="cardtop-overlay">
             </div>
           </div>
-          <div className="project-card fizzbuzz">
-            <div className="cardtop">
-              <div className="cardtop-overlay">
-              </div>
+          <div className="cardbottom">
+            <div className="project-description">
+              <h2>Pumpkin Spice Bot</h2>
+              <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
             </div>
-            <div className="cardbottom">
-              <div className="project-description">
-                <h2>Pumpkin Spice Bot</h2>
-                <p>A seasonal-beverage themed version of <em>fizzbuzz</em>, built in pure Javascript and jQuery.</p>
-              </div>
-              <div className="card-buttons">
-                <a href="https://lemurriot.github.io/beepboop2/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
-                <a href="https://github.com/lemurriot/beepboop2" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
-              </div>
+            <div className="card-buttons">
+              <a href="https://lemurriot.github.io/beepboop2/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
+              <a href="https://github.com/lemurriot/beepboop2" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
+            </div>
 
+          </div>
+        </div>
+        <div className="project-card herbl">
+          <div className="cardtop">
+            <div className="cardtop-overlay">
             </div>
           </div>
-          <div className="project-card herbl">
-            <div className="cardtop">
-              <div className="cardtop-overlay">
-              </div>
+          <div className="cardbottom">
+            <div className="project-description">
+              <h2>Herbl</h2>
+              <p>A sample responsive website built with Bootstrap and pure CSS.</p>
             </div>
-            <div className="cardbottom">
-              <div className="project-description">
-                <h2>Herbl</h2>
-                <p>A sample responsive website built with Bootstrap and pure CSS.</p>
-              </div>
-              <div className="card-buttons">
-                <a href="https://lemurriot.github.io/herb-grid/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
-                <a href="https://github.com/lemurriot/herb-grid" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
-              </div>
+            <div className="card-buttons">
+              <a href="https://lemurriot.github.io/herb-grid/" title="Go to webpage" target="_blank"><button className="project-site-link project-link">Go to the webpage</button></a>
+              <a href="https://github.com/lemurriot/herb-grid" title="Go to repository" target="_blank"><button className="project-github-link project-link">Go to the repository</button></a>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
-  export default WebProjects;
+export default WebProjects;

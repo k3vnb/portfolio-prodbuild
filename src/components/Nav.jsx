@@ -174,18 +174,18 @@ class Nav extends React.Component {
           `}</style>
         <div className={this.state.navOpacityFull ? 'sidebar-links-container-on' : 'sidebar-links-container-off'}>
           <div>
-            <div className="nav-link-sidebar" onClick={(e) => scrollToTop()}>
+            <div className="nav-link-sidebar" onClick={() => scrollToTop()}>
               <img className="self-portrait" src={logo} alt="Kevin Boyle" title="Back to Top"/>
             </div>
           </div>
           <div className="nav-links-right">
-            <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.about-container')}>
+            <div className="nav-link-sidebar" onClick={() => scrollToPage('.about-container')}>
               About
             </div>
-            <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.gallery-container')}>
+            <div className="nav-link-sidebar" onClick={() => scrollToPage('.gallery-container')}>
               Gallery
             </div>
-            <div className="nav-link-sidebar" onClick={(e) => scrollToPage('.contact-container')}>
+            <div className="nav-link-sidebar" onClick={() => scrollToPage('.contact-container')}>
               Contact
             </div>
           </div>

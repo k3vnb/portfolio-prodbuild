@@ -1,6 +1,5 @@
 import React from 'react';
 import wallpaper from '../assets/images/body-bg.svg';
-import { Link } from 'react-router-dom';
 import skyBG from '../assets/images/sky-bg.jpg';
 
 
@@ -54,6 +53,7 @@ class Header extends React.Component {
               height: 100%;
               background-repeat: repeat-y;
               background-size: cover;
+              background-position: bottom;
               position: sticky;
               top: -525px;
             }
@@ -107,11 +107,6 @@ class Header extends React.Component {
                 box-shadow: 13px 19px 20px 0px #9cece54a;
               }
             }
-            @media screen and (max-width: 330px){
-              .header-main-content {
-                width: 77%;
-              }
-            }
             .title-text, .tagline {
               text-align: center;
               color: #0e000e;
@@ -156,15 +151,25 @@ class Header extends React.Component {
               box-shadow: 3px 3px 5px #fffffe8c;
             }
             h1 {
-              margin: 0;
+              margin: 0%;
               margin-bottom: 4%;
             }
             .nav-component {
               z-index: 0;
             }
-            @media screen and (max-width: 450px){
+            @media screen and (max-width: 420px){
+              .link-line {
+                flex-direction: column;
+              }
               .nav-links {
+                width: 100%;
+                height: 10vh;
                 font-size: 3.5vw;
+                margin-bottom: 5%;
+              }
+              .header-main-content {
+                width: 87%;
+                height: 50vh;
               }
             }
             `}</style>
@@ -176,9 +181,9 @@ class Header extends React.Component {
                   <h1 className="title-text">Kevin  &nbsp;Boyle</h1>
                   <h2 className="tagline">Web Developer & Designer</h2>
                   <div className="link-line">
-                    <div className="nav-links" onClick={(e) => scrollToPage('.about-container')}>About</div>
-                    <div className="nav-links" onClick={(e) => scrollToPage('.gallery-container')}>Gallery</div>
-                    <div className="nav-links" onClick={(e) => scrollToPage('.contact-container')}>Contact</div>
+                    <div className="nav-links" onClick={() => scrollToPage('.about-container')}>About</div>
+                    <div className="nav-links" onClick={() => scrollToPage('.gallery-container')}>Gallery</div>
+                    <div className="nav-links" onClick={() => scrollToPage('.contact-container')}>Contact</div>
                   </div>
                 </div>
               </div>

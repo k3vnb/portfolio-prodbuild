@@ -7,7 +7,10 @@ import linkedinIcon from '../assets/images/icons/linkedin-icon.png';
 
 function Contact(){
   return(
-    <div className="contact-container">
+    <div className="before-contact">
+      <h2>Contact Me</h2>
+
+
       <style jsx>{`
           .contact-container {
             height: 100vh;
@@ -76,22 +79,24 @@ function Contact(){
             }
           }
           `}</style>
-      <div className="contact-page-inner">
-        <div className="contact-box contact-top-left">
-          <a href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" title="email boyle.kevin.michael@gmail.com"><img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" /></a>
+      <div className="contact-container">
+        <div className="contact-page-inner">
+          <div className="contact-box contact-top-left">
+            <a href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" title="email boyle.kevin.michael@gmail.com"><img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" /></a>
+          </div>
+          <div className="contact-box contact-top-right">
+            <a href="http://www.github.com/lemurriot" target="_blank" title="Go to Kevin's Github"><img className="github-icon icon" src={githubIcon} /></a>
+          </div>
+          <div className="contact-box contact-bottom-left">
+            <a href="http://www.instagram.com/k3vnb33" target="_blank" title="Go to Kevin's Instagram"><img className="instagram-icon icon" src={instagramIcon} /></a>
+          </div>
+          <div className="contact-box contact-bottom-right">
+            <a href="http://www.linkedin.com/in/boylekev" target="_blank" title="Go to Kevin's LinkedIn"><img className="linkedin-icon icon" src={linkedinIcon} /></a>
+          </div>
         </div>
-        <div className="contact-box contact-top-right">
-          <a href="http://www.github.com/lemurriot" target="_blank" title="Go to Kevin's Github"><img className="github-icon icon" src={githubIcon} /></a>
+        <div className="email-on-psuedo-footer">
+          <h4><span className="display-none-sm-scrn">email me at</span> <a href="mailto:boyle.kevin.michael@gmail.com" title="email me at boyle.kevin.michael@gmail.com">boyle.kevin.michael@gmail.com</a></h4>
         </div>
-        <div className="contact-box contact-bottom-left">
-          <a href="http://www.instagram.com/k3vnb33" target="_blank" title="Go to Kevin's Instagram"><img className="instagram-icon icon" src={instagramIcon} /></a>
-        </div>
-        <div className="contact-box contact-bottom-right">
-          <a href="http://www.linkedin.com/in/boylekev" target="_blank" title="Go to Kevin's LinkedIn"><img className="linkedin-icon icon" src={linkedinIcon} /></a>
-        </div>
-      </div>
-      <div className="email-on-psuedo-footer">
-        <h4><span className="display-none-sm-scrn">email me at</span> <a href="mailto:boyle.kevin.michael@gmail.com" title="email me at boyle.kevin.michael@gmail.com">boyle.kevin.michael@gmail.com</a></h4>
       </div>
     </div>
   );

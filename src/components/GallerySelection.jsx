@@ -44,7 +44,9 @@ function GallerySelection(props){
             border-radius: 50%;
             position: fixed;
             top: 2%;
-            right: 2%;
+            right: 5%;
+            display: flex;
+            justify-content: center;
           }
           .close-button:hover {
             color: white;
@@ -56,7 +58,7 @@ function GallerySelection(props){
             font-size: 40px;
             position: fixed;
             bottom: 2%;
-            right: 2%;
+            right: 5%;
           }
           .next-button:hover {
             color: white;
@@ -66,15 +68,17 @@ function GallerySelection(props){
             color: yellow;
             text-shadow: 0px 0px 3px white;
           }
-          h3 {
-            align-self: flex-end;
-            margin-right: 5%;
-          }
         }`}
       </style>
-      <h3 className="close-button" onClick={() => {props.onToggleLightbox()}}>X</h3>
+      <div className="close-button" onClick={() => {props.onToggleLightbox();}}>
+        <h3>X</h3>
+      </div>
       <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
-        <h3 className="next-button" onClick={() => {props.onChangeLightboxPicture(props.imageNumber)}}>Next</h3>
+      <div className="next-button" onClick={() => {props.onChangeLightboxPicture(props.imageNumber);}}>
+        <h3>
+          Next
+        </h3>
+      </div>
     </div>
   );
 }
