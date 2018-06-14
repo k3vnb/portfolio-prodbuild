@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function GallerySelection(props){
+
   return(
     <div className={props.lightboxIsVisible ? 'gallery-lightbox' : 'gallery-invisible'}>
       <style jsx>
@@ -26,6 +27,7 @@ function GallerySelection(props){
           .image {
             width: 50vw;
             height: auto;
+            object-fit: contain;
           }
           .close-button {
             color: purple;
@@ -41,6 +43,7 @@ function GallerySelection(props){
       </style>
       <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
       <h3 className="close-button" onClick={() => {props.onToggleLightbox()}}>X</h3>
+      <h3 className="next-button" onClick={() => {props.onChangeLightboxPicture(props.imageNumber)}}>Y</h3>
     </div>
   );
 }
@@ -49,7 +52,8 @@ GallerySelection.propTypes = {
   imageList: PropTypes.object,
   imageNumber: PropTypes.number,
   lightboxIsVisible: PropTypes.boolean,
-  onToggleLightbox: PropTypes.func
+  onToggleLightbox: PropTypes.func,
+  onChangeLightboxPicture: PropTypes.func
 };
 
 

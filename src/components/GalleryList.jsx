@@ -56,6 +56,7 @@ class GalleryList extends React.Component {
     };
     this.handleGallerySelection = this.handleGallerySelection.bind(this);
     this.handleLightboxToggle = this.handleLightboxToggle.bind(this);
+    this.handleChangingLightboxPicture = this.handleChangingLightboxPicture.bind(this);
   }
 
 
@@ -65,7 +66,17 @@ class GalleryList extends React.Component {
     console.log(this.state);
   }
   handleLightboxToggle(){
+    console.log(this.state);
     this.setState({lightboxIsVisible: false});
+  }
+  handleChangingLightboxPicture(imageNumber){
+    if (imageNumber < 3){
+      let newImageNumber = parseInt(imageNumber) + 1;
+      this.setState({selectedGalleryItem: newImageNumber.toString()});
+    } else {
+      this.setState({selectedGalleryItem: '0'});
+
+    }
   }
   render(){
 
@@ -126,7 +137,8 @@ class GalleryList extends React.Component {
               <GallerySelection onToggleLightbox={this.handleLightboxToggle}
               imageList={this.state.masterIllustrationList}
               imageNumber={this.state.selectedGalleryItem}
-              lightboxIsVisible={this.state.lightboxIsVisible } />
+              lightboxIsVisible={this.state.lightboxIsVisible }
+              onChangeLightboxPicture={this.handleChangingLightboxPicture} />
             </div>
             </div>
         </div>
