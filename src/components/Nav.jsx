@@ -46,9 +46,9 @@ class Nav extends React.Component {
 
 
     return(
-      <div className="sidebar">
+      <div className="topbar">
         <style jsx>{`
-          .sidebar {
+          .topbar {
             position: fixed;
             top: -.5%;
             left: 0%;
@@ -57,7 +57,7 @@ class Nav extends React.Component {
             border-bottom: .5px solid #ffa90e8c;
             height: 7.8vh;
           }
-          .sidebar-links-container-off {
+          .topbar-links-container-off {
             height: 100%;
             width: 80%;
             display: -webkit-box;
@@ -74,7 +74,7 @@ class Nav extends React.Component {
                     animation: become-transparent .2s;
             margin-left: 5%;
           }
-          .sidebar-links-container-on {
+          .topbar-links-container-on {
             height: 100%;
             width: 80%;
             display: -webkit-box;
@@ -100,7 +100,7 @@ class Nav extends React.Component {
             width: 35%;
             margin-left: 5%;
           }
-          .nav-link-sidebar {
+          .nav-link-topbar {
             color: #4c4943;
             font-family: 'Carrois Gothic SC', sans-serif;
             font-size: 2vw;
@@ -108,14 +108,14 @@ class Nav extends React.Component {
             -o-transition: text-shadow .1s;
             transition: text-shadow .1s;
           }
-          .nav-link-sidebar:hover {
+          .nav-link-topbar:hover {
             cursor: pointer;
             -webkit-transform: scale(1.015);
                 -ms-transform: scale(1.015);
                     transform: scale(1.015);
             text-shadow: .5px .5px 0px #0202029c;
           }
-          .nav-link-sidebar:active {
+          .nav-link-topbar:active {
             -webkit-transform: scale(1.025);
                 -ms-transform: scale(1.025);
                     transform: scale(1.025);
@@ -171,21 +171,29 @@ class Nav extends React.Component {
               opacity: 0;
             }
           }
+          @media screen and (max-width: 500px){
+            .nav-link-topbar {
+              font-size: 12px;
+            }
+            .nav-links-right {
+              width: 65%;
+            }
+          }
           `}</style>
-        <div className={this.state.navOpacityFull ? 'sidebar-links-container-on' : 'sidebar-links-container-off'}>
+        <div className={this.state.navOpacityFull ? 'topbar-links-container-on' : 'topbar-links-container-off'}>
           <div>
-            <div className="nav-link-sidebar" onClick={() => scrollToTop()}>
+            <div className="nav-link-topbar" onClick={() => scrollToTop()}>
               <img className="self-portrait" src={logo} alt="Kevin Boyle" title="Back to Top"/>
             </div>
           </div>
           <div className="nav-links-right">
-            <div className="nav-link-sidebar" onClick={() => scrollToPage('.about-container')}>
+            <div className="nav-link-topbar" onClick={() => scrollToPage('.about-container')}>
               About
             </div>
-            <div className="nav-link-sidebar" onClick={() => scrollToPage('.gallery-container')}>
+            <div className="nav-link-topbar" onClick={() => scrollToPage('.gallery-container')}>
               Gallery
             </div>
-            <div className="nav-link-sidebar" onClick={() => scrollToPage('.contact-container')}>
+            <div className="nav-link-topbar" onClick={() => scrollToPage('.contact-container')}>
               Contact
             </div>
           </div>

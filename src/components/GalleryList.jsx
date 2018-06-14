@@ -8,6 +8,7 @@ import walrus from '../assets/images/gallery/walrus.png';
 import nightDrive from '../assets/images/gallery/nightdrive1.png';
 import duckBath from '../assets/images/gallery/duckbath1.png';
 import mindBlown from '../assets/images/gallery/mindblown.png';
+import wallpaper from '../assets/images/body-bg.svg';
 
 const masterGalleryList = [
   {
@@ -97,20 +98,32 @@ class GalleryList extends React.Component {
         }
 
         .gallery-main-content {
-          background-color: #2020a7d6;
+          width: 92%;
+          margin: auto;
+          box-shadow: 1px 1px 3px #0000008c;
           color: white;
-          padding: 1% 1% 5%;
+          background-image: url(${wallpaper});
           font-family: 'Carrois Gothic', sans-serif;
           margin-bottom: 50vh;
+          border: 2px solid #00000078;
+        }
+        .gallery-overlay {
+          padding: 1% 1% 5%;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(1, 1, 2, 0.79) 0%,rgba(177, 0, 255, 0.53) 100%)
         }
         .gallery-main-content h2 {
           margin: 0% 0% 5% 5%;
+          text-shadow: 1px 1px 1px #00000082;
+          z-index: 2;
         }
         .illustration-container {
           width: 100%;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-around;
+          z-index: 2;
         }
         `}</style>
         <div className="top-buffer"></div>
@@ -119,26 +132,28 @@ class GalleryList extends React.Component {
           <WebProjects />
         </div>
         <div className="gallery-main-content">
-          <h2>Sample Illustrations</h2>
-          <div className="illustration-container">
-            {masterGalleryList.map((picture, index) =>
+          <div className="gallery-overlay">
+            <h2>Sample Illustrations</h2>
+            <div className="illustration-container">
+              {masterGalleryList.map((picture, index) =>
 
 
-              <Gallery imageSource = {picture.imageSource}
-                imageTitle = {picture.imageTitle}
-                imageItself = {picture.imageItself}
-                key={index}
-                imageId = {index}
-                onGalleryItemSelection={this.handleGallerySelection} />
-            )}
+                <Gallery imageSource = {picture.imageSource}
+                  imageTitle = {picture.imageTitle}
+                  imageItself = {picture.imageItself}
+                  key={index}
+                  imageId = {index}
+                  onGalleryItemSelection={this.handleGallerySelection} />
+              )}
 
-          </div>
-          <div className="GallerySelection-container">
-            <GallerySelection onToggleLightbox={this.handleLightboxToggle}
-              imageList={this.state.masterIllustrationList}
-              imageNumber={this.state.selectedGalleryItem}
-              lightboxIsVisible={this.state.lightboxIsVisible }
-              onChangeLightboxPicture={this.handleChangingLightboxPicture} />
+            </div>
+            <div className="GallerySelection-container">
+              <GallerySelection onToggleLightbox={this.handleLightboxToggle}
+                imageList={this.state.masterIllustrationList}
+                imageNumber={this.state.selectedGalleryItem}
+                lightboxIsVisible={this.state.lightboxIsVisible }
+                onChangeLightboxPicture={this.handleChangingLightboxPicture} />
+            </div>
           </div>
         </div>
       </div>

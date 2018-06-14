@@ -163,13 +163,13 @@ class Header extends React.Component {
               }
               .nav-links {
                 width: 100%;
-                height: 10vh;
-                font-size: 3.5vw;
+                height: 50px;
+                font-size: 5vw;
                 margin-bottom: 5%;
               }
               .header-main-content {
                 width: 87%;
-                height: 50vh;
+                height: 80vh;
               }
             }
             `}</style>

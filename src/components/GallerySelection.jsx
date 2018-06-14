@@ -23,6 +23,12 @@ function GallerySelection(props){
             z-index: 6;
             animation: fade-in-image .5s;
           }
+          @keyframes fade-in-image {
+            0% {
+              opacity: 0; }
+            100% {
+              opacity: 100; }
+            }
           .gallery-invisible {
             display: none;
           }

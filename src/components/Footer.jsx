@@ -5,7 +5,7 @@ function Footer(){
     fontFamily: 'Didact Gothic, sans-serif',
     width: '100%',
     position: 'fixed',
-    bottom: '0',
+    bottom: '2',
     height: 20,
     color: 'white',
     textShadow: '-.5px .5px 1px black',

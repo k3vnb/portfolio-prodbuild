@@ -9,8 +9,10 @@ function Gallery(props){
           width: 80px;
           height: 80px;
           border-radius: 50%;
+          border: .5px solid black;
           overflow: hidden;
           transition: transform .3s;
+          box-shadow: 0px 0px 8px 2px #ffffff94;
         }
 
         @media screen and (max-width: 500px){
@@ -41,7 +43,7 @@ Gallery.propTypes = {
   imageTitle: PropTypes.string,
   imageItself: PropTypes.string,
   imageId: PropTypes.number,
-  onGallerySelection: PropTypes.func
+  onGalleryItemSelection: PropTypes.func
 };
 
 export default Gallery;

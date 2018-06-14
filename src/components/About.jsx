@@ -8,6 +8,7 @@ function About() {
           .main-container {
             font-family: 'Carrois Gothic', sans-serif;
             min-height: 120vh;
+            margin-bottom: 55vw;
           }
           .about-upper {
             display: flex;
@@ -71,9 +72,6 @@ function About() {
           }
 
           @media screen and (max-width: 650px){
-            .main-container {
-              margin-bottom: 36%;
-            }
             .leader-text {
               font-size: 14px;
             }
@@ -92,21 +90,7 @@ function About() {
               margin-left: -10%;
             }
           }
-
-          @media screen and (max-width: 599px){
-            .main-container {
-              margin-bottom: 60%;
-            }
-          }
-          @media screen and (max-width: 475px){
-            .main-container {
-              margin-bottom: 90%;
-            }
-          }
           @media screen and (max-width: 400px){
-            .main-container {
-              margin-bottom: 130%;
-            }
             .about-lower ul {
               font-size: 7.6px;
             }

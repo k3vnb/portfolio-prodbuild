@@ -13,7 +13,7 @@ function Contact(){
   return(
     <div>
       <div className="before-contact">
-          <ParallaxHeader />
+        <ParallaxHeader />
       </div>
 
       <style jsx>{`
@@ -126,4 +126,4 @@ function Contact(){
 }
 
 export default Contact;
-            // background-color: #156df5;
+// background-color: #156df5;

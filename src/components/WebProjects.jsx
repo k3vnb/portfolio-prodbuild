@@ -13,6 +13,8 @@ function WebProjects() {
             font-family: 'Carrois Gothic SC', sans-serif;
             background: #ffffff;
             padding-bottom: 10vh;
+            position: sticky;
+            top: 10px;
           }
           .gallery-header {
             text-align: center;
@@ -57,15 +59,6 @@ function WebProjects() {
             height: 100%;
             width: 100%;
           }
-          .sievejobs .cardtop {
-            background-image: url(${sjScrnsht1});
-          }
-          .fizzbuzz .cardtop {
-            background-image: url(${fbScrnsht1});
-          }
-          .herbl .cardtop {
-            background-image: url(${hrblScrnsht1});
-          }
           .cardtop {
             background-repeat: no-repeat;
             background-position: top;
@@ -75,6 +68,17 @@ function WebProjects() {
             background-size: cover;
             transition: background-image .3s;
           }
+          .sievejobs .cardtop {
+            background-image: url(${sjScrnsht1});
+            background-size: contain;
+            background-position: center;
+          }
+          .fizzbuzz .cardtop {
+            background-image: url(${fbScrnsht1});
+          }
+          .herbl .cardtop {
+            background-image: url(${hrblScrnsht1});
+          }
           .cardtop-overlay {
             height: 100%;
             width: 100%;
@@ -83,14 +87,14 @@ function WebProjects() {
           }
           .cardbottom {
             height: 50%;
-            padding: 5%;
+            padding: 6%;
             min-height: 35vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
           }
           .cardbottom h2 {
-            font-size: 12px;
+            font-size: 16px;
             margin-bottom: 2%;
           }
           .cardbottom p {
@@ -131,7 +135,9 @@ function WebProjects() {
             }
           @media screen and (max-width: 450px){
             .project-card {
-              width: 100%;
+              width: 96%;
+              margin: auto;
+              margin-top: 8%;
               display: flex;
             }
             .cardtop {
