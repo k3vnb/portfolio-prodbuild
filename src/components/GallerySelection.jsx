@@ -17,6 +17,7 @@ function GallerySelection(props){
             align-items: center;
             justify-content: center;
             background-color: #000000cc;
+            font-family: 'Didact Gothic', sans-serif;
             padding-top: 5%;
             height: 100%;
             width: 100%;
@@ -53,6 +54,8 @@ function GallerySelection(props){
             right: 5%;
             display: flex;
             justify-content: center;
+            align-items: center;
+            padding: 0% 0% .5% .5%;
           }
           .close-button:hover {
             color: white;

@@ -103,7 +103,8 @@ class GalleryList extends React.Component {
           box-shadow: 1px 1px 3px #0000008c;
           color: white;
           background-image: url(${wallpaper});
-          font-family: 'Carrois Gothic', sans-serif;
+          font-family: 'Josefin Sans', sans-serif;
+          letter-spacing: 3px;
           margin-bottom: 50vh;
           border: 2px solid #00000078;
         }
@@ -133,7 +134,7 @@ class GalleryList extends React.Component {
         </div>
         <div className="gallery-main-content">
           <div className="gallery-overlay">
-            <h2>Sample Illustrations</h2>
+            <h2>Sample &nbsp;Illustrations</h2>
             <div className="illustration-container">
               {masterGalleryList.map((picture, index) =>
 
