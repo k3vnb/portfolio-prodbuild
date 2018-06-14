@@ -52,20 +52,20 @@ class GalleryList extends React.Component {
           },
       },
       selectedGalleryItem: '1',
+      lightboxIsVisible: false
     };
     this.handleGallerySelection = this.handleGallerySelection.bind(this);
-
+    this.handleLightboxToggle = this.handleLightboxToggle.bind(this);
   }
 
 
   handleGallerySelection(newSelectedGalleryItem) {
     this.setState({selectedGalleryItem: newSelectedGalleryItem});
-    console.log(this.state.selectedGalleryItem);
-    
+    this.setState({lightboxIsVisible: true});
+    console.log(this.state);
   }
-  handleChangingSelectedQuestion(galleryItemId){
-    this.setState({selectedGalleryItem: galleryItemId});
-    console.log('changed to', galleryItemId);
+  handleLightboxToggle(){
+    this.setState({lightboxIsVisible: false});
   }
   render(){
 
@@ -123,9 +123,10 @@ class GalleryList extends React.Component {
 
             </div>
             <div className="GallerySelection-container">
-              <GallerySelection onGalleryItemSelection={this.handleGallerySelection}
+              <GallerySelection onToggleLightbox={this.handleLightboxToggle}
               imageList={this.state.masterIllustrationList}
-              imageNumber={this.state.selectedGalleryItem} />
+              imageNumber={this.state.selectedGalleryItem}
+              lightboxIsVisible={this.state.lightboxIsVisible } />
             </div>
             </div>
         </div>

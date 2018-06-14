@@ -4,12 +4,11 @@ import PropTypes from 'prop-types';
 
 function GallerySelection(props){
   return(
-    <div className="gallery-lightbox">
+    <div className={props.lightboxIsVisible ? 'gallery-lightbox' : 'gallery-invisible'}>
       <style jsx>
         {`
           .gallery-lightbox {
-            position: absolute;
-            
+            position: fixed;
             top: 0%;
             left: 0%;
             justify-content: center;
@@ -18,16 +17,30 @@ function GallerySelection(props){
             height: 100%;
             width: 100%;
             z-index: 6;
+            display: flex;
             animation: fade-in-image .5s;
           }
+          .gallery-invisible {
+            display: none;
+          }
           .image {
-            height: 200px;
-            width: 200px;
+            width: 50vw;
+            height: auto;
+          }
+          .close-button {
+            color: purple;
+            font-size: 60px;
+            margin-left: 5%;
+          }
+          .close-button:hover {
+            color: white;
+            margin-left: 5%;
+            cursor: pointer;
           }
         }`}
       </style>
-      GALLERY SELECTION TEST
-      <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="altLKJ:KLJ:LKJF:KFJ:LKDF"/>
+      <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
+      <h3 className="close-button" onClick={() => {props.onToggleLightbox()}}>X</h3>
     </div>
   );
 }
@@ -35,7 +48,8 @@ function GallerySelection(props){
 GallerySelection.propTypes = {
   imageList: PropTypes.object,
   imageNumber: PropTypes.number,
-  thisSelectedGalleryItem: PropTypes.object
+  lightboxIsVisible: PropTypes.boolean,
+  onToggleLightbox: PropTypes.func
 };
 
 
