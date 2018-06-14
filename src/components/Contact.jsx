@@ -13,17 +13,25 @@ function Contact(){
   return(
     <div>
       <div className="before-contact">
-        <img src={wallpaper} />
-        <ParallaxHeader />
+          <ParallaxHeader />
       </div>
 
       <style jsx>{`
           .before-contact {
             font-family: 'Carrois Gothic', sans-serif;
-            background-color: #156df5;
+            background-image: url(${wallpaper});
+            background-repeat: repeat-y;
+            background-size: cover;
+            opacity: .85;
+          }
+          .before-contact-overlay {
+            height: 100%;
+            width: 100%;
+            background-color: white;
           }
           .before-contact img {
-            height: 200px;
+            opacity: .3;
+            height: 50px;
             width: 100%;
             object-fit: cover;
           }
@@ -118,3 +126,4 @@ function Contact(){
 }
 
 export default Contact;
+            // background-color: #156df5;

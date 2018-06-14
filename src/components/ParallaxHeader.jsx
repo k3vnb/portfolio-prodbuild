@@ -5,8 +5,8 @@ import wallpaper from '../assets/images/body-bg.svg';
 const ParallaxHeader = () => (
   <Parallax
     className="parallax-container1"
-    offsetYMax={10}
-    offsetYMin={-20}
+    offsetYMax={90}
+    offsetYMin={-90}
     slowerScrollRate
     tag="figure"
   ><style jsx>{`
@@ -19,16 +19,17 @@ const ParallaxHeader = () => (
         position: relative;
       }
       .projects-banner {
-        height: 450px;
+        height: 250px;
         width: 100%;
+        opacity: .3;
         object-fit: cover;
       }
       .projects-title {
         color: white;
-        text-shadow: 1px 1px 1px #00000073;
+        text-shadow: 1px 1px 1px #000000c2;
         font-family: 'Didact Gothic', sans-serif;
         position: absolute;
-        top: 20%;
+        top: 45%;
         right: 16%;
       }
       `}</style>
