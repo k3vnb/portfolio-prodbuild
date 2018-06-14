@@ -1,5 +1,4 @@
 import React from 'react';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import Gallery from './Gallery';
 import GallerySelection from './GallerySelection';
 import ParallaxImage from './ParallaxImage';
@@ -79,9 +78,9 @@ class GalleryList extends React.Component {
   render(){
 
     return (
-      <ParallaxProvider>
-        <div className="gallery-container">
-          <style jsx>{`
+
+      <div className="gallery-container">
+        <style jsx>{`
         .top-buffer {
           height: 14.4vh;
         }
@@ -114,36 +113,36 @@ class GalleryList extends React.Component {
           justify-content: space-around;
         }
         `}</style>
-          <div className="top-buffer"></div>
-          <ParallaxImage />
-          <div className="web-projects">
-            <WebProjects />
+        <div className="top-buffer"></div>
+        <ParallaxImage />
+        <div className="web-projects">
+          <WebProjects />
+        </div>
+        <div className="gallery-main-content">
+          <h2>Sample Illustrations</h2>
+          <div className="illustration-container">
+            {masterGalleryList.map((picture, index) =>
+
+
+              <Gallery imageSource = {picture.imageSource}
+                imageTitle = {picture.imageTitle}
+                imageItself = {picture.imageItself}
+                key={index}
+                imageId = {index}
+                onGalleryItemSelection={this.handleGallerySelection} />
+            )}
+
           </div>
-          <div className="gallery-main-content">
-            <h2>Sample Illustrations</h2>
-            <div className="illustration-container">
-              {masterGalleryList.map((picture, index) =>
-
-
-                <Gallery imageSource = {picture.imageSource}
-                  imageTitle = {picture.imageTitle}
-                  imageItself = {picture.imageItself}
-                  key={index}
-                  imageId = {index}
-                  onGalleryItemSelection={this.handleGallerySelection} />
-              )}
-
-            </div>
-            <div className="GallerySelection-container">
-              <GallerySelection onToggleLightbox={this.handleLightboxToggle}
-                imageList={this.state.masterIllustrationList}
-                imageNumber={this.state.selectedGalleryItem}
-                lightboxIsVisible={this.state.lightboxIsVisible }
-                onChangeLightboxPicture={this.handleChangingLightboxPicture} />
-            </div>
+          <div className="GallerySelection-container">
+            <GallerySelection onToggleLightbox={this.handleLightboxToggle}
+              imageList={this.state.masterIllustrationList}
+              imageNumber={this.state.selectedGalleryItem}
+              lightboxIsVisible={this.state.lightboxIsVisible }
+              onChangeLightboxPicture={this.handleChangingLightboxPicture} />
           </div>
         </div>
-      </ParallaxProvider>
+      </div>
+
     );
   }
 }

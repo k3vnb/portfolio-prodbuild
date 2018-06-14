@@ -4,14 +4,29 @@ import skyBG from '../assets/images/sky-bg.jpg';
 import gmailIcon from '../assets/images/icons/gmail-icon.png';
 import githubIcon from '../assets/images/icons/github-icon.png';
 import linkedinIcon from '../assets/images/icons/linkedin-icon.png';
+import ParallaxHeader from './ParallaxHeader';
+import wallpaper from '../assets/images/body-bg.svg';
+
+
 
 function Contact(){
   return(
-    <div className="before-contact">
-      <h2>Contact Me</h2>
-
+    <div>
+      <div className="before-contact">
+        <img src={wallpaper} />
+        <ParallaxHeader />
+      </div>
 
       <style jsx>{`
+          .before-contact {
+            font-family: 'Carrois Gothic', sans-serif;
+            background-color: #156df5;
+          }
+          .before-contact img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+          }
           .contact-container {
             height: 100vh;
             border-bottom: 5.6vh solid #3b3b3b;

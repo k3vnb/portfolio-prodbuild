@@ -12,10 +12,6 @@ function WebProjects() {
           .webprojects-container {
             font-family: 'Carrois Gothic SC', sans-serif;
             background: #ffffff;
-            background: -moz-linear-gradient(top, #ffffff 80%, #ffffff 80%, #ffff5f 100%);
-            background: -webkit-linear-gradient(top, #ffffff 80%,#ffffff 80%,#ffff5f 100%);
-            background: linear-gradient(to bottom, #ffffff 80%,#ffffff 80%,#ffff5f 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffff5f',GradientType=0 );
             padding-bottom: 10vh;
           }
           .gallery-header {

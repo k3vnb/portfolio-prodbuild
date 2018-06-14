@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <div style={appStyleSheet}>
         <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Carrois+Gothic+SC|Didact+Gothic');
+          @import url('https://fonts.googleapis.com/css?family=Acme|Amatic+SC|Carrois+Gothic+SC|Didact+Gothic|Pacifico');
           * {
             box-sizing: border-box;
             margin: 0%;

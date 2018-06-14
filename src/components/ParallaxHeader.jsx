@@ -1,24 +1,25 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import pool from '../assets/images/gallery/pool.png';
+import wallpaper from '../assets/images/body-bg.svg';
 
-const ParallaxImage = () => (
+const ParallaxHeader = () => (
   <Parallax
-    className="parallax-container"
+    className="parallax-container1"
     offsetYMax={10}
-    offsetYMin={-90}
+    offsetYMin={-20}
     slowerScrollRate
     tag="figure"
   ><style jsx>{`
-    .parallax-container {
+    .parallax-container1 {
       margin-top: 5%;
       margin-bottom: 5%;
+      background-color: black;
     }
       .projects-banner-container {
         position: relative;
       }
       .projects-banner {
-        height: 250px;
+        height: 450px;
         width: 100%;
         object-fit: cover;
       }
@@ -32,11 +33,11 @@ const ParallaxImage = () => (
       }
       `}</style>
     <div className="projects-banner-container">
-      <img className="projects-banner" src={pool}/>
-      <h1 className="projects-title">Projects</h1>
+      <img className="projects-banner" src={wallpaper}/>
+      <h1 className="projects-title">Contact</h1>
     </div>
 
   </Parallax>
 );
 
-export default ParallaxImage;
+export default ParallaxHeader;

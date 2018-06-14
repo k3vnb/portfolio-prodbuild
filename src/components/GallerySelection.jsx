@@ -62,6 +62,7 @@ function GallerySelection(props){
           }
           .next-button:hover {
             color: white;
+            text-shadow: 0px 0px 1px black;
             cursor: pointer;
           }
           .next-button:active {
