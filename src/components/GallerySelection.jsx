@@ -12,38 +12,69 @@ function GallerySelection(props){
             position: fixed;
             top: 0%;
             left: 0%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             background-color: #000000cc;
             padding-top: 5%;
             height: 100%;
             width: 100%;
             z-index: 6;
-            display: flex;
             animation: fade-in-image .5s;
           }
           .gallery-invisible {
             display: none;
           }
           .image {
-            width: 50vw;
+            width: 75vw;
             height: auto;
             object-fit: contain;
           }
+          .lightbox-buttons {
+            display: flex;
+            flex-direction: column;
+          }
           .close-button {
             color: purple;
-            font-size: 60px;
-            margin-left: 5%;
+            font-size: 27.6px;
+            height: 40px;
+            width: 40px;
+            border: 1px solid white;
+            border-radius: 50%;
+            position: fixed;
+            top: 2%;
+            right: 2%;
           }
           .close-button:hover {
             color: white;
-            margin-left: 5%;
             cursor: pointer;
+          }
+          .next-button {
+            color: black;
+            text-shadow: 0px 0px 1px white;
+            font-size: 40px;
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+          }
+          .next-button:hover {
+            color: white;
+            cursor: pointer;
+          }
+          .next-button:active {
+            color: yellow;
+            text-shadow: 0px 0px 3px white;
+          }
+          h3 {
+            align-self: flex-end;
+            margin-right: 5%;
           }
         }`}
       </style>
-      <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
       <h3 className="close-button" onClick={() => {props.onToggleLightbox()}}>X</h3>
-      <h3 className="next-button" onClick={() => {props.onChangeLightboxPicture(props.imageNumber)}}>Y</h3>
+      <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
+        <h3 className="next-button" onClick={() => {props.onChangeLightboxPicture(props.imageNumber)}}>Next</h3>
     </div>
   );
 }

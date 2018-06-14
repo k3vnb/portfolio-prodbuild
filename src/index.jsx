@@ -1,16 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Favicon from 'react-favicon';
+import favicon from './assets/images/favicon.png';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
 import { HashRouter } from 'react-router-dom';
 
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
-      <HashRouter>
-        <Component/>
-      </HashRouter>
-    </AppContainer>,
+    <div>
+      <Favicon url={favicon} />
+      <AppContainer>
+        <HashRouter>
+          <Component/>
+        </HashRouter>
+      </AppContainer>
+    </div>,
     document.getElementById('react-app-root')
   );
 };
