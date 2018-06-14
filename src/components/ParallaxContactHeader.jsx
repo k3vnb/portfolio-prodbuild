@@ -2,7 +2,7 @@ import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import wallpaper from '../assets/images/body-bg.svg';
 
-const ParallaxHeader = () => (
+const ParallaxContactHeader = () => (
   <Parallax
     className="parallax-container1"
     offsetYMax={90}
@@ -13,7 +13,6 @@ const ParallaxHeader = () => (
     .parallax-container1 {
       margin-top: 5%;
       margin-bottom: 5%;
-      background-color: black;
     }
       .projects-banner-container {
         position: relative;
@@ -23,6 +22,9 @@ const ParallaxHeader = () => (
         width: 100%;
         opacity: .3;
         object-fit: cover;
+      }
+      .projects-banner img {
+
       }
       .projects-title {
         color: white;
@@ -41,4 +43,4 @@ const ParallaxHeader = () => (
   </Parallax>
 );
 
-export default ParallaxHeader;
+export default ParallaxContactHeader;

@@ -11,9 +11,10 @@ class Nav extends React.Component {
     };
     this.state.navOpacityFull = false;
     this.makeOpaque = this.makeOpaque.bind(this);
+    this.checkViewPort = this.checkViewPort.bind(this);
   }
   componentDidMount () {
-    window.addEventListener('scroll', this.makeOpaque);
+    window.addEventListener('scroll', this.makeOpaque, this.checkViewPort);
   }
 
   makeOpaque() {
@@ -23,6 +24,14 @@ class Nav extends React.Component {
       this.setState({navOpacityFull: false});
     }
   }
+  underlineNavLink(){
+    console.log("in viewport");
+  }
+  checkViewPort(){
+    console.log("hello");
+    let x = document.querySelector('.about-container').getBoundingClientRect();
+    console.log(x);
+    }
   render(){
     function scrollToPage(pageSelector) {
       const goToPage = document.querySelector(pageSelector);
@@ -43,6 +52,7 @@ class Nav extends React.Component {
         block: 'start'
       });
     }
+
 
 
     return(

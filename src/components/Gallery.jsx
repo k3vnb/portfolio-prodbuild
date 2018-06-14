@@ -11,8 +11,11 @@ function Gallery(props){
           border-radius: 50%;
           border: .5px solid black;
           overflow: hidden;
-          transition: transform .3s;
+          transition: box-shadow .5s;
           box-shadow: 0px 0px 8px 2px #ffffff94;
+        }
+        .gallery-card:hover {
+          box-shadow: 0px 0px 10px 4px #ffffff85;
         }
 
         @media screen and (max-width: 500px){

@@ -107,7 +107,7 @@ function About() {
       <div className="about-lower">
         <p><span className="leader-text2">I consider coding to be a craft and an artform</span>, an opportunity for lifelong learning and for building on life experiences. My personal mission is to contribute and facilitate meaningful art, interaction, and dialogue to society and to build positive relationships with peers, clients, and users.</p>
         <p>My background is in anthropology, education, cross-cultural communication, and community management. As an undergraduate at the University of Toronto, I was immersed in post-structural ideas on human communication in the age of digital media. Later I joined the Peace Corps in Turkmenistan, where I developed an English language program for a remote and isolated village. Over the years I've studied music, art, language, and philosophy. When I first learned to code, I immediately realized that I had found the platform that would combine all of my passions and interests with endless possibilities.</p>
-        <p className="leader-text2">Some of my skills are:</p>
+        <p className="leader-text2">My skillset includes:</p>
         <ul className="skills-list">
           <li>Javascript</li>
           <li>React/Redux</li>

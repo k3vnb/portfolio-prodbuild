@@ -4,7 +4,7 @@ import skyBG from '../assets/images/sky-bg.jpg';
 import gmailIcon from '../assets/images/icons/gmail-icon.png';
 import githubIcon from '../assets/images/icons/github-icon.png';
 import linkedinIcon from '../assets/images/icons/linkedin-icon.png';
-import ParallaxHeader from './ParallaxHeader';
+import ParallaxContactHeader from './ParallaxContactHeader';
 import wallpaper from '../assets/images/body-bg.svg';
 
 
@@ -13,7 +13,7 @@ function Contact(){
   return(
     <div>
       <div className="before-contact">
-        <ParallaxHeader />
+        <ParallaxContactHeader />
       </div>
 
       <style jsx>{`
