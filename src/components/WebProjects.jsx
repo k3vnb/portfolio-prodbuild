@@ -12,12 +12,21 @@ function WebProjects() {
       <style jsx>{`
           .webprojects-container {
             font-family: 'Carrois Gothic SC', sans-serif;
+            background: #ffffff;
+            background: -moz-linear-gradient(top, #ffffff 80%, #ffffff 80%, #fbb7ff 100%);
+            background: -webkit-linear-gradient(top, #ffffff 80%,#ffffff 80%,#fbb7ff 100%);
+            background: linear-gradient(to bottom, #ffffff 80%,#ffffff 80%,#fbb7ff 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fbb7ff',GradientType=0 );
           }
           .gallery-header {
             text-align: center;
-            font-family: 'Didact Gothic', sans-serif;
             color: white;
-            text-shadow: 0px 0px 2px #4646b5;
+            text-shadow: 0px 0px 2px black;
+            box-shadow: 1px 1px 3px #0000008c;
+            background-color: #1bb3a6;
+            width: 33%;
+            margin-left: 5%;
+            padding: 1%;
           }
           .project-card-container {
             display: flex;
@@ -29,6 +38,7 @@ function WebProjects() {
             margin: 5% 0% 5% 2%;
             box-shadow: 1px 1px 3px #0000008c;
             transition: transform .1s, box-shadow .21s;
+            background-color: white;
           }
           .project-card:last-child {
             margin-right: 2%;

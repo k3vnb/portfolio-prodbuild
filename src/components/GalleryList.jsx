@@ -12,22 +12,22 @@ import mindBlown from '../assets/images/gallery/mindblown.png';
 
 const masterGalleryList = [
   {
-    imageSource: '1A',
+    imageSource: '0',
     imageTitle: 'Pic1',
     imageItself: `${walrus}`
   },
   {
-    imageSource: '1B',
+    imageSource: '1',
     imageTitle: 'Pic2',
     imageItself: `${duckBath}`
   },
   {
-    imageSource: '1C',
+    imageSource: '2',
     imageTitle: 'Pic3',
     imageItself: `${nightDrive}`
   },
   {
-    imageSource: '1D',
+    imageSource: '3',
     imageTitle: 'Pic4',
     imageItself: `${mindBlown}`
   }
@@ -37,16 +37,35 @@ class GalleryList extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      selectedGalleryItem: '1'
+      masterIllustrationList: {
+        '0':   {
+            imageItself: `${walrus}`
+          },
+          '1':  {
+            imageItself: `${duckBath}`
+          },
+          '2': {
+            imageItself: `${nightDrive}`
+          },
+          '3': {
+            imageItself: `${mindBlown}`
+          },
+      },
+      selectedGalleryItem: '1',
     };
-
     this.handleGallerySelection = this.handleGallerySelection.bind(this);
+
   }
 
 
-  handleGallerySelection() {
-    console.log('gallery item seleced');
-    console.log(this);
+  handleGallerySelection(newSelectedGalleryItem) {
+    this.setState({selectedGalleryItem: newSelectedGalleryItem});
+    console.log(this.state.selectedGalleryItem);
+    
+  }
+  handleChangingSelectedQuestion(galleryItemId){
+    this.setState({selectedGalleryItem: galleryItemId});
+    console.log('changed to', galleryItemId);
   }
   render(){
 
@@ -92,16 +111,21 @@ class GalleryList extends React.Component {
             <h2>Sample Illustrations</h2>
             <div className="illustration-container">
               {masterGalleryList.map((picture, index) =>
+
+
                 <Gallery imageSource = {picture.imageSource}
                   imageTitle = {picture.imageTitle}
                   imageItself = {picture.imageItself}
                   key={index}
-                  questionId = {index}
+                  imageId = {index}
                   onGalleryItemSelection={this.handleGallerySelection} />
               )}
+
             </div>
             <div className="GallerySelection-container">
-              <GallerySelection onGalleryItemSelection={this.handleGallerySelection}/>
+              <GallerySelection onGalleryItemSelection={this.handleGallerySelection}
+              imageList={this.state.masterIllustrationList}
+              imageNumber={this.state.selectedGalleryItem} />
             </div>
             </div>
         </div>
@@ -111,3 +135,15 @@ class GalleryList extends React.Component {
 }
 
 export default GalleryList;
+
+// {Object.keys(this.state.masterIllustrationList).map(function(galleryItemId) {
+//
+//   return <div className="galleryItem"><Gallery
+//     imageSource ={galleryItemId.imageSource}
+//     imageTitle = {galleryItemId.imageTitle}
+//     imageItself = {galleryItemId.imageItself}
+//     key={galleryItemId}
+//     questionId = {galleryItemId}
+//
+//   /></div>;
+// })}

@@ -39,8 +39,8 @@ function Gallery(props){
 Gallery.propTypes = {
   imageSource: PropTypes.string,
   imageTitle: PropTypes.string,
-  imageItself: PropTypes.element,
-  imageId: PropTypes.string,
+  imageItself: PropTypes.string,
+  imageId: PropTypes.number,
   onGallerySelection: PropTypes.func
 };
 
