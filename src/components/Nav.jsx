@@ -30,55 +30,35 @@ class Nav extends React.Component {
       this.setState({navOpacityFull: false});
     }
   }
-  underlineNavLink(){
-    var testDiv = document.querySelector(".about-container");
-    var testDiv1 = document.querySelector(".gallery-container");
-    var testDiv2 = document.querySelector(".contact-container");
-
-    var x = testDiv.offsetTop;
-    var x1 = testDiv1.offsetTop;
-    var x2 = testDiv2.offsetTop;
-    console.log(x);
-    console.log(x1);
-    console.log(x2);
-    console.log('in viewport');
-  }
   checkViewPort(){
-    console.log(window.innerWidth);
-    console.log(window.scrollY);
+
     if (window.innerWidth > 450){
       if (window.scrollY < 1100) {
         this.setState({aboutLinkIsUnderlined: true});
         this.setState({galleryLinkIsUnderlined: false});
-        this.setState({contactLinkIsUnderlined: false});
-        console.log(this.state);
+        this.setState({contactLinkIsUnderlined: false})
       } else if (window.scrollY > 1100 && window.scrollY < 2400){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: true});
-        this.setState({contactLinkIsUnderlined: false});
-        console.log(this.state);
+        this.setState({contactLinkIsUnderlined: false})
       } else if (window.scrollY > 2400){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: false});
-        this.setState({contactLinkIsUnderlined: true});
-        console.log(this.state);
+        this.setState({contactLinkIsUnderlined: true})
       }
     } else if (window.innerWidth < 450){
         if (window.scrollY < 900) {
           this.setState({aboutLinkIsUnderlined: true});
           this.setState({galleryLinkIsUnderlined: false});
           this.setState({contactLinkIsUnderlined: false});
-          console.log(this.state);
         } else if (window.scrollY > 900 && window.scrollY < 2000){
           this.setState({aboutLinkIsUnderlined: false});
           this.setState({galleryLinkIsUnderlined: true});
           this.setState({contactLinkIsUnderlined: false});
-          console.log(this.state);
         } else if (window.scrollY > 2000){
           this.setState({aboutLinkIsUnderlined: false});
           this.setState({galleryLinkIsUnderlined: false});
           this.setState({contactLinkIsUnderlined: true});
-          console.log(this.state);
         }
       }
   }
@@ -159,6 +139,30 @@ class Nav extends React.Component {
                     justify-content: space-between;
             width: 35%;
             margin-left: 5%;
+          }
+          .nav-link-underline {
+            border-bottom: 1px solid #d8783f63;
+            animation: 2s underline ease-in;
+          }
+          .nav-link-reverse-underline {
+            border-bottom: 0px solid #d8783f63;
+            animation: .5s reverse-underline ease-in;
+          }
+          @keyframes underline {
+            from {
+              border-bottom: 0px solid #d8783f63;
+            }
+            to {
+              border-bottom: 1px solid #d8783f63;
+            }
+          }
+          @keyframes reverse-underline {
+            from {
+              border-bottom: 1px solid #d8783f63;
+            }
+            to {
+              border-bottom: 0px solid #d8783f63;
+            }
           }
           .nav-link-topbar {
             color: #4c4943;
@@ -247,13 +251,13 @@ class Nav extends React.Component {
             </div>
           </div>
           <div className="nav-links-right">
-            <div className="nav-link-topbar" title="go to about section" onClick={() => scrollToPage('.about-container')}>
+            <div className={this.state.aboutLinkIsUnderlined ? 'nav-link-topbar nav-link-underline' : 'nav-link-topbar nav-link-reverse-underline'} title="go to about section" onClick={() => scrollToPage('.about-container')}>
               About
             </div>
-            <div className="nav-link-topbar" title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>
+            <div className={this.state.galleryLinkIsUnderlined ? 'nav-link-topbar nav-link-underline' : 'nav-link-topbar nav-link-reverse-underline'} title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>
               Gallery
             </div>
-            <div className="nav-link-topbar" title="go to contact section" onClick={() => scrollToPage('.contact-container')}>
+            <div className={this.state.contactLinkIsUnderlined ? 'nav-link-topbar nav-link-underline' : 'nav-link-topbar nav-link-reverse-underline'} title="go to contact section" onClick={() => scrollToPage('.contact-container')}>
               Contact
             </div>
           </div>
