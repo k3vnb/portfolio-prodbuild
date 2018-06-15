@@ -95,8 +95,8 @@ function GallerySelection(props){
 
 GallerySelection.propTypes = {
   imageList: PropTypes.object,
-  imageNumber: PropTypes.number,
-  lightboxIsVisible: PropTypes.boolean,
+  imageNumber: PropTypes.string,
+  lightboxIsVisible: PropTypes.bool,
   onToggleLightbox: PropTypes.func,
   onChangeLightboxPicture: PropTypes.func
 };

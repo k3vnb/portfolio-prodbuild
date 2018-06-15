@@ -13,22 +13,22 @@ import wallpaper from '../assets/images/body-bg.svg';
 const masterGalleryList = [
   {
     imageSource: '0',
-    imageTitle: 'Pic1',
+    imageTitle: 'Pool Day',
     imageItself: `${walrus}`
   },
   {
     imageSource: '1',
-    imageTitle: 'Pic2',
+    imageTitle: 'Bird Bath',
     imageItself: `${duckBath}`
   },
   {
     imageSource: '2',
-    imageTitle: 'Pic3',
+    imageTitle: 'Night Drive',
     imageItself: `${nightDrive}`
   },
   {
     imageSource: '3',
-    imageTitle: 'Pic4',
+    imageTitle: 'Mind Blown',
     imageItself: `${mindBlown}`
   }
 ];
@@ -97,7 +97,7 @@ class GalleryList extends React.Component {
           align-items: center;
         }
 
-        .gallery-main-content {
+        .illustration-gallery {
           width: 92%;
           margin: auto;
           box-shadow: 1px 1px 3px #0000008c;
@@ -114,7 +114,7 @@ class GalleryList extends React.Component {
           width: 100%;
           background: linear-gradient(90deg,rgba(2,0,36,1) 0%,rgba(1, 1, 2, 0.79) 0%,rgba(177, 0, 255, 0.53) 100%)
         }
-        .gallery-main-content h2 {
+        .illustration-gallery h2 {
           margin: 0% 0% 5% 5%;
           text-shadow: 1px 1px 1px #00000082;
           z-index: 2;
@@ -132,7 +132,7 @@ class GalleryList extends React.Component {
         <div className="web-projects">
           <WebProjects />
         </div>
-        <div className="gallery-main-content">
+        <div className="illustration-gallery">
           <div className="gallery-overlay">
             <h2>Sample &nbsp;Illustrations</h2>
             <div className="illustration-container">

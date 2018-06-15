@@ -81,26 +81,6 @@ function Contact(){
           .contact-bottom-right {
             background-color: #ff9800ad;
           }
-          .email-on-psuedo-footer {
-            position: absolute;
-            font-family: Didact Gothic, sans-serif;
-            color: white;
-            font-size: 10px;
-            bottom: -3.5%;
-            left: 2%;
-          }
-          .email-on-psuedo-footer h4 {
-            margin: 0%;
-          }
-          .email-on-psuedo-footer a {
-            color: white;
-            text-decoration: none;
-          }
-          @media screen and (max-width: 430px){
-            .display-none-sm-scrn {
-              display: none;
-            }
-          }
           `}</style>
       <div className="contact-container">
         <div className="contact-page-inner">
@@ -116,9 +96,6 @@ function Contact(){
           <div className="contact-box contact-bottom-right">
             <a href="http://www.linkedin.com/in/boylekev" target="_blank" title="Go to Kevin's LinkedIn"><img className="linkedin-icon icon" src={linkedinIcon} /></a>
           </div>
-        </div>
-        <div className="email-on-psuedo-footer">
-          <h4><span className="display-none-sm-scrn">email me at</span> <a href="mailto:boyle.kevin.michael@gmail.com" title="email me at boyle.kevin.michael@gmail.com">boyle.kevin.michael@gmail.com</a></h4>
         </div>
       </div>
     </div>

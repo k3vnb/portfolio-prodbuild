@@ -44,8 +44,8 @@ function Error404(props){
             `}</style>
       <h1>ERROR 404</h1>
       <div className="return-home">
-      <h3>The page {props.location.pathname} is invalid!</h3>
-      <h3>Return <Link to="/" ><span className="go-home">Home</span></Link>?</h3>
+        <h3>The page {props.location.pathname} is invalid!</h3>
+        <h3>Return <Link to="/" ><span className="go-home">Home</span></Link>?</h3>
       </div>
     </div>
   );

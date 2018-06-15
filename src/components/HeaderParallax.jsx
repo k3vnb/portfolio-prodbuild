@@ -62,6 +62,7 @@ const HeaderParallax = () => (
       letter-spacing: 13px;
     }
     .tagline {
+      font-family: 'Didact Gothic', sans-serif;
       text-shadow: .5px .5px 1px white;
     }
     .link-line {
@@ -71,6 +72,7 @@ const HeaderParallax = () => (
       position: sticky;
     }
     .nav-links {
+      font-family: 'Josefin Sans', sans-serif;
       border: 1px solid #ffa90e;
       color: #ffa90e;
       width: 100%;
@@ -119,15 +121,15 @@ const HeaderParallax = () => (
     }
 
       `}</style>
-      <div className="header-main-content">
-        <h1 className="title-text">Kevin  &nbsp;Boyle</h1>
-        <h2 className="tagline">Web Developer & Designer</h2>
-        <div className="link-line">
-          <div className="nav-links" onClick={() => scrollToPage('.about-container')}>About</div>
-          <div className="nav-links" onClick={() => scrollToPage('.gallery-container')}>Gallery</div>
-          <div className="nav-links" onClick={() => scrollToPage('.contact-container')}>Contact</div>
-        </div>
+    <div className="header-main-content">
+      <h1 className="title-text">Kevin  &nbsp;Boyle</h1>
+      <h2 className="tagline">Web Developer & Designer</h2>
+      <div className="link-line">
+        <div className="nav-links" title="go to about section" onClick={() => scrollToPage('.about-container')}>About</div>
+        <div className="nav-links" title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>Gallery</div>
+        <div className="nav-links" title="go to contact section" onClick={() => scrollToPage('.contact-container')}>Contact</div>
       </div>
+    </div>
 
   </Parallax>
 );

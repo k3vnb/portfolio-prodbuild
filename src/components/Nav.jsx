@@ -7,15 +7,21 @@ class Nav extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-
+      aboutLinkIsUnderlined: false,
+      galleryLinkIsUnderlined: false,
+      contactLinkIsUnderlined: false
     };
     this.state.navOpacityFull = false;
     this.makeOpaque = this.makeOpaque.bind(this);
     this.checkViewPort = this.checkViewPort.bind(this);
   }
   componentDidMount () {
-    window.addEventListener('scroll', this.makeOpaque, this.checkViewPort);
+    window.addEventListener('scroll', this.makeOpaque);
+    window.addEventListener('scroll', this.checkViewPort);
   }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.checkViewPort);
+}
 
   makeOpaque() {
     if (document.documentElement.scrollTop > 400) {
@@ -25,13 +31,57 @@ class Nav extends React.Component {
     }
   }
   underlineNavLink(){
-    console.log("in viewport");
+    var testDiv = document.querySelector(".about-container");
+    var testDiv1 = document.querySelector(".gallery-container");
+    var testDiv2 = document.querySelector(".contact-container");
+
+    var x = testDiv.offsetTop;
+    var x1 = testDiv1.offsetTop;
+    var x2 = testDiv2.offsetTop;
+    console.log(x);
+    console.log(x1);
+    console.log(x2);
+    console.log('in viewport');
   }
   checkViewPort(){
-    console.log("hello");
-    let x = document.querySelector('.about-container').getBoundingClientRect();
-    console.log(x);
-    }
+    console.log(window.innerWidth);
+    console.log(window.scrollY);
+    if (window.innerWidth > 450){
+      if (window.scrollY < 1100) {
+        this.setState({aboutLinkIsUnderlined: true});
+        this.setState({galleryLinkIsUnderlined: false});
+        this.setState({contactLinkIsUnderlined: false});
+        console.log(this.state);
+      } else if (window.scrollY > 1100 && window.scrollY < 2400){
+        this.setState({aboutLinkIsUnderlined: false});
+        this.setState({galleryLinkIsUnderlined: true});
+        this.setState({contactLinkIsUnderlined: false});
+        console.log(this.state);
+      } else if (window.scrollY > 2400){
+        this.setState({aboutLinkIsUnderlined: false});
+        this.setState({galleryLinkIsUnderlined: false});
+        this.setState({contactLinkIsUnderlined: true});
+        console.log(this.state);
+      }
+    } else if (window.innerWidth < 450){
+        if (window.scrollY < 900) {
+          this.setState({aboutLinkIsUnderlined: true});
+          this.setState({galleryLinkIsUnderlined: false});
+          this.setState({contactLinkIsUnderlined: false});
+          console.log(this.state);
+        } else if (window.scrollY > 900 && window.scrollY < 2000){
+          this.setState({aboutLinkIsUnderlined: false});
+          this.setState({galleryLinkIsUnderlined: true});
+          this.setState({contactLinkIsUnderlined: false});
+          console.log(this.state);
+        } else if (window.scrollY > 2000){
+          this.setState({aboutLinkIsUnderlined: false});
+          this.setState({galleryLinkIsUnderlined: false});
+          this.setState({contactLinkIsUnderlined: true});
+          console.log(this.state);
+        }
+      }
+  }
   render(){
     function scrollToPage(pageSelector) {
       const goToPage = document.querySelector(pageSelector);
@@ -197,13 +247,13 @@ class Nav extends React.Component {
             </div>
           </div>
           <div className="nav-links-right">
-            <div className="nav-link-topbar" onClick={() => scrollToPage('.about-container')}>
+            <div className="nav-link-topbar" title="go to about section" onClick={() => scrollToPage('.about-container')}>
               About
             </div>
-            <div className="nav-link-topbar" onClick={() => scrollToPage('.gallery-container')}>
+            <div className="nav-link-topbar" title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>
               Gallery
             </div>
-            <div className="nav-link-topbar" onClick={() => scrollToPage('.contact-container')}>
+            <div className="nav-link-topbar" title="go to contact section" onClick={() => scrollToPage('.contact-container')}>
               Contact
             </div>
           </div>
@@ -214,3 +264,8 @@ class Nav extends React.Component {
 }
 
 export default Nav;
+
+// smallwd: 447, 1120, 2701
+// medwd: 453, 1355, 2819
+// lgwd: 456, 1451, 2923
+// about: <1120; gallery: >1121, <2700; contact: >2701;
