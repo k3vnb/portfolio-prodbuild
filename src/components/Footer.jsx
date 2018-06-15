@@ -5,17 +5,12 @@ function Footer(){
   let footerLeftStyleSheet = {
     position: 'absolute',
     bottom: 4,
-    left: 2,
-  }
+    left: 8,
+  };
   let footerRightStyleSheet = {
-
-    width: '100%',
     position: 'fixed',
     bottom: 2,
     right: 10,
-    display: 'flex',
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
   };
   return (
     <div className="footer-container">
@@ -37,12 +32,12 @@ function Footer(){
           }
           `}</style>
       <div style={footerRightStyleSheet}>
-          <h3>Kevin Boyle</h3>
-        </div>
-      <div style={footerLeftStyleSheet}>
-        <h3 className="footer-left"><span className="display-none-sm-scrn">email me at</span>boyle.kevin.michael@gmail.com</h3>
+        <h3>Kevin Boyle</h3>
       </div>
-  </div>
+      <div style={footerLeftStyleSheet}>
+        <h3 className="footer-left"><span className="display-none-sm-scrn">email me at </span> boyle.kevin.michael@gmail.com</h3>
+      </div>
+    </div>
   );
 }
 

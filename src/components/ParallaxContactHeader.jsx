@@ -4,29 +4,29 @@ import wallpaper from '../assets/images/body-bg.svg';
 
 const ParallaxContactHeader = () => (
   <Parallax
-    className="parallax-container1"
+    className="contact-parallax-container1"
     offsetYMax={90}
     offsetYMin={-90}
     slowerScrollRate
     tag="figure"
   ><style jsx>{`
-    .parallax-container1 {
+    .contact-parallax-container1 {
       margin-top: 5%;
       margin-bottom: 5%;
     }
-      .projects-banner-container {
+      .contact-banner-container {
         position: relative;
       }
-      .projects-banner {
+      .contact-banner {
         height: 250px;
         width: 100%;
         opacity: .3;
         object-fit: cover;
       }
-      .projects-banner img {
+      .contact-banner img {
 
       }
-      .projects-title {
+      .contact-title {
         color: white;
         text-shadow: 1px 1px 1px #000000c2;
         font-family: 'Didact Gothic', sans-serif;
@@ -35,9 +35,9 @@ const ParallaxContactHeader = () => (
         right: 16%;
       }
       `}</style>
-    <div className="projects-banner-container">
-      <img className="projects-banner" src={wallpaper}/>
-      <h1 className="projects-title">Contact</h1>
+    <div className="contact-banner-container">
+      <img className="contact-banner" src={wallpaper}/>
+      <h1 className="contact-title">Contact</h1>
     </div>
 
   </Parallax>

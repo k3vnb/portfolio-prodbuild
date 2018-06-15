@@ -103,4 +103,3 @@ function Contact(){
 }
 
 export default Contact;
-// background-color: #156df5;

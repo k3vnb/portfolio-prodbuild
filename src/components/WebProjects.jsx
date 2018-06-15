@@ -16,7 +16,7 @@ function WebProjects() {
             position: sticky;
             top: 10px;
           }
-          .gallery-header {
+          .projects-gallery-header {
             text-align: center;
             color: white;
             text-shadow: 0px 0px 2px black;
@@ -130,7 +130,7 @@ function WebProjects() {
             background-color: #47ff7e;
           }
           @media screen and (max-width: 650px){
-            .gallery-header {
+            .projects-gallery-header {
               width: 75%;
             }
           @media screen and (max-width: 450px){
@@ -149,7 +149,7 @@ function WebProjects() {
             }
           }
           `}</style>
-      <div className="gallery-header">
+      <div className="projects-gallery-header">
         <h2>Websites & Web Apps</h2>
       </div>
       <div className="project-card-container">

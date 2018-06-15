@@ -4,13 +4,13 @@ import pool from '../assets/images/gallery/pool.png';
 
 const ParallaxImage = () => (
   <Parallax
-    className="parallax-container"
+    className="projects-parallax-container"
     offsetYMax={10}
     offsetYMin={-90}
     slowerScrollRate
     tag="figure"
   ><style jsx>{`
-    .parallax-container {
+    .projects-parallax-container {
       margin-top: 5%;
       margin-bottom: 5%;
     }

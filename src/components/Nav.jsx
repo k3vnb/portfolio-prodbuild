@@ -21,7 +21,7 @@ class Nav extends React.Component {
   }
   componentWillUnmount() {
     window.removeEventListener('scroll', this.checkViewPort);
-}
+  }
 
   makeOpaque() {
     if (document.documentElement.scrollTop > 400) {
@@ -36,31 +36,31 @@ class Nav extends React.Component {
       if (window.scrollY < 1100) {
         this.setState({aboutLinkIsUnderlined: true});
         this.setState({galleryLinkIsUnderlined: false});
-        this.setState({contactLinkIsUnderlined: false})
+        this.setState({contactLinkIsUnderlined: false});
       } else if (window.scrollY > 1100 && window.scrollY < 2400){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: true});
-        this.setState({contactLinkIsUnderlined: false})
+        this.setState({contactLinkIsUnderlined: false});
       } else if (window.scrollY > 2400){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: false});
-        this.setState({contactLinkIsUnderlined: true})
+        this.setState({contactLinkIsUnderlined: true});
       }
     } else if (window.innerWidth < 450){
-        if (window.scrollY < 900) {
-          this.setState({aboutLinkIsUnderlined: true});
-          this.setState({galleryLinkIsUnderlined: false});
-          this.setState({contactLinkIsUnderlined: false});
-        } else if (window.scrollY > 900 && window.scrollY < 2000){
-          this.setState({aboutLinkIsUnderlined: false});
-          this.setState({galleryLinkIsUnderlined: true});
-          this.setState({contactLinkIsUnderlined: false});
-        } else if (window.scrollY > 2000){
-          this.setState({aboutLinkIsUnderlined: false});
-          this.setState({galleryLinkIsUnderlined: false});
-          this.setState({contactLinkIsUnderlined: true});
-        }
+      if (window.scrollY < 900) {
+        this.setState({aboutLinkIsUnderlined: true});
+        this.setState({galleryLinkIsUnderlined: false});
+        this.setState({contactLinkIsUnderlined: false});
+      } else if (window.scrollY > 900 && window.scrollY < 2000){
+        this.setState({aboutLinkIsUnderlined: false});
+        this.setState({galleryLinkIsUnderlined: true});
+        this.setState({contactLinkIsUnderlined: false});
+      } else if (window.scrollY > 2000){
+        this.setState({aboutLinkIsUnderlined: false});
+        this.setState({galleryLinkIsUnderlined: false});
+        this.setState({contactLinkIsUnderlined: true});
       }
+    }
   }
   render(){
     function scrollToPage(pageSelector) {
@@ -142,7 +142,7 @@ class Nav extends React.Component {
           }
           .nav-link-underline {
             border-bottom: 1px solid #d8783f63;
-            animation: 2s underline ease-in;
+            animation: 1s underline ease-in;
           }
           .nav-link-reverse-underline {
             border-bottom: 0px solid #d8783f63;
@@ -266,10 +266,4 @@ class Nav extends React.Component {
     );
   }
 }
-
 export default Nav;
-
-// smallwd: 447, 1120, 2701
-// medwd: 453, 1355, 2819
-// lgwd: 456, 1451, 2923
-// about: <1120; gallery: >1121, <2700; contact: >2701;

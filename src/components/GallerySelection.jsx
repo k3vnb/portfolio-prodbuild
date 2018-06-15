@@ -18,7 +18,6 @@ function GallerySelection(props){
             justify-content: center;
             background-color: #000000cc;
             font-family: 'Didact Gothic', sans-serif;
-            padding-top: 5%;
             height: 100%;
             width: 100%;
             z-index: 6;
@@ -33,7 +32,7 @@ function GallerySelection(props){
           .gallery-invisible {
             display: none;
           }
-          .image {
+          .lightbox-image {
             width: 75vw;
             height: auto;
             object-fit: contain;
@@ -83,7 +82,7 @@ function GallerySelection(props){
       <div className="close-button" onClick={() => {props.onToggleLightbox();}}>
         <h3>X</h3>
       </div>
-      <img className="image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
+      <img className="lightbox-image" src={props.imageList[props.imageNumber].imageItself} alt="SVG Illustration"/>
       <div className="next-button" onClick={() => {props.onChangeLightboxPicture(props.imageNumber);}}>
         <h3>
           Next
