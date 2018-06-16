@@ -1,6 +1,7 @@
 import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
-import pool from '../assets/images/gallery/pool.png';
+import pool1 from '../assets/images/gallery/pool1.png';
+
 
 const ParallaxImage = () => (
   <Parallax
@@ -21,6 +22,7 @@ const ParallaxImage = () => (
         height: 250px;
         width: 100%;
         object-fit: cover;
+        object-position: 0% 6%;
       }
       .projects-title {
         color: white;
@@ -32,7 +34,7 @@ const ParallaxImage = () => (
       }
       `}</style>
     <div className="projects-banner-container">
-      <img className="projects-banner" src={pool}/>
+      <img className="projects-banner" src={pool1}/>
       <h1 className="projects-title">Projects</h1>
     </div>
 

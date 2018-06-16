@@ -90,6 +90,12 @@ function About() {
               margin-left: -10%;
             }
           }
+          @media screen and (max-width: 460px){
+            .main-container {
+              margin-bottom: 80vw;
+              margin-top: 5vh;
+            }
+          }
           @media screen and (max-width: 400px){
             .about-lower ul {
               font-size: 7.6px;
