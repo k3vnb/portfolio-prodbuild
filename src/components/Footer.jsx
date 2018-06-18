@@ -19,7 +19,6 @@ function Footer(){
             position: relative;
             color: white;
             font-family: 'Didact Gothic', sans-serif;
-            font-size: 10px;
             text-shadow: -.5px .5px 1px black;
           }
           .copy-to-clipboard:hover {

@@ -6,8 +6,8 @@ function Gallery(props){
     <div className="gallery-card" onClick={() => {props.onGalleryItemSelection(props.imageId);}}>
       <style jsx>{`
         .gallery-card {
-          width: 80px;
-          height: 80px;
+          width: 18vw;
+          height: 18vw;
           border-radius: 50%;
           border: .5px solid black;
           overflow: hidden;
@@ -20,8 +20,8 @@ function Gallery(props){
 
         @media screen and (max-width: 500px){
           .gallery-card {
-            width: 50px;
-            height: 50px;
+            width: 75px;
+            height: 75px;
           }
         }
         .gallery-image {

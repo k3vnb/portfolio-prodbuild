@@ -56,6 +56,11 @@ function GallerySelection(props){
             align-items: center;
             padding: 0% 0% .5% .5%;
           }
+          .close-button h3 {
+            position: absolute;
+            top: -20%;
+            right: 24%;
+          }
           .close-button:hover {
             color: white;
             cursor: pointer;
@@ -63,9 +68,9 @@ function GallerySelection(props){
           .next-button {
             color: black;
             text-shadow: 0px 0px 1px white;
-            font-size: 40px;
+            font-size: 62px;
             position: fixed;
-            bottom: 2%;
+            bottom: 15%;
             right: 5%;
           }
           .next-button:hover {

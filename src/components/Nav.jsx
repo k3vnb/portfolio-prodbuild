@@ -37,25 +37,25 @@ class Nav extends React.Component {
         this.setState({aboutLinkIsUnderlined: true});
         this.setState({galleryLinkIsUnderlined: false});
         this.setState({contactLinkIsUnderlined: false});
-      } else if (window.scrollY > 1100 && window.scrollY < 2400){
+      } else if (window.scrollY > 1100 && window.scrollY < 3200){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: true});
         this.setState({contactLinkIsUnderlined: false});
-      } else if (window.scrollY > 2400){
+      } else if (window.scrollY > 3200){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: false});
         this.setState({contactLinkIsUnderlined: true});
       }
     } else if (window.innerWidth < 450){
-      if (window.scrollY < 900) {
+      if (window.scrollY < 1400) {
         this.setState({aboutLinkIsUnderlined: true});
         this.setState({galleryLinkIsUnderlined: false});
         this.setState({contactLinkIsUnderlined: false});
-      } else if (window.scrollY > 900 && window.scrollY < 2000){
+      } else if (window.scrollY > 1400 && window.scrollY < 3200){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: true});
         this.setState({contactLinkIsUnderlined: false});
-      } else if (window.scrollY > 2000){
+      } else if (window.scrollY > 3200){
         this.setState({aboutLinkIsUnderlined: false});
         this.setState({galleryLinkIsUnderlined: false});
         this.setState({contactLinkIsUnderlined: true});
@@ -237,7 +237,7 @@ class Nav extends React.Component {
           }
           @media screen and (max-width: 500px){
             .nav-link-topbar {
-              font-size: 12px;
+              font-size: 16px;
             }
             .nav-links-right {
               width: 65%;

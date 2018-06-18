@@ -18,7 +18,7 @@ const ParallaxImage = () => (
         position: relative;
       }
       .projects-banner {
-        height: 250px;
+        height: 380px;
         width: 100%;
         object-fit: cover;
         object-position: center;
@@ -27,6 +27,7 @@ const ParallaxImage = () => (
         color: white;
         text-shadow: 1px 1px 1px #00000073;
         font-family: 'Didact Gothic', sans-serif;
+        font-size: 45px;
         position: absolute;
         top: 20%;
         right: 16%;

@@ -60,6 +60,7 @@ const HeaderParallax = () => (
       color: #fff9f0;
       text-shadow: 3px 3px 5px black;
       letter-spacing: 13px;
+      font-size: 45px;
     }
     .tagline {
       font-family: 'Didact Gothic', sans-serif;
@@ -83,6 +84,7 @@ const HeaderParallax = () => (
       padding: 1%;
       width: 30%;
       height: 50px;
+      font-size: 20px;
       transition: box-shadow .2s;
     }
     .nav-links:hover {

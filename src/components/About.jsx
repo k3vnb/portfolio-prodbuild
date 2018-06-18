@@ -76,29 +76,22 @@ function About() {
               font-size: 14px;
             }
             .about-upper-right {
-              font-size: 10px;
+              font-size: 12px;
             }
             .leader-text2 {
               font-size: 14px;
             }
             .about-lower {
-              font-size: 11px;
+              font-size: 13px;
             }
             .about-lower ul {
-              font-size: 10px;
-              width: 120%;
-              margin-left: -10%;
+              font-size: 11px;
+              width: 100%;
             }
           }
           @media screen and (max-width: 460px){
             .main-container {
-              margin-bottom: 80vw;
-              margin-top: 5vh;
-            }
-          }
-          @media screen and (max-width: 400px){
-            .about-lower ul {
-              font-size: 7.6px;
+              margin: 5vh 5% 83vw;
             }
           }
             `}</style>
@@ -119,13 +112,13 @@ function About() {
           <li>React/Redux</li>
           <li>HTML5/CSS3</li>
           <li>Sass/SCSS</li>
-          <li>SVG/Vector Graphic Illustration</li>
           <li>MVC</li>
-          <li>API Integration</li>
           <li>NodeJS/NPM</li>
           <li>jQuery</li>
-          <li>Mobile Responsive Design</li>
           <li>SEO</li>
+          <li>API Integration</li>
+          <li>Mobile Responsive Design</li>
+          <li>SVG/Vector Graphic Illustration</li>
           <li>Behavior Driven Development</li>
           <li>Creative Problem Solving</li>
           <li>Cross-cultural Communication</li>

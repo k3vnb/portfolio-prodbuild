@@ -29,6 +29,7 @@ const ParallaxContactHeader = () => (
         position: absolute;
         top: 45%;
         right: 16%;
+        font-size: 45px;
       }
       `}</style>
     <div className="contact-banner-container">

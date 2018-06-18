@@ -105,7 +105,7 @@ class GalleryList extends React.Component {
           background-image: url(${wallpaper});
           font-family: 'Josefin Sans', sans-serif;
           letter-spacing: 3px;
-          margin-bottom: 50vh;
+          margin-bottom: 44vh;
           border: 2px solid #00000078;
         }
         .gallery-overlay {
@@ -118,6 +118,7 @@ class GalleryList extends React.Component {
           margin: 0% 0% 5% 5%;
           text-shadow: 1px 1px 1px #00000082;
           z-index: 2;
+          font-size: 42px;
         }
         .illustration-container {
           width: 100%;

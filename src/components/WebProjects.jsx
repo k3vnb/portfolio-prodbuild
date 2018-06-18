@@ -32,6 +32,7 @@ function WebProjects() {
             justify-content: space-between;
           }
           .project-card {
+            height: 100%;
             width: 29%;
             margin: 5% 0% 5% 2%;
             box-shadow: 1px 1px 3px #0000008c;
@@ -94,19 +95,21 @@ function WebProjects() {
             justify-content: space-between;
           }
           .cardbottom h2 {
-            font-size: 16px;
+            font-size: 17px;
             margin-bottom: 2%;
           }
           .cardbottom p {
-            font-size: 10px;
+            font-size: 14px;
             color: #706a79;
           }
           .project-link {
             width: 99.5%;
-            min-height: 25px;
+            min-height: 36px;
             color: white;
             text-shadow: .5px .5px .5px #3f51b59c;
             border: none;
+            font-size: 12px;
+            font-weight: bold;
             transition: width .2s ease-out, box-shadow .2s ease-out;
           }
           .project-link:hover {
