@@ -11,8 +11,7 @@ const ParallaxContactHeader = () => (
     tag="figure"
   ><style jsx>{`
     .contact-parallax-container1 {
-      margin-top: 5%;
-      margin-bottom: 5%;
+      height: 250px;
     }
       .contact-banner-container {
         position: relative;
@@ -22,9 +21,6 @@ const ParallaxContactHeader = () => (
         width: 100%;
         opacity: .3;
         object-fit: cover;
-      }
-      .contact-banner img {
-
       }
       .contact-title {
         color: white;

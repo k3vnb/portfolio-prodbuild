@@ -31,7 +31,7 @@ const HeaderParallax = () => (
       font-family: 'Didact Gothic', sans-serif;
       display: flex;
       flex-direction: column;
-      padding: 5%;
+      padding: 10%;
       animation: opacity-change-2 3s, box-shadow-glow 6s;
     }
     @keyframes opacity-change-2 {
@@ -82,7 +82,7 @@ const HeaderParallax = () => (
       box-shadow: inset 1px 1px 1px black;
       padding: 1%;
       width: 30%;
-      height: 30px;
+      height: 50px;
       transition: box-shadow .2s;
     }
     .nav-links:hover {
@@ -102,7 +102,7 @@ const HeaderParallax = () => (
     .nav-component {
       z-index: 0;
     }
-    @media screen and (max-width: 420px){
+    @media screen and (max-width: 520px){
       .link-line {
         flex-direction: column;
       }
@@ -110,11 +110,10 @@ const HeaderParallax = () => (
         width: 100%;
         height: 40px;
         font-size: 5vw;
-        margin-bottom: 4%;
+        margin-bottom: 5%;
       }
       .header-main-content {
         width: 87%;
-        height: 72vh;
         margin: auto;
         margin-top: -10%;
       }

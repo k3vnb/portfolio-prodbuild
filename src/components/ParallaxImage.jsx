@@ -12,7 +12,6 @@ const ParallaxImage = () => (
     tag="figure"
   ><style jsx>{`
     .projects-parallax-container {
-      margin-top: 5%;
       margin-bottom: 5%;
     }
       .projects-banner-container {
@@ -22,7 +21,7 @@ const ParallaxImage = () => (
         height: 250px;
         width: 100%;
         object-fit: cover;
-        object-position: 0% 6%;
+        object-position: center;
       }
       .projects-title {
         color: white;

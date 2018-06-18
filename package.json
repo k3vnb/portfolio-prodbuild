@@ -1,17 +1,23 @@
 {
   "name": "personal-portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "engines": {
+      "node": "8.9.3"
+    },
   "scripts": {
     "lint": "eslint src/** src/**/**; exit 0",
     "lint-fix": "eslint src/** src/**/** --fix; exit 0",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server"
+    "test": "jest; exit 0",
+    "start": "webpack-dev-server",
+    "prod": "NODE_ENV=production node server.js",
+    "prodbuild": "webpack --config webpack.production.config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.3",
     "file-loader": "^1.1.6",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",

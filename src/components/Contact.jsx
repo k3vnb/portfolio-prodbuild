@@ -31,7 +31,7 @@ function Contact(){
           }
           .before-contact img {
             opacity: .3;
-            height: 50px;
+            height: 205px;
             width: 100%;
             object-fit: cover;
           }
