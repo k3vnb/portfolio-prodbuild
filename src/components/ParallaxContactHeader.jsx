@@ -20,7 +20,8 @@ const ParallaxContactHeader = () => (
         height: 250px;
         width: 100%;
         opacity: .3;
-        object-fit: cover;
+        -o-object-fit: cover;
+           object-fit: cover;
       }
       .contact-title {
         color: white;

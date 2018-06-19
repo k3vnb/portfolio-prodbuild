@@ -25,6 +25,7 @@ function Error404(props){
             width: 40vw;
             border-radius: 50%;
             background-color: #3f51b5b5;
+            -webkit-box-shadow: 1px 1px 3px #000000b0;
             box-shadow: 1px 1px 3px #000000b0;
             text-shadow: 1px 1px 1px #000000b0;
             color: white;
@@ -41,16 +42,16 @@ function Error404(props){
               right: 50%;
             }
           }
-            `}</style>
-      <h1>ERROR 404</h1>
-      <div className="return-home">
-        <h3>The page {props.location.pathname} is invalid!</h3>
-        <h3>Return <Link to="/" ><span className="go-home">Home</span></Link>?</h3>
+          `}</style>
+        <h1>ERROR 404</h1>
+        <div className="return-home">
+          <h3>The page {props.location.pathname} is invalid!</h3>
+          <h3>Return <Link to="/" ><span className="go-home">Home</span></Link>?</h3>
+        </div>
       </div>
-    </div>
-  );
-}
-Error404.propTypes = {
-  location: PropTypes.string
-};
-export default Error404;
+    );
+  }
+  Error404.propTypes = {
+    location: PropTypes.string
+  };
+  export default Error404;

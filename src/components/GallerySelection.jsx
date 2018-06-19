@@ -12,17 +12,33 @@ function GallerySelection(props){
             position: fixed;
             top: 0%;
             left: 0%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             background-color: #000000cc;
             font-family: 'Didact Gothic', sans-serif;
             height: 100%;
             width: 100%;
             z-index: 6;
-            animation: fade-in-image .5s;
+            -webkit-animation: fade-in-image .5s;
+                    animation: fade-in-image .5s;
           }
+          @-webkit-keyframes fade-in-image {
+            0% {
+              opacity: 0; }
+            100% {
+              opacity: 100; }
+            }
           @keyframes fade-in-image {
             0% {
               opacity: 0; }
@@ -35,25 +51,35 @@ function GallerySelection(props){
           .lightbox-image {
             width: 75vw;
             height: auto;
-            object-fit: contain;
+            -o-object-fit: contain;
+               object-fit: contain;
           }
           .lightbox-buttons {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-direction: column;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
           }
           .close-button {
             color: purple;
-            font-size: 27.6px;
+            font-size: 40px;
             height: 40px;
             width: 40px;
-            border: 1px solid white;
-            border-radius: 50%;
             position: fixed;
             top: 2%;
             right: 5%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             padding: 0% 0% .5% .5%;
           }
           .close-button h3 {

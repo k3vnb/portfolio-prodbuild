@@ -14,34 +14,35 @@ class App extends React.Component {
     return (
       <div style={appStyleSheet}>
         <style jsx global>{`
-          @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Didact+Gothic|Josefin+Sans');
-          * {
-            box-sizing: border-box;
-            margin: 0%;
-          }
-          a {
-            text-decoration: none;
-          }
-          .main-container {
-            margin: 2% 16%;
-            padding: 8%;
-            background-color: white;
-            height: 200px;
-          }
-          @media screen and (max-width: 500px){
+            * {
+              -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              margin: 0%;
+            }
+            a {
+              text-decoration: none;
+            }
             .main-container {
-              margin: 3% 8%;
+              margin: 2% 16%;
+              padding: 8%;
+              background-color: white;
+              height: 200px;
+            }
+            @media screen and (max-width: 500px){
+              .main-container {
+                margin: 3% 8%;
+              }
             }
             `}
-        </style>
-        <Switch>
-          <Route exact path='/' component={LandingPage} />
-          <Route component={Error404} />
-        </Switch>
-        <Footer />
-      </div>
-    );
+          </style>
+          <Switch>
+            <Route exact path='/' component={LandingPage} />
+            <Route component={Error404} />
+          </Switch>
+          <Footer />
+        </div>
+      );
+    }
   }
-}
 
-export default App;
+  export default App;

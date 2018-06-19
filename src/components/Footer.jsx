@@ -15,23 +15,23 @@ function Footer(){
   return (
     <div className="footer-container">
       <style jsx>{`
-          .footer-container {
-            position: relative;
-            color: white;
-            font-family: 'Didact Gothic', sans-serif;
-            text-shadow: -.5px .5px 1px black;
+        .footer-container {
+          position: relative;
+          color: white;
+          font-family: 'Didact Gothic', sans-serif;
+          text-shadow: -.5px .5px 1px black;
+        }
+        .copy-to-clipboard:hover {
+          cursor: pointer;
+        }
+        @media screen and (max-width: 430px){
+          .display-none-sm-scrn {
+            display: none;
           }
-          .copy-to-clipboard:hover {
-            cursor: pointer;
+          .footer-left {
+            font-size: .9em;
           }
-          @media screen and (max-width: 430px){
-            .display-none-sm-scrn {
-              display: none;
-            }
-            .footer-left {
-              font-size: .9em;
-            }
-          }
+        }
           `}</style>
       <div style={footerRightStyleSheet}>
         <h3>Kevin Boyle</h3>

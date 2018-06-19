@@ -24,7 +24,7 @@ class Nav extends React.Component {
   }
 
   makeOpaque() {
-    if (document.documentElement.scrollTop > 400) {
+    if (document.documentElement.scrollTop > 400 || window.pageYOffset > 400) {
       this.setState({navOpacityFull: true});
     } else {
       this.setState({navOpacityFull: false});
@@ -142,11 +142,21 @@ class Nav extends React.Component {
           }
           .nav-link-underline {
             border-bottom: 1px solid #d8783f63;
-            animation: 1s underline ease-in;
+            -webkit-animation: 1s underline ease-in;
+                    animation: 1s underline ease-in;
           }
           .nav-link-reverse-underline {
             border-bottom: 0px solid #d8783f63;
-            animation: .5s reverse-underline ease-in;
+            -webkit-animation: .5s reverse-underline ease-in;
+                    animation: .5s reverse-underline ease-in;
+          }
+          @-webkit-keyframes underline {
+            from {
+              border-bottom: 0px solid #d8783f63;
+            }
+            to {
+              border-bottom: 1px solid #d8783f63;
+            }
           }
           @keyframes underline {
             from {
@@ -154,6 +164,14 @@ class Nav extends React.Component {
             }
             to {
               border-bottom: 1px solid #d8783f63;
+            }
+          }
+          @-webkit-keyframes reverse-underline {
+            from {
+              border-bottom: 1px solid #d8783f63;
+            }
+            to {
+              border-bottom: 0px solid #d8783f63;
             }
           }
           @keyframes reverse-underline {

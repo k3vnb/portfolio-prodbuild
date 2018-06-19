@@ -20,8 +20,10 @@ const ParallaxImage = () => (
       .projects-banner {
         height: 380px;
         width: 100%;
-        object-fit: cover;
-        object-position: center;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
       }
       .projects-title {
         color: white;

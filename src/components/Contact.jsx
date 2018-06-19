@@ -17,70 +17,87 @@ function Contact(){
       </div>
 
       <style jsx>{`
-          .before-contact {
-            font-family: 'Carrois Gothic', sans-serif;
-            background-image: url(${wallpaper});
-            background-repeat: repeat-y;
-            background-size: cover;
-            opacity: .85;
-          }
-          .before-contact-overlay {
-            height: 100%;
-            width: 100%;
-            background-color: white;
-          }
-          .before-contact img {
-            opacity: .3;
-            height: 205px;
-            width: 100%;
-            object-fit: cover;
-          }
-          .contact-container {
-            height: 100vh;
-            border-bottom: 5.6vh solid #3b3b3b;
-            position: relative;
-          }
-          .contact-page-inner {
-            width: 100%;
-            height: 100.5%;
-            display: flex;
-            background-image: url(${skyBG});
-            background-size: cover;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-          }
-          .contact-box {
-            width: 50%;
-            height: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .icon {
-            height: 17vw;
-            transition: height .2s ease-out;
-          }
-          .icon:hover {
-            height: 16.1vw
-          }
-          .github-icon, .instagram-icon, .linkedin-icon {
-            border-radius: 23%;
-            box-shadow: 3px 2px 8px #0000008c;
+        .before-contact {
+          font-family: 'Carrois Gothic', sans-serif;
+          background-image: url(${wallpaper});
+          background-repeat: repeat-y;
+          background-size: cover;
+          opacity: .85;
+        }
+        .before-contact-overlay {
+          height: 100%;
+          width: 100%;
+          background-color: white;
+        }
+        .before-contact img {
+          opacity: .3;
+          height: 205px;
+          width: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+        }
+        .contact-container {
+          height: 100vh;
+          border-bottom: 5.6vh solid #3b3b3b;
+          position: relative;
+        }
+        .contact-page-inner {
+          width: 100%;
+          height: 100.5%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          background-image: url(${skyBG});
+          background-size: cover;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+        }
+        .contact-box {
+          width: 50%;
+          height: 50%;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+        }
+        .icon {
+          height: 17vw;
+          -webkit-transition: height .2s ease-out;
+          -o-transition: height .2s ease-out;
+          transition: height .2s ease-out;
+        }
+        .icon:hover {
+          height: 16.1vw
+        }
+        .github-icon, .instagram-icon, .linkedin-icon {
+          border-radius: 23%;
+          -webkit-box-shadow: 3px 2px 8px #0000008c;
+                  box-shadow: 3px 2px 8px #0000008c;
 
-          }
-          .contact-top-left {
-            background-color: #e91e63a8;
-          }
-          .contact-top-right {
-            background-color: #2196f36e;
-          }
-          .contact-bottom-left {
-            background-color: #8bc34a69;
-          }
-          .contact-bottom-right {
-            background-color: #ff9800ad;
-          }
+        }
+        .contact-top-left {
+          background-color: #e91e63a8;
+        }
+        .contact-top-right {
+          background-color: #2196f36e;
+        }
+        .contact-bottom-left {
+          background-color: #8bc34a69;
+        }
+        .contact-bottom-right {
+          background-color: #ff9800ad;
+        }
           `}</style>
       <div className="contact-container">
         <div className="contact-page-inner">

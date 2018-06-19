@@ -9,148 +9,188 @@ function WebProjects() {
   return(
     <div className="webprojects-container">
       <style jsx>{`
-          .webprojects-container {
-            font-family: 'Carrois Gothic SC', sans-serif;
-            background: #ffffff;
-            padding-bottom: 10vh;
-            position: sticky;
-            top: 10px;
-          }
+        .webprojects-container {
+          font-family: 'Carrois Gothic SC', sans-serif;
+          background: #ffffff;
+          padding-bottom: 10vh;
+          position: -webkit-sticky;
+          position: sticky;
+          top: 10px;
+        }
+        .projects-gallery-header {
+          text-align: center;
+          color: white;
+          text-shadow: 0px 0px 2px black;
+          -webkit-box-shadow: 1px 1px 3px #0000008c;
+                  box-shadow: 1px 1px 3px #0000008c;
+          background-color: #1bb3a6;
+          width: 33%;
+          margin-left: 5%;
+          padding: 1%;
+        }
+        .project-card-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+        }
+        .project-card {
+          height: 100%;
+          width: 29%;
+          margin: 5% 0% 5% 2%;
+          -webkit-box-shadow: 1px 1px 3px #0000008c;
+                  box-shadow: 1px 1px 3px #0000008c;
+          -webkit-transition: -webkit-transform .1s, -webkit-box-shadow .21s;
+          transition: -webkit-transform .1s, -webkit-box-shadow .21s;
+          -o-transition: transform .1s, box-shadow .21s;
+          transition: transform .1s, box-shadow .21s;
+          transition: transform .1s, box-shadow .21s, -webkit-transform .1s, -webkit-box-shadow .21s;
+          background-color: white;
+        }
+        .project-card:last-child {
+          margin-right: 2%;
+        }
+        .project-card:hover {
+          -webkit-transform: scale(1.001);
+              -ms-transform: scale(1.001);
+                  transform: scale(1.001);
+          -webkit-box-shadow: 1.2px 1.2px 2.4px #3c3333f5;
+                  box-shadow: 1.2px 1.2px 2.4px #3c3333f5;
+        }
+        .project-card:hover button {
+          -webkit-box-shadow: .5px .5px 1px #0000008c;
+                  box-shadow: .5px .5px 1px #0000008c;
+        }
+        .project-card:hover h2 {
+          border-bottom: .5px solid #3f51b582;
+        }
+        .project-card:hover .cardtop-overlay {
+          -webkit-box-shadow: inset 1px 1px 10px white;
+                  box-shadow: inset 1px 1px 10px white;
+          border-bottom: .2px solid #3f51b582;
+        }
+        .screenshot {
+          height: 100%;
+          width: 100%;
+        }
+        .cardtop {
+          background-repeat: no-repeat;
+          background-position: top;
+          height: 50%;
+          min-height: 160px;
+          width: 100%;
+          background-size: cover;
+          -webkit-transition: background-image .3s;
+          -o-transition: background-image .3s;
+          transition: background-image .3s;
+        }
+        .sievejobs .cardtop {
+          background-image: url(${sjScrnsht1});
+          background-size: contain;
+          background-position: center;
+        }
+        .fizzbuzz .cardtop {
+          background-image: url(${fbScrnsht1});
+        }
+        .herbl .cardtop {
+          background-image: url(${hrblScrnsht1});
+        }
+        .cardtop-overlay {
+          height: 100%;
+          width: 100%;
+          -webkit-box-shadow: inset 0 0 33px #00000029;
+                  box-shadow: inset 0 0 33px #00000029;
+          -webkit-transition: -webkit-box-shadow .2s;
+          transition: -webkit-box-shadow .2s;
+          -o-transition: box-shadow .2s;
+          transition: box-shadow .2s;
+          transition: box-shadow .2s, -webkit-box-shadow .2s;
+        }
+        .cardbottom {
+          height: 50%;
+          padding: 6%;
+          min-height: 35vh;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between;
+        }
+        .cardbottom h2 {
+          font-size: 17px;
+          margin-bottom: 2%;
+        }
+        .cardbottom p {
+          font-size: 14px;
+          color: #706a79;
+        }
+        .project-link {
+          width: 99.5%;
+          min-height: 36px;
+          color: white;
+          text-shadow: .5px .5px .5px #3f51b59c;
+          border: none;
+          font-size: 12px;
+          font-weight: bold;
+          -webkit-transition: width .2s ease-out, -webkit-box-shadow .2s ease-out;
+          transition: width .2s ease-out, -webkit-box-shadow .2s ease-out;
+          -o-transition: width .2s ease-out, box-shadow .2s ease-out;
+          transition: width .2s ease-out, box-shadow .2s ease-out;
+          transition: width .2s ease-out, box-shadow .2s ease-out, -webkit-box-shadow .2s ease-out;
+        }
+        .project-link:hover {
+          width: 100%;
+          -webkit-box-shadow: 0px .3px 3px #3f51b59c;
+                  box-shadow: 0px .3px 3px #3f51b59c;
+          cursor: pointer;
+          text-shadow: .5px .5px .5px black;
+        }
+        .project-link:active {
+          width: 99.4%;
+          -webkit-box-shadow: 0px .1px 1px inset #3f51b59c;
+                  box-shadow: 0px .1px 1px inset #3f51b59c;
+        }
+        button:focus {
+          outline: 0;
+        }
+        .project-site-link {
+          background-color: #4bf5f4;
+          margin-bottom: 3%;
+        }
+        .project-github-link {
+          background-color: #47ff7e;
+        }
+        @media screen and (max-width: 650px){
           .projects-gallery-header {
-            text-align: center;
-            color: white;
-            text-shadow: 0px 0px 2px black;
-            box-shadow: 1px 1px 3px #0000008c;
-            background-color: #1bb3a6;
-            width: 33%;
-            margin-left: 5%;
-            padding: 1%;
+            width: 75%;
           }
-          .project-card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-          }
+        }
+        @media screen and (max-width: 450px){
           .project-card {
-            height: 100%;
-            width: 29%;
-            margin: 5% 0% 5% 2%;
-            box-shadow: 1px 1px 3px #0000008c;
-            transition: transform .1s, box-shadow .21s;
-            background-color: white;
-          }
-          .project-card:last-child {
-            margin-right: 2%;
-          }
-          .project-card:hover {
-            transform: scale(1.001);
-            box-shadow: 1.2px 1.2px 2.4px #3c3333f5;
-          }
-          .project-card:hover button {
-            box-shadow: .5px .5px 1px #0000008c;
-          }
-          .project-card:hover h2 {
-            border-bottom: .5px solid #3f51b582;
-          }
-          .project-card:hover .cardtop-overlay {
-            box-shadow: inset 1px 1px 10px white;
-            border-bottom: .2px solid #3f51b582;
-          }
-          .screenshot {
-            height: 100%;
-            width: 100%;
+            width: 96%;
+            margin: auto;
+            margin-top: 8%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
           }
           .cardtop {
-            background-repeat: no-repeat;
-            background-position: top;
-            height: 50%;
-            min-height: 160px;
-            width: 100%;
-            background-size: cover;
-            transition: background-image .3s;
-          }
-          .sievejobs .cardtop {
-            background-image: url(${sjScrnsht1});
-            background-size: contain;
-            background-position: center;
-          }
-          .fizzbuzz .cardtop {
-            background-image: url(${fbScrnsht1});
-          }
-          .herbl .cardtop {
-            background-image: url(${hrblScrnsht1});
-          }
-          .cardtop-overlay {
-            height: 100%;
-            width: 100%;
-            box-shadow: inset 0 0 33px #00000029;
-            transition: box-shadow .2s;
+            width: 40%;
+            border-right: .5px solid #4bf6f4c7;
           }
           .cardbottom {
-            height: 50%;
-            padding: 6%;
-            min-height: 35vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            width: 60%;
           }
-          .cardbottom h2 {
-            font-size: 17px;
-            margin-bottom: 2%;
-          }
-          .cardbottom p {
-            font-size: 14px;
-            color: #706a79;
-          }
-          .project-link {
-            width: 99.5%;
-            min-height: 36px;
-            color: white;
-            text-shadow: .5px .5px .5px #3f51b59c;
-            border: none;
-            font-size: 12px;
-            font-weight: bold;
-            transition: width .2s ease-out, box-shadow .2s ease-out;
-          }
-          .project-link:hover {
-            width: 100%;
-            box-shadow: 0px .3px 3px #3f51b59c;
-            cursor: pointer;
-            text-shadow: .5px .5px .5px black;
-          }
-          .project-link:active {
-            width: 99.4%;
-            box-shadow: 0px .1px 1px inset #3f51b59c;
-          }
-          button:focus {
-            outline: 0;
-          }
-          .project-site-link {
-            background-color: #4bf5f4;
-            margin-bottom: 3%;
-          }
-          .project-github-link {
-            background-color: #47ff7e;
-          }
-          @media screen and (max-width: 650px){
-            .projects-gallery-header {
-              width: 75%;
-            }
-          @media screen and (max-width: 450px){
-            .project-card {
-              width: 96%;
-              margin: auto;
-              margin-top: 8%;
-              display: flex;
-            }
-            .cardtop {
-              width: 40%;
-              border-right: .5px solid #4bf6f4c7;
-            }
-            .cardbottom {
-              width: 60%;
-            }
-          }
+        }
           `}</style>
       <div className="projects-gallery-header">
         <h2>Websites & Web Apps</h2>
