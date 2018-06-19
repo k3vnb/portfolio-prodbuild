@@ -45,23 +45,41 @@ class Header extends React.Component {
               position: sticky;
               top: -525px;
             }
+            .background-img2 {
+              background-image: url(${skyBG});
+              background-size: 25%;
+              background-position: 50% 50%;
+              position: absolute;
+              top: 0%;
+              left: 0%;
+              height: 100%;
+              width: 100%;
+            }
             .background-img {
               height: 100%;
               width: 100%;
               background-image: url(${skyBG});
-              opacity: .7;
+              background-size: 10%;
+              background-position: center;
+              opacity: .1;
               animation: opacity-change 1.5s ease-in;
+              position: absolute;
+              top: 0%;
+              bottom: 0%;
             }
             @keyframes opacity-change {
-              from {
-                opacity: .3;
+              0% {
+                opacity: .5;
+                background-size: 33%;
               }
-              to {
-                opacity: .7;
+
+              100% {
+                opacity: .1;
+                background-size: 10%;
               }
             }
             .header-overlay {
-              background-color: #0e000e61;
+              background: linear-gradient(217deg,rgba(255, 32, 32, 0.44),rgba(255,0,0,0) 70.71%), linear-gradient(145deg,rgba(0, 67, 255, 0),rgba(0,255,0,0) 70.71%), linear-gradient(336deg,rgba(161, 161, 197, 0.78),rgba(0,0,255,0) 70.71%);
               height: 100%;
               display: flex;
               justify-content: center;
@@ -69,18 +87,19 @@ class Header extends React.Component {
               z-index: 3;
             }
             `}</style>
-        <div className="header-container">
-          <div className="wallpaper-div">
-            <div className="background-img">
+          <div className="header-container">
+            <div className="background-img2"></div>
+            <div className="wallpaper-div">
+              <div className="background-img">
+              </div>
               <div className="header-overlay">
                 <HeaderParallax />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
-}
 
-export default Header;
+  export default Header;
