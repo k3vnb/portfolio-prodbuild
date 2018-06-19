@@ -255,7 +255,7 @@ class Nav extends React.Component {
               About
             </div>
             <div className={this.state.galleryLinkIsUnderlined ? 'nav-link-topbar nav-link-underline' : 'nav-link-topbar nav-link-reverse-underline'} title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>
-              Gallery
+              Projects
             </div>
             <div className={this.state.contactLinkIsUnderlined ? 'nav-link-topbar nav-link-underline' : 'nav-link-topbar nav-link-reverse-underline'} title="go to contact section" onClick={() => scrollToPage('.contact-container')}>
               Contact

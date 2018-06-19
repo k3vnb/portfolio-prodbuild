@@ -28,6 +28,9 @@ function Footer(){
             .display-none-sm-scrn {
               display: none;
             }
+            .footer-left {
+              font-size: .9em;
+            }
           }
           `}</style>
       <div style={footerRightStyleSheet}>

@@ -127,7 +127,7 @@ const HeaderParallax = () => (
       <h2 className="tagline">Web Developer & Designer</h2>
       <div className="link-line">
         <div className="nav-links" title="go to about section" onClick={() => scrollToPage('.about-container')}>About</div>
-        <div className="nav-links" title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>Gallery</div>
+        <div className="nav-links" title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>Projects</div>
         <div className="nav-links" title="go to contact section" onClick={() => scrollToPage('.contact-container')}>Contact</div>
       </div>
     </div>
