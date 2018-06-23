@@ -87,16 +87,32 @@ function Contact(){
 
         }
         .contact-top-left {
-          background-color: #e91e63a8;
+          background: -webkit-gradient(linear,left top, right top,from(rgb(197, 19, 184)),color-stop(0%, rgba(233, 30, 99, 0.72)),to(rgba(233, 30, 99, 0.75)));
+          background: -webkit-linear-gradient(left,rgb(197, 19, 184) 0%,rgba(233, 30, 99, 0.72) 0%,rgba(233, 30, 99, 0.75) 100%);
+          background: -o-linear-gradient(left,rgb(197, 19, 184) 0%,rgba(233, 30, 99, 0.72) 0%,rgba(233, 30, 99, 0.75) 100%);
+          background: linear-gradient(90deg,rgb(197, 19, 184) 0%,rgba(233, 30, 99, 0.72) 0%,rgba(233, 30, 99, 0.75) 100%);
+          background: #e91e63a8;
         }
         .contact-top-right {
-          background-color: #2196f36e;
+          background: background: -webkit-gradient(linear,left top, right top,from(rgb(41, 135, 210)),color-stop(0%, rgba(30, 196, 233, 0.72)),to(rgba(30, 214, 233, 0.75)));
+          background: -webkit-linear-gradient(left,rgb(41, 135, 210) 0%,rgba(30, 196, 233, 0.72) 0%,rgba(30, 214, 233, 0.75) 100%);
+          background: -o-linear-gradient(left,rgb(41, 135, 210) 0%,rgba(30, 196, 233, 0.72) 0%,rgba(30, 214, 233, 0.75) 100%);
+          background: linear-gradient(90deg,rgb(41, 135, 210) 0%,rgba(30, 196, 233, 0.72) 0%,rgba(30, 214, 233, 0.75) 100%);
+          background: #2196f36e;
         }
         .contact-bottom-left {
-          background-color: #8bc34a69;
+          background:   -webkit-gradient(linear,left top, right top,from(rgb(41, 210, 46)),color-stop(0%, rgba(33, 233, 30, 0.72)),to(rgba(61, 193, 66, 0.65)));
+         background:   -webkit-linear-gradient(left,rgb(41, 210, 46) 0%,rgba(33, 233, 30, 0.72) 0%,rgba(61, 193, 66, 0.65) 100%);
+         background:   -o-linear-gradient(left,rgb(41, 210, 46) 0%,rgba(33, 233, 30, 0.72) 0%,rgba(61, 193, 66, 0.65) 100%);
+         background:   linear-gradient(90deg,rgb(41, 210, 46) 0%,rgba(33, 233, 30, 0.72) 0%,rgba(61, 193, 66, 0.65) 100%);
+          background: #8bc34a69;
         }
         .contact-bottom-right {
-          background-color: #ff9800ad;
+          background:   -webkit-gradient(linear,left top, right top,from(rgb(202, 139,    47)),color-stop(0%, rgba(255, 152, 0, 0.76)),to(rgba(218, 171, 28, 0.77)));
+           background:   -webkit-linear-gradient(left,rgb(202, 139, 47) 0%,rgba(255, 152, 0, 0.76) 0%,rgba(218, 171, 28, 0.77) 100%);
+           background:   -o-linear-gradient(left,rgb(202, 139, 47) 0%,rgba(255, 152, 0, 0.76) 0%,rgba(218, 171, 28, 0.77) 100%);
+           background:   linear-gradient(90deg,rgb(202, 139, 47) 0%,rgba(255, 152, 0, 0.76) 0%,rgba(218, 171, 28, 0.77) 100%);
+          background: #ff9800ad;
         }
           `}</style>
       <div className="contact-container">

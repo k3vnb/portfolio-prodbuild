@@ -24,8 +24,13 @@ const HeaderParallax = () => (
   ><style jsx>{`
 
     .header-main-content {
-      text-shadow: 1px 1px 1px black;
+      border: 6px solid #ff003912;
       width: 82vw;
+      max-width: 630px;
+      background: -webkit-gradient(linear,left top, right top,from(rgb(52, 71, 173)),color-stop(0%, rgba(29, 18, 72, 0.77)),to(rgba(177, 0, 255, 0.53)));
+      background: -webkit-linear-gradient(left,rgb(52, 71, 173) 0%,rgba(29, 18, 72, 0.77) 0%,rgba(177, 0, 255, 0.53) 100%);
+      background: -o-linear-gradient(left,rgb(52, 71, 173) 0%,rgba(29, 18, 72, 0.77) 0%,rgba(177, 0, 255, 0.53) 100%);
+      background: linear-gradient(90deg,rgb(52, 71, 173) 0%,rgba(29, 18, 72, 0.77) 0%,rgba(177, 0, 255, 0.53) 100%);
       background: -webkit-linear-gradient(233deg,#ff021936,rgba(0, 0, 0, 0.2) 27.71%),-webkit-linear-gradient(323deg,rgba(50,57,132,0.06),rgba(3, 169, 244, 0.45) 70.71%),-webkit-linear-gradient(253deg,rgba(125, 30, 156, 0.37),rgba(0, 0, 0, 0.28) 81.71%),-webkit-linear-gradient(61deg,rgba(0, 149, 236, 0.43),rgba(0,255,0,0) 41.71%);
       background: -o-linear-gradient(233deg,#ff021936,rgba(0, 0, 0, 0.2) 27.71%),-o-linear-gradient(323deg,rgba(50,57,132,0.06),rgba(3, 169, 244, 0.45) 70.71%),-o-linear-gradient(253deg,rgba(125, 30, 156, 0.37),rgba(0, 0, 0, 0.28) 81.71%),-o-linear-gradient(61deg,rgba(0, 149, 236, 0.43),rgba(0,255,0,0) 41.71%);
       background: linear-gradient(217deg,#ff021936,rgba(0, 0, 0, 0.2) 27.71%),linear-gradient(127deg,rgba(50,57,132,0.06),rgba(3, 169, 244, 0.45) 70.71%),linear-gradient(197deg,rgba(125, 30, 156, 0.37),rgba(0, 0, 0, 0.28) 81.71%),linear-gradient(389deg,rgba(0, 149, 236, 0.43),rgba(0,255,0,0) 41.71%);
@@ -38,6 +43,7 @@ const HeaderParallax = () => (
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
+      justify-content: space-around;
       padding: 5%;
       -webkit-animation: opacity-change-2 1.5s ease-out, box-shadow-glow 1.5s ease-out;
               animation: opacity-change-2 1.5s ease-out, box-shadow-glow 1.5s ease-out;
@@ -93,17 +99,17 @@ const HeaderParallax = () => (
       text-decoration: none;
       text-align: center;
       color: #fff9f0;
-      text-shadow: 3px 3px 5px black;
+      text-shadow: -4px 1px 2px #7836f4;
       letter-spacing: 13px;
-      font-size: 57px;
+      font-size: 76px;
     }
     .tagline {
       text-align: center;
-      color: #171717;
-      font-weight: bold;
+      color: white;
+      font-weight: 500;
       font-family: 'Work Sans', sans-serif;
-      text-shadow: .5px .5px 1px white;
-      font-size: 2em;
+      text-shadow: -3px 1px 1px #812c90;
+      font-size: 1.6em;
     }
     .link-line {
       margin-top: 5%;
@@ -117,7 +123,9 @@ const HeaderParallax = () => (
     }
     .nav-links {
       font-family: 'Josefin Sans', sans-serif;
-      border: 1px solid #eaeaea;
+      border: 1px solid #ffdbe724;
+      border-top: none;
+      border-left: none;
       color: #fdfdfd;
       width: 100%;
       display: -webkit-box;
@@ -135,6 +143,11 @@ const HeaderParallax = () => (
       width: 30%;
       height: 44px;
       font-size: 24px;
+      text-shadow: 3px 2px 1px #c73333a1;
+      background: -webkit-gradient(linear,left top, right top,from(rgb(52, 71, 173)),color-stop(0%, rgba(29, 18, 72, 0.77)),to(rgba(177, 0, 255, 0.53)));
+      background: -webkit-linear-gradient(left,rgb(52, 71, 173) 0%,rgba(29, 18, 72, 0.77) 0%,rgba(177, 0, 255, 0.53) 100%);
+      background: -o-linear-gradient(left,rgb(52, 71, 173) 0%,rgba(29, 18, 72, 0.77) 0%,rgba(177, 0, 255, 0.53) 100%);
+      background: linear-gradient(90deg,rgb(52, 71, 173) 0%,rgba(29, 18, 72, 0.77) 0%,rgba(177, 0, 255, 0.53) 100%);
       background: #e91e630d;
       -webkit-transition: -webkit-box-shadow .2s;
       transition: -webkit-box-shadow .2s;
@@ -145,7 +158,7 @@ const HeaderParallax = () => (
     .nav-links:hover {
       -webkit-box-shadow: 2px 2px 2px #0000009e;
               box-shadow: 2px 2px 2px #0000009e;
-      text-shadow: 2px 2px 2px #000000d4;
+      text-shadow: 2px 2px 2px #e84141f7;
       cursor: pointer;
       -webkit-transform: translate(-.5px, -.5px);
           -ms-transform: translate(-.5px, -.5px);
@@ -161,6 +174,11 @@ const HeaderParallax = () => (
     }
     .nav-component {
       z-index: 0;
+    }
+    @media screen and (max-width: 520px){
+      .title-text {
+        font-size: 57px;
+      }
     }
     @media screen and (max-width: 420px){
       .link-line {
@@ -185,8 +203,8 @@ const HeaderParallax = () => (
 
       `}</style>
     <div className="header-main-content">
-      <h1 className="title-text">Kevin &nbsp;Boyle</h1>
-      <h2 className="tagline">Web Developer & Designer</h2>
+        <h1 className="title-text">Kevin &nbsp;Boyle</h1>
+        <h2 className="tagline">Web Developer & Designer</h2>
       <div className="link-line">
         <div className="nav-links" title="go to about section" onClick={() => scrollToPage('.about-container')}>About</div>
         <div className="nav-links" title="go to gallery section" onClick={() => scrollToPage('.gallery-container')}>Projects</div>

@@ -14,6 +14,7 @@ class App extends React.Component {
     return (
       <div style={appStyleSheet}>
         <style jsx global>{`
+            @import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC|Didact+Gothic|Josefin+Sans');
             * {
               -webkit-box-sizing: border-box;
               box-sizing: border-box;
