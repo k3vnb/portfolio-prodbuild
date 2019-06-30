@@ -118,7 +118,7 @@ function Contact(){
       <div className="contact-container">
         <div className="contact-page-inner">
           <div className="contact-box contact-top-left">
-            <a href="mailto:boyle.kevin.michael@gmail?Subject=Hi%20Kevin" title="email boyle.kevin.michael@gmail.com"><img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" /></a>
+            <a href="mailto:boyle.kevin.michael@gmail.com?Subject=Hi%20Kevin" title="email boyle.kevin.michael@gmail.com"><img className="gmail-icon icon" src={gmailIcon} alt="boyle.kevin.michael@gmail.com" /></a>
           </div>
           <div className="contact-box contact-top-right">
             <a href="http://www.github.com/lemurriot" target="_blank" title="Go to Kevin's Github"><img className="github-icon icon" src={githubIcon} /></a>
