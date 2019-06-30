@@ -3,9 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "engines": {
-      "node": "8.9.3"
-    },
   "scripts": {
     "lint": "eslint src/** src/**/**; exit 0",
     "lint-fix": "eslint src/** src/**/** --fix; exit 0",
